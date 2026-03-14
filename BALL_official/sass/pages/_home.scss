@@ -1,0 +1,172 @@
+.section-about {
+  background-color: $color-primary-grey-light;
+  padding: 12rem 10rem 5rem 10rem;
+  margin-top: -13vh;
+  @include respond(tab-port) {
+    padding: 14rem 4rem 1rem 4rem;
+  }
+}
+
+.section-awards {
+  box-sizing: border-box;
+  background-color: $color-primary-grey-light;
+  padding: 13rem 10rem 5rem 10rem;
+  margin-top: -13vh;
+  @include respond(tab-port) {
+    padding: 1rem 4rem 1rem 4rem;
+  }
+}
+
+.section-gallery {
+  box-sizing: border-box;
+  background-color: $color-primary-grey-light;
+  padding: 8rem 4rem;
+  @include respond(tab-port) {
+    padding: 5rem 1rem;
+  }
+}
+
+.section-features {
+  padding: 17rem 0;
+  background-color: $color-primary-grey-light;
+  background-image:
+    linear-gradient(to right bottom, #ee300093, #004980e2),
+    url(../img/guidedog.jpg);
+  background-size: cover;
+  background-position: center;
+  // position: relative;
+  // alternative of clip-path, then we need to -skewY boxes
+  // transform: skewY(-7deg);
+  clip-path: polygon(0 12%, 100% 0, 100% 88%, 0 100%);
+
+  @include respond(tab-land-small) {
+    margin-top: -17vh;
+    clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+    padding: 8rem 0;
+    margin-bottom: 5rem;
+  }
+}
+// the direct children of .section-features is ony a row
+// & > * { // transform: skewY(7deg);
+// }
+.section-donation {
+  background-color: $color-primary-grey-light;
+  padding: 16rem 10rem 1rem 10rem;
+  margin-top: -18vh;
+
+  @include respond(tab-port) {
+    padding: 20rem 4rem 1rem 4rem;
+  }
+}
+
+.section-news {
+  background-color: $color-primary-grey-light;
+  padding: 8rem 10rem 10rem 10rem;
+
+  @include respond(tab-port) {
+    padding: 5rem 4rem 6rem 4rem;
+  }
+}
+
+.section-map {
+  padding: 5rem 10rem;
+  margin: 5rem 2rem;
+
+  @include respond(tab-port) {
+    padding: 4rem;
+  }
+
+  @include respond(phone) {
+    padding: 0.5rem;
+  }
+}
+
+.section-presentation {
+  background-color: $color-primary-white;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 4rem;
+  }
+  @include respond(phone) {
+    padding: 0.5rem;
+  }
+}
+.section-video {
+  // position: relative;
+  // padding: 35rem 5rem 10rem 5rem;
+  // background-color: $color-primary-white;
+  // margin-bottom: 5rem;
+  margin-top: -15vh;
+  background-color: $color-primary-white;
+  padding: 5rem 15rem 0rem 15rem;
+  margin: 5rem 2rem 0rem 2rem;
+
+  @include respond(tab-port) {
+    padding: 4rem 4rem 0rem 4rem;
+    // margin-bottom: 10rem;
+  }
+  @include respond(phone) {
+    padding: 0.5rem;
+  }
+}
+.section-facts {
+  // position: relative;
+  // padding: 35rem 5rem 10rem 5rem;
+  // background-color: $color-primary-white;
+  // margin-bottom: 5rem;
+  // margin-top: -15vh;
+  background-color: $color-primary-white;
+  // padding: 5rem 15rem;
+  padding: 5rem 10rem 5rem 10rem;
+  margin: 5rem 0rem;
+
+  @include respond(tab-port) {
+    padding: 0rem 6rem 10rem 6rem;
+    // margin-bottom: 10rem;
+    margin: 0rem 0rem 8rem 0rem;
+  }
+}
+
+.video-kenya {
+  @include respond(mobile) {
+    width: 70%;
+  }
+}
+.section-experience {
+  background-color: $color-primary-grey-light;
+  padding: 5rem 0;
+}
+.section-about__ngo {
+  background-color: $color-primary-grey-light;
+  padding: 5rem 10rem 12rem 10rem;
+
+  @include respond(tab-port) {
+    padding: 5rem 4rem 20rem 4rem;
+  }
+}
+.section-about__programmes {
+  background-color: $color-primary-grey-light;
+  padding: 5rem 10rem 12rem 10rem;
+
+  @include respond(tab-port) {
+    padding: 5rem 4rem 10rem 4rem;
+  }
+}
+
+.section-about__education {
+  background-color: $color-primary-grey-light;
+  padding: 5rem 10rem 5rem 10rem;
+
+  @include respond(tab-port) {
+    padding: 5rem 4rem 5rem 4rem;
+  }
+}
+.section-contact {
+  padding: 5rem 10rem;
+  background-color: $color-primary-grey-light;
+
+  @include respond(tab-port) {
+    padding: 5rem 4rem;
+  }
+}

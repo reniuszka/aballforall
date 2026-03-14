@@ -1,0 +1,55 @@
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+// both clears floats on the left and right, we want to see at a table, no content needed
+
+@mixin absCenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+//        MEDIA QUERY MANAGER- 1 EM = 16px
+/*  0-600px phone - phone
+600-900px tablet portrait - tab-port
+900-1200px tablet landscape  - tab-land
+1200-1800 is where our normal style applies
+1800px +  big desktop
+*/
+// REM and EMs in media query arenot affected by root settings (what we define in html: font-size:62.5%)
+// Rems and Ems are by default equal what is comes from the browser which is 16px, we are going to use EMs here, ale REMS tends to failas intended in some browsers
+// 600px/16=37.5em
+// 1em = 16px
+// ORDER: base+typography, general layout +grid> page layout >components
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media (max-width: 34.375em) {
+			@content;
+		} // 550px/16=34.375em
+	}
+	@if $breakpoint == tab-port {
+		@media (max-width: 50.25em) {
+			@content;
+		} // 900px/16px
+	}
+	@if $breakpoint == tab-land-small {
+		@media (max-width: 65.7em) {
+			@content;
+		} // 1050px/16
+	}
+	@if $breakpoint == tab-land {
+		@media (max-width: 75em) {
+			@content;
+		} // 1200px/16
+	}
+	@if $breakpoint == big-desktop {
+		@media (min-width: 112.5em) {
+			@content;
+		} // 1800px/16
+	}
+}

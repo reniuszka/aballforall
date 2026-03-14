@@ -1,0 +1,215 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    letter-spacing: 0.3rem;
+
+    // change for the button element in contact
+    // pointer - a handshows
+    // & it is for the bottom beacuse its not a link or visited
+    // &:focus - for the bottom
+
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 1rem rgba($color-primary-black, 0.3);
+    /* shadow in X direction, shadow for Y it goes down, blur, color of shadow: here only transparent shadow , 30% of opacity*/
+
+    /* when we hover the button we want some after effects */
+    /* we want it to be bigger and fade out */
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+  /* active means when we click; it goes up a bit thats why its Y because its vertical movement */
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-primary-black, 0.2);
+  }
+  /* its looks like we are closer to the page when the shadow is smaller and less blurry */
+  &--white {
+    background-color: $color-primary-white;
+    color: $color-primary-blue;
+    font-weight: 700;
+
+    &::after {
+      background-color: $color-primary-white;
+    }
+  }
+
+  &--blue {
+    background-color: $color-primary-blue-light;
+    color: $color-primary-white;
+    font-weight: 700;
+
+    &::after {
+      background-color: $color-primary-blue-light;
+    }
+  }
+
+  &--blue-dark {
+    background-color: $color-primary-blue;
+    color: $color-primary-white;
+    font-weight: 700;
+
+    &::after {
+      background-color: $color-primary-blue;
+    }
+  }
+
+  /* pseudo element, creating a btn behind the btn to it shows up when we click of hover, it needs to be position absolute relats to a btn with text, then top 2 i left 0 because we dont want to move it anywhere, just make it bigger and dissappear so apaciy 0 */
+  /* ::after creates a pseudo-element that is the last child of the selected element. */
+  /* we need to define content property always, here empty, then display - always */
+  /* we are giving the same attributes of abt after as btn, we want to be inline block and have the same height and width as our btn with text */
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+  /* zindex means that it is hidden behind the button  &.link*/
+
+  /* delay 0.75s */
+  /* thanks to animation-fill-mode backwards firstly other btn-animated is implemented, withot it I could see the button and then the animation, now, I cannot see the bottom when refresh the web 
+          */
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}
+.btn-program {
+  font-size: $default-font-size;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid $color-primary-blue;
+  padding: 0.6rem;
+  transition: all 0.2s;
+  // margin-left: 1rem;
+  background-color: $color-primary-blue-light;
+  color: $color-primary-white;
+  border-bottom: 1px solid $color-primary-blue-light;
+  border-radius: 0.4rem;
+  box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.2);
+}
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    font-weight: 700;
+    color: $color-primary-blue;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary-blue;
+    padding: 0.4rem;
+    transition: all 0.2s;
+    margin-left: 1rem;
+  }
+
+  &:hover {
+    background-color: $color-primary-blue-light;
+    color: $color-primary-white;
+    border-bottom: 1px solid $color-primary-blue-light;
+    box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.2);
+    transform: translateY(-2px);
+    // padding: 0.5rem 0.8rem;
+    border-radius: 0.4rem;
+  }
+
+  &:active {
+    box-shadow: 0 1rem 1rem rgba($color-primary-black, 0.2);
+    transform: translateY(0);
+  }
+}
+
+.feature-box--btn {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  list-style: none;
+}
+.feature-box--btns {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  list-style: none;
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    padding: 3rem;
+    margin: 3rem;
+  }
+}
+
+.feature-box--btns-li {
+  @include respond(phone) {
+    padding: 1rem;
+    margin: 2rem;
+  }
+}
+
+.donation-box--btn {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  list-style: none;
+}
+.donation-box--btns {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  list-style: none;
+
+  @include respond(phone) {
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+}
+
+.donation-box--btns-li {
+  @include respond(phone) {
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
+
+.margin-bottom {
+  margin-bottom: 0.5rem;
+}
+.video-one.margin-bottom {
+  margin-bottom: 0.5rem;
+}

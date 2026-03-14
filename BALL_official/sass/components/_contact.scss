@@ -1,0 +1,96 @@
+.contactus {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-primary-red, 0.7) 10%,
+      rgba($color-primary-blue, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/K.jpg);
+  // background-image: linear-gradient( 180deg,
+  // rgba($color-primary-blue-light, .9) 30%,
+  // rgba($color-primary-white, .9) 30%, transparent 100%),
+  // url(../img/K.jpg);
+  // at 10% we want red, at 50% we want red, znd the rest should be transparent
+  background-size: cover;
+  // 100%=cover
+  height: 55rem;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-primary-black, 0.35);
+  margin-bottom: 5rem;
+
+  @include respond(tab-land-small) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-primary-red, 0.7) 10%,
+        rgba($color-primary-blue, 0.9) 100%,
+        transparent 70%
+      ),
+      url(../img/K.jpg);
+    background-size: cover;
+  }
+
+  &__form {
+    width: 50%;
+    padding: 1rem 1rem;
+    color: $color-primary-white;
+    // background-color: white;
+    // border: black 1rem solid;
+
+    @include respond(tab-land-small) {
+      width: 100%;
+    }
+  }
+}
+.contact__form--box {
+  border-radius: 3px;
+  border: 0.1rem solid $color-primary-red;
+  background-color: rgba($color-primary-white, 0.8);
+  list-style-type: none;
+}
+
+.contact__form--text {
+  font-size: 1.3rem;
+  padding: 1rem;
+  color: $color-primary-blue;
+  font-weight: 400;
+  letter-spacing: 0.05rem;
+  & > li {
+    margin-left: 0.5rem;
+  }
+  @include respond(phone) {
+    padding: 0;
+    margin: 0;
+    font-size: 1.15rem;
+  }
+}
+
+.contact__form--textbold {
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  @include respond(phone) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.contact__icon {
+  padding-top: 1rem;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  display: inline-block;
+  background-color: white;
+  // background-image: linear-gradient(to right, $color-primary-blue-light, $color-primary-blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  @include respond(phone) {
+    opacity: 0;
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+  }
+}

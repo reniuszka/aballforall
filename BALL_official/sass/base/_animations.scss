@@ -1,0 +1,53 @@
+/* animation keyframes +myname added to .heading-primary-main, when it starts, when it finishes, at the begining we dont want to see it, at the end apacity 1 at 100% */
+/* translating X direction- horizontaly--> -100px because it will start from the left, the movement goes from left to right,  Y vertically I */
+/* translate(0) - no movement */
+@keyframes moveInLeft {
+          0% {
+                    opacity: 0;
+                    transform: translateX(-10rem);
+          }
+          /* 50% {
+                    transform: rotate(120deg);     
+          } */
+          /* rotation example ;), backface needed! */
+
+          80% {
+                    transform: translateX(1rem);     
+          }
+
+          100% {
+                    opacity: 1;
+                    transform: translate(0);
+          }
+}
+
+@keyframes moveInRight {
+          0% {
+                    opacity: 0;
+                    transform: translateX(10rem);
+          }
+
+          80% {
+                    transform: translateX(-1rem); 
+          }
+
+          100% {
+                    opacity: 1;
+                    transform: translate(0);
+          }
+}
+/* a link is a sudoclass - a special state of a link when its hovered, visited..  */
+/* inline block - we are getting extra padding and heighs, and its treated as it is TEXT, so we can use text-align */
+/* transition helps us to activate all transformations + duration needs to be added */
+
+@keyframes moveInBottom {
+          0% {
+                    opacity: 0;
+                    transform: translateY(5rem);
+          }
+          
+          100% {
+                    opacity: 1;
+                    transform: translate(0);
+          }
+}

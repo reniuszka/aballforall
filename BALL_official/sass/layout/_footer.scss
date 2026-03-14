@@ -1,0 +1,98 @@
+.footer,
+.footer-program {
+  background-color: $color-primary-blue-dark;
+  font-size: 1.3rem;
+  padding: 3rem 2rem;
+  letter-spacing: 0.15rem;
+  font-weight: 300;
+  color: $color-primary-grey-light;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &__logo-box {
+    text-align: center;
+    margin-bottom: 3em;
+  }
+  //  to centre the img - it is an ilign element, behaves just as text
+  &__logo {
+    width: 10rem;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  &__navigation {
+    border-top: 1px solid $color-primary-blue-light;
+    padding-top: 2rem;
+    display: inline-block;
+    max-width: 500px;
+
+    @include respond(tab-land-small) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  // inline-block will use just the width that is available, so will ajust to the elements below, padding top puts a line a bit higher
+  // &__logo-box {
+
+  // }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__link {
+    margin: 1rem;
+    &:link,
+    &:visited {
+      color: $color-primary-grey-light;
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
+      // background-color: $color-primary-blue-dark;
+      transition: all 0.2s;
+      // margin: 1rem;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary-red;
+      box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
+      transform: scaleX(1.1) scaleY(1.1);
+      font-weight: 600;
+      // padding-left: 1rem;
+      // padding-right: 1rem;
+    }
+  }
+
+  .margin-bottom {
+    margin-bottom: 4rem;
+  }
+  // &__img {
+  //           width: 5rem;
+  //           height: auto;
+  // }
+
+  &__copyright {
+    float: right;
+
+    border-top: 1px solid $color-primary-blue-light;
+    padding-top: 2rem;
+    max-width: 500px;
+
+    @include respond(tab-land-small) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+.footer-program {
+  background-color: #222650;
+}

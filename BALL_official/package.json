@@ -1,0 +1,14 @@
+{
+  "name": "ball_official",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "R",
+  "license": "ISC",
+  "dependencies": {
+    "compile-sass": "^1.1.3"
+  }
+}

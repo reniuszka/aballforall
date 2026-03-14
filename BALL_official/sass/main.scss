@@ -1,0 +1,335 @@
+// install node, npm install if someone sends me the files
+// json is needed - it contains the list of npm files that we use, later we send that file and the other person need to install node js and then npm install to download all files needed whhch are listed in json file
+// node -v to check the version of node
+// npm init - to download json and the file was
+// when we use SCSS terminal needs to be turned on, to connect css with sass we need to go to the package.json file and add one line in the script part
+
+// npm install node-sass --save-dev - to install sass
+// create a file main scss and copy all from css to scss
+// "test": "echo \"Error: no test specified\" && exit 1"- we dont need it -can delete it
+// name: command - sass input file-lacalization output file-localization -w to watch it all the time, then we dont need to refresh terminal every time
+// so in json we need to write: "scripts": {
+//     "compile:sass": "node-sass sass/main.scss css/style.css -w"
+// -w stands for watching, so if we run npm run compile:sass again and change sth in the file its gonna save it and refresh without running npm run compile:sass again
+// amd then in terminal : npm run compile:sass
+// then we can open style.css to see the results
+
+// npm install live-server -g - globally installing it to our computer
+// i by to aktywowac przy moim projekcie to wpisuje live-server w terminalu - I need to be in my home folder ()inside of ball_website
+// http://127.0.0.1:8080/ballindex.html then it is at the local port and IP
+// now we have two terminals running, one for live-server, the other one for detecting changes
+
+// base = _base.scss file
+
+// import decorations:
+
+// npm run compile:sass
+
+@import "abstract/functions";
+
+@import "abstract/mixins";
+
+@import "abstract/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/awards";
+@import "components/button";
+@import "components/card";
+@import "components/composition";
+@import "components/feature-box";
+@import "components/form";
+@import "components/bg-video";
+@import "components/popup";
+@import "components/contact";
+@import "components/documentary-kenya";
+@import "components/uefa";
+@import "components/gallery";
+@import "components/how-to-support";
+
+@import "layout/header";
+@import "layout/grid";
+@import "layout/footer";
+@import "layout/navigation";
+@import "pages/home";
+
+// // variables:
+// $color-primary-blue: #004980;
+// $color-primary-red: #ee3000;
+// $color-primary-gray: #777;
+// $color-primary-white: #fff;
+// $color-primary-black: #000;
+
+// base:
+// *,
+// *::after,
+// *::before {
+//           margin: 0;
+//           padding: 0;
+//           box-sizing: inherit;
+// }
+// /* universal selector * for all elements in the page, to celar extra padding and margins in diff websites */
+// /* border box borders and paadings are not added to the total width and heigh of the box that we specify for a box*/
+// /* padding added into body applies white border around all body */
+// /* 1rem is 16px, but If I want to change the font size I can do html and define new font size then 10px=1rem so it is 62.5% to make our life easier,
+// it needs to be in % because if we set it in px then readers are not able to zoom it, it would be blocked to zoom, rem not supported by internet explorer */
+// html {
+//           font-size: 62.5%;
+// }
+// body {
+//           font-family: "Lato", sans-serif;
+//           font-weight: 100;
+//           /* font-size: 16px; */
+//           line-height: 1.7;
+//           color: $color-primary-white;
+//           text-transform: uppercase;
+//           padding: 1.5rem;
+
+//           box-sizing: border-box;
+// }
+// // /* linear-gradint puts filter with colours, to right, to right bottom, then click on the colour and choose opacity(transparancy - the last two letters 0 first column, at the bottom is almost tranparent)
+// // , add img through url, img as a cover and position at the top/bottom,center */
+// .header {
+//           height: 96vh;
+//           background-image: linear-gradient(
+//                     to right bottom, #ee300093,#004980e2),
+//                     url(../img/blindfootball2.png);
+//           background-size: cover;
+//           background-position: center;
+//           position: relative;
+
+//           clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+
+//           &__logo-box {
+//                     position: absolute;
+//                     top: 1.5rem;
+//                     left: 2rem;
+//           }
+//           &__logo {
+//                     height: 8rem;
+//                     width: auto;
+//           }
+
+//           &__text-box {
+//                     position: absolute;
+//                     top: 30%;
+//                     left: 30%;
+//                     transform: translate(-15%, -15%);
+//                     text-align: center;
+//           }
+
+// }
+
+// // & __logo-box means that it is .header__logo-box - we are following BEM way of naming classes
+// /* clip (cut),  polygon (poli - many gon (corners), X direction - from left corner to right top corner, right bottom corner, Y direction - from left top corner to left bottom corner */
+// /* na polygon patrzymy w ten sposob ze pierwsze bierzemy lewy gorny rog i czy chcemy go przesunac jakos - nie - wiec 0 po poziomie i 0 pion, potem prawy gorny rog czy cos zmieniamy - nie, czyli musimy powiedziec ze 100% szerokosci i 0 zmiany w pionie,
+// potem prawy gorny rog, ma byc w tej samej lini w poziomie wiec 100% ale w pionie chcemy uciec wiec np 70% lub w px, i potem lewy dolny rog, 0 zmiany w poziomie, ale w pionie 100% dlugosci:) */
+
+// /* position relative and absolute */
+// /* thats why we use top and left coz we are telling where we want to put it refering to the .header  */
+// /* position: relative places an element relative to its current position without changing the layout around it, whereas position: absolute places an element relative to its parent’s position and changing the layout around it. */
+// // .header__logo {
+// //           height: 8rem;
+// //           width: auto;
+// // }
+// /* an example that we are able to use that animation for other things ;) */
+// /* .logo:hover {
+//           animation: moveInRight 2s ease-out;
+// } */
+// /* to center the box, we are putting absolute position relates to header - a parent element, finding the middle - centre of the screen, so 50% for top and left,
+// and THEN shift it by TRANSFORM - TRANSLATE -50% for both, now this is saying that from text box is going to cut -50% of left from its perspective, and be shifted -50% from text's heigh*/
+// // .d-box {
+// //           position: absolute;
+// //           top: 30%;
+// //           left: 30%;
+// //           transform: translate(-15%, -15%);
+// //           text-align: center;
+// // }
+// /* to centre the button */
+
+// .heading-primary {
+//           color: $color-primary-white;
+//           text-transform: uppercase;
+
+//           margin-bottom: 6rem;
+
+//           backface-visibility: hidden;
+//           /* its an animation property, because sometimes its shaking  - so its smoother or when we dont want to see the back of rotation 180 */
+
+//           &--main {
+//                     display: block;
+//                     font-size: 6rem;
+//                     font-weight: 700;
+//                     letter-spacing: 2.5rem;
+
+//                     animation-name: moveInLeft;
+//                     animation-duration: 2s;
+//                     animation-timing-function: ease-in;
+
+//                     /* animation will happen 3 times
+//                     animation-iteration-count: 3;*/
+//                     /* animation-delay: 1s; */
+//           }
+//           &--sub {
+//                     display: block;
+//                     font-size: 3rem;
+//                     font-weight: 400;
+//                     letter-spacing: 2rem;
+
+//                     animation: moveInRight 2s ease-in;
+
+//           }
+// }
+// /* diplay block to put them in two lines and spacing */
+// .heading-primary--main {
+//           display: block;
+//           font-size: 6rem;
+//           font-weight: 700;
+//           letter-spacing: 2.5rem;
+
+//           animation-name: moveInLeft;
+//           animation-duration: 2s;
+//           animation-timing-function: ease-in;
+
+//           /* animation will happen 3 times
+//           animation-iteration-count: 3;*/
+//           /* animation-delay: 1s; */
+// }
+
+// .heading-primary--sub {
+//           display: block;
+//           font-size: 3rem;
+//           font-weight: 400;
+//           letter-spacing: 2rem;
+
+//           animation: moveInRight 2s ease-in;
+
+//           /* animation: shortcut for name duration and timing fuction (in what way and how fast) */
+// }
+
+// /* animation keyframes +myname added to .heading-primary-main, when it starts, when it finishes, at the begining we dont want to see it, at the end apacity 1 at 100% */
+// /* translating X direction- horizontaly--> -100px because it will start from the left, the movement goes from left to right,  Y vertically I */
+// /* translate(0) - no movement */
+// @keyframes moveInLeft {
+//           0% {
+//                     opacity: 0;
+//                     transform: translateX(-10rem);
+//           }
+//           /* 50% {
+//                     transform: rotate(120deg);
+//           } */
+//           /* rotation example ;), backface needed! */
+
+//           80% {
+//                     transform: translateX(1rem);
+//           }
+
+//           100% {
+//                     opacity: 1;
+//                     transform: translate(0);
+//           }
+// }
+
+// @keyframes moveInRight {
+//           0% {
+//                     opacity: 0;
+//                     transform: translateX(10rem);
+//           }
+
+//           80% {
+//                     transform: translateX(-1rem);
+//           }
+
+//           100% {
+//                     opacity: 1;
+//                     transform: translate(0);
+//           }
+// }
+// /* a link is a sudoclass - a special state of a link when its hovered, visited..  */
+// /* inline block - we are getting extra padding and heighs, and its treated as it is TEXT, so we can use text-align */
+// /* transition helps us to activate all transformations + duration needs to be added */
+
+// @keyframes moveInBottom {
+//           0% {
+//                     opacity: 0;
+//                     transform: translateY(5rem);
+//           }
+
+//           100% {
+//                     opacity: 1;
+//                     transform: translate(0);
+//           }
+// }
+
+// .btn {
+//           &:link,
+//           &:visited {
+//                     font-size: 1.4rem;
+//                     text-transform: uppercase;
+//                     text-decoration: none;
+//                     padding: 1.5rem 4rem;
+//                     display: inline-block;
+//                     border-radius: 10rem;
+//                     transition: all .2s;
+//                     position: relative;
+//                     letter-spacing: .3rem;
+//           }
+
+//           &:hover {
+//                     transform: translateY(-.3rem);
+//                     box-shadow: 0 1rem 1rem rgba($color-primary-black,0.3);
+//                     /* shadow in X direction, shadow for Y it goes down, blur, color of shadow: here only transparent shadow , 30% of opacity*/
+
+//                     /* when we hover the button we want some after effects */
+//           /* we want it to be bigger and fade out */
+
+//                     &::after {
+//                               transform: scaleX(1.4) scaleY(1.6);
+//                               opacity: 0;
+//                     }
+//           }
+//           /* active means when we click; it goes up a bit thats why its Y because its vertical movement */
+//           &:active {
+//                     transform: translateY(-.1rem);
+//                     box-shadow: 0 .5rem 1rem rgba($color-primary-black,0.2);
+//           }
+//           /* its looks like we are closer to the page when the shadow is smaller and less blurry */
+//           &--white {
+//                     background-color: $color-primary-white;
+//                     color: $color-primary-blue;
+//                     font-weight: 700;
+
+//                     &::after {
+//                               background-color: $color-primary-white;
+//                     }
+//           }
+
+//           /* pseudo element, creating a btn behind the btn to it shows up when we click of hover, it needs to be position absolute relats to a btn with text, then top 2 i left 0 because we dont want to move it anywhere, just make it bigger and dissappear so apaciy 0 */
+//           /* ::after creates a pseudo-element that is the last child of the selected element. */
+//           /* we need to define content property always, here empty, then display - always */
+//           /* we are giving the same attributes of abt after as btn, we want to be inline block and have the same height and width as our btn with text */
+//           &::after {
+//                     content: "";
+//                     display: inline-block;
+//                     height: 100%;
+//                     width: 100%;
+//                     border-radius: 10rem;
+//                     position: absolute;
+//                     top: 0;
+//                     left: 0;
+//                     z-index: -1;
+//                     transition: all 0.4s;
+//           }
+//           /* zindex means that it is hidden behind the button  &.link*/
+
+//           /* delay 0.75s */
+//           /* thanks to animation-fill-mode backwards firstly other btn-animated is implemented, withot it I could see the button and then the animation, now, I cannot see the bottom when refresh the web
+//           */
+//           &--animated {
+//                     animation: moveInBottom .5s ease-out .75s;
+//                     animation-fill-mode: backwards;
+//           }
+// }

@@ -1,0 +1,63 @@
+// /* linear-gradint puts filter with colours, to right, to right bottom, then click on the colour and choose opacity(transparancy - the last two letters 0 first column, at the bottom is almost tranparent)
+// , add img through url, img as a cover and position at the top/bottom,center */
+.header {
+  height: 96vh;
+  background-image:
+    linear-gradient(to right bottom, #ee300093, #004980e2),
+    url(../img/blindfootball.jpg);
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 83vh, 0 100%);
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+  }
+  &__logo-box {
+    position: absolute;
+    top: 3rem;
+    left: 3.5rem;
+    margin: 3rem;
+  }
+  &__logo {
+    border-radius: 50%;
+    height: 8.5rem;
+    width: auto;
+    // @include respond(tab-land-small) {
+    //   height: 7rem;
+    //   // margin: 0.5rem;
+    // }
+  }
+  &__text-box {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    transform: translate(-32.5%, -25%);
+    text-align: center;
+  }
+}
+// & __logo-box means that it is .header__logo-box - we are following BEM way of naming classes
+/* clip (cut),  polygon (poli - many gon (corners), X direction - from left corner to right top corner, right bottom corner, Y direction - from left top corner to left bottom corner */
+/* na polygon patrzymy w ten sposob ze pierwsze bierzemy lewy gorny rog i czy chcemy go przesunac jakos - nie - wiec 0 po poziomie i 0 pion, potem prawy  gorny rog czy cos zmieniamy - nie, czyli musimy powiedziec ze 100% szerokosci i 0 zmiany w pionie,
+potem prawy gorny rog, ma byc w tej samej lini w poziomie wiec 100% ale w pionie chcemy uciec wiec np 70% lub w px, i potem lewy dolny rog, 0 zmiany w poziomie, ale w pionie 100% dlugosci:) */
+
+/* position relative and absolute
+/* thats why we use top and left coz we are telling where we want to put it refering to the .header */
+/* position: relative places an element relative to its current position without changing the layout around it, whereas position: absolute places an element relative to its parent’s position and changing the layout around it. */
+// .header__logo {
+// height: 8rem;
+// width: auto;
+// }
+/* an example that we are able to use that animation for other things ;) */
+/* .logo:hover {
+          animation: moveInRight 2s ease-out;     
+} */
+/* to center the box, we are putting absolute position relates to header - a parent element, finding the middle - centre of the screen, so 50% for top and left, 
+and THEN shift it by TRANSFORM - TRANSLATE -50% for both, now this is saying that from text box is going to cut -50% of left from its perspective, and be shifted -50% from text's heigh */
+// .text-box {
+// position: absolute;
+// top: 30%;
+// left: 30%;
+// transform: translate(-15%, -15%);
+// text-align: center;
+// }
+/* to centre the button */

@@ -1,0 +1,59 @@
+.form {
+          &__group:not(:last-child) {
+                    margin-bottom: 1rem;
+                    
+          }
+
+          &__input {
+                    font-size: 1.5rem;
+                    font-family: inherit;
+                    color: $color-primary-grey-dark;
+                    padding: .8rem 1rem;
+                    border-radius: 2px;
+                    background-color: rgba($color-primary-white, .9);
+                    border: none;
+                    border-bottom: 3px solid transparent;
+                    width: 78%;
+                    display: block;
+                    transition: all .3s;
+
+                    &:focus {
+                              outline: none;
+                              box-shadow: 0 1rem 2rem rgba($color-primary-black, .1);
+                              border-bottom: 2px solid $color-primary-blue;
+          
+                              &::-webkit-input-placeholder {
+                                        color: $color-primary-grey-dark;
+                              }
+                    }
+// it will use the browers notification that sth is missing and add red border until we put @ or . and some sign behind it until it is valid and gives blue border
+                    &:focus:invalid {
+                              border-bottom: 3px solid $color-primary-red;
+                    }
+
+          }
+// we add the border as transparent, because when it is on focus with color it goes a little bt down and we dont want to see it
+          // when we click on it its called focus the border aorund is called outline, we want to get rid of it, 
+          // but we want to notify when its clicked so adding box-shadow and border-bottom
+          
+// changing the color of placeholder inside wehn we click its changing the color
+          
+
+          &__label {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    margin-left: 1rem;
+                    margin-top: .5rem;
+                    display: block;
+                    transition: all .3s;
+
+          }
+// we want label to be hidden, '+" means that we are adding a subling of input, as they are on the same level, they are chldren of form_group, + looking for the first subling after input, ~ is for all siblings
+          &__input:placeholder-shown + &__label {
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: translateY(-4rem);
+
+          }
+          // the effect here is like the labelgoes down from the input but we cannotsee it at the begining as it is invisible ;0
+}
