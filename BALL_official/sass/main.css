@@ -14,8 +14,8 @@
     transform: translateX(-10rem);
   }
   /* 50% {
-            transform: rotate(120deg);     
-  } */
+                  transform: rotate(120deg);     
+        } */
   /* rotation example ;), backface needed! */
   80% {
     transform: translateX(1rem);
@@ -146,7 +146,7 @@ body {
 }
 .heading-primary--main {
   /* animation will happen 3 times 
-                  animation-iteration-count: 3;*/
+              animation-iteration-count: 3;*/
   /* animation-delay: 1s; */
 }
 .heading-primary--sub {
@@ -527,8 +527,6 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 2rem;
-  -webkit-box-shadow: 5px 19px 33px -18px rgba(132, 141, 141, 0.79);
-  -moz-box-shadow: 5px 19px 33px -18px rgba(132, 141, 141, 0.79);
   box-shadow: 5px 19px 33px -18px rgba(132, 141, 141, 0.79);
 }
 
@@ -576,7 +574,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: scale-down;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
   border-radius: 0px 0px 0px 55px;
   border-radius: 50%;
   border: 2px solid #5eb9ff;
@@ -586,7 +585,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0px 0px 0px 55px;
   border-radius: 50%;
   border: 2px solid #5eb9ff;
@@ -595,7 +595,8 @@ body {
 .news-photo-img-ai {
   display: block;
   height: 110%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: 5px solid #004980;
   border-radius: 3px;
   box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.15);
@@ -736,7 +737,7 @@ a.disabled {
   /* zindex means that it is hidden behind the button  &.link*/
   /* delay 0.75s */
   /* thanks to animation-fill-mode backwards firstly other btn-animated is implemented, withot it I could see the button and then the animation, now, I cannot see the bottom when refresh the web 
-          */
+        */
 }
 .btn--animated {
   animation: moveInBottom 0.5s ease-out 0.75s;
@@ -872,17 +873,12 @@ a.disabled {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 3px;
   overflow: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
 }
 .card__side--back {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  -o-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 .card__side--back-1 {
@@ -898,17 +894,9 @@ a.disabled {
   background-image: linear-gradient(to right bottom, #f75, #ad1f24);
 }
 .card:hover .card__side--front {
-  -webkit-transform: rotateY(-180deg);
-  -moz-transform: rotateY(-180deg);
-  -ms-transform: rotateY(-180deg);
-  -o-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
 .card:hover .card__side--back {
-  -webkit-transform: rotateY(0);
-  -moz-transform: rotateY(0);
-  -ms-transform: rotateY(0);
-  -o-transform: rotateY(0);
   transform: rotateY(0);
 }
 .card__picture {
@@ -1030,17 +1018,12 @@ a.disabled {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 3px;
   overflow: hidden;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
 }
 .card-news__side--back {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateU(180deg);
-  -ms-transform: rotateU(180deg);
-  -o-transform: rotateu(180deg);
   transform: rotateY(180deg);
 }
 .card-news__side--back-1 {
@@ -1056,23 +1039,16 @@ a.disabled {
   background-image: linear-gradient(to right bottom, #f75, #ad1f24);
 }
 .card-news:hover .card-news__side--front {
-  -webkit-transform: rotateY(-180deg);
-  -moz-transform: rotateY(-180deg);
-  -ms-transform: rotateY(-180deg);
-  -o-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
 .card-news:hover .card-news__side--back {
-  -webkit-transform: rotateY(0);
-  -moz-transform: rotateY(0);
-  -ms-transform: rotateY(0);
-  -o-transform: rotateY(0);
   transform: rotateY(0);
 }
 .card-news__picture {
   background-size: cover;
   width: 100%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   height: 30rem;
   background-position: center center;
   margin-bottom: 3rem;
@@ -1171,10 +1147,16 @@ a.disabled {
   background-image: url(../img/aballforall-documentary-gr.png);
 }
 .card-news__picture--35 {
-  background-image: url(../img/aballforall-event-with-30-countries.jpg);
+  background-image: url(../img/event2026.jpg);
 }
 .card-news__picture--36 {
   background-image: url(../img/Loukia-Youthorama&UEFA-Foundation-for-Children-Conference.jpg);
+}
+.card-news__picture--37 {
+  background-image: url(../img/interview2026.png);
+}
+.card-news__picture--38 {
+  background-image: url(../img/ERT3-interview2026.png);
 }
 .card-news__heading {
   font-size: 2.4rem;
@@ -1578,6 +1560,11 @@ a.disabled {
   display: block;
   transition: all 0.3s;
 }
+.form__input:-moz-placeholder + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
@@ -1726,9 +1713,6 @@ a.disabled {
   column-count: 2;
   column-gap: 4rem;
   column-rule: 1px solid #5eb9ff;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -webkit-hyphens: auto;
   hyphens: auto;
 }
 @media (max-width: 65.7em) {
@@ -2034,7 +2018,8 @@ a.disabled {
   grid-column: center-start/center-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
-  column-gap: 10rem;
+  -moz-column-gap: 10rem;
+       column-gap: 10rem;
   row-gap: 5rem;
   align-items: start;
 }
@@ -2050,7 +2035,8 @@ a.disabled {
   display: grid;
   grid-template-columns: min-content 1fr;
   row-gap: 1.5rem;
-  column-gap: 3rem;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
 }
 .documentary-kenya-feature__icon {
   fill: darkred;
@@ -2359,7 +2345,8 @@ a.disabled {
 .documentary-kenya-gallery-small .gallery-small__image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 
@@ -3062,6 +3049,10 @@ button:focus {
   font-weight: 700;
 }
 
+.margin-top-very-small {
+  margin-top: 0.5rem;
+}
+
 .margin-top-small {
   margin-top: 1.5rem;
 }
@@ -3265,7 +3256,8 @@ button:focus {
 }
 
 .image-gallery-ball li img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 100%;
   width: 26rem;
   height: 26rem;
@@ -3376,7 +3368,8 @@ h1 {
 
 .offer-card__img {
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   /* width: 25rem; */
   position: center;
@@ -3390,7 +3383,8 @@ h1 {
 
 .img-program__img {
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   min-width: 80%;
   max-width: 90%;
   /* width: 25rem; */
@@ -3416,7 +3410,8 @@ h1 {
 
 .img-program__img-full {
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   min-width: 50%;
   max-width: 80%;
   position: center;
@@ -3756,8 +3751,8 @@ h1 {
 }
 .header__logo {
   border-radius: 50%;
-  height: 8.5rem;
-  width: auto;
+  height: 10.2rem;
+  width: 10rem;
 }
 .header__text-box {
   position: absolute;
@@ -3857,8 +3852,8 @@ and THEN shift it by TRANSFORM - TRANSLATE -50% for both, now this is saying tha
 }
 .footer__logo,
 .footer-program__logo {
-  width: 10rem;
-  height: auto;
+  height: 12.2rem;
+  width: 12.5rem;
   border-radius: 50%;
 }
 .footer__navigation,
@@ -3962,11 +3957,11 @@ and THEN shift it by TRANSFORM - TRANSLATE -50% for both, now this is saying tha
 
 .nav__logo {
   margin: 0.5rem 0 0 1.2rem;
-  height: 8.7rem;
+  height: 10rem;
+  width: 10rem;
   transition: all 0.3s;
   cursor: pointer;
   transition: all 0.5s;
-  width: 8.7rem;
 }
 .nav__logo:hover {
   scale: 0.9;

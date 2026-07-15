@@ -1,968 +1,973 @@
 .container-uefa {
-  font-family: "Architects Daughter", cursive;
-  font-size: 1.9rem;
-  letter-spacing: 0.15rem;
-  background-color: lightgray;
-  display: grid;
-  grid-template-rows: 20vh min-content 1vh min-content 30vh;
-  grid-template-columns:
-    [full-start] minmax(8rem, 1fr) [center-start] repeat(
-      4,
-      [col-start] minmax(min-content, 40rem) [col-end]
-    )
-    [center-end]
-    minmax(8rem, 1fr) [full-end];
+    font-family: "Architects Daughter", cursive;
+    font-size: 1.9rem;
+    letter-spacing: 0.15rem;
+    background-color: lightgray;
+    display: grid;
+    grid-template-rows: 20vh min-content 1vh min-content 30vh;
+    grid-template-columns:
+        [full-start] minmax(8rem, 1fr) [center-start] repeat(
+            4,
+            [col-start] minmax(min-content, 40rem) [col-end]
+        )
+        [center-end]
+        minmax(8rem, 1fr) [full-end];
 
-  @include respond(tab-land-small) {
-    grid-template-rows: 20vh repeat(3, min-content) 30vh;
-    grid-template-columns:
-      [full-start] minmax(3rem, 1fr) [center-start] repeat(
-        4,
-        [col-start] minmax(min-content, 40rem) [col-end]
-      )
-      [center-end]
-      minmax(3rem, 1fr) [full-end];
-  }
-  @include respond(phone) {
-    grid-template-rows: 20vh repeat(3, min-content) 30vh;
-    grid-template-columns:
-      [full-start] minmax(1rem, 1fr) [center-start] repeat(
-        4,
-        [col-start] minmax(min-content, 40rem) [col-end]
-      )
-      [center-end]
-      minmax(1rem, 1fr) [full-end];
-  }
+    @include respond(tab-land-small) {
+        grid-template-rows: 20vh repeat(3, min-content) 30vh;
+        grid-template-columns:
+            [full-start] minmax(3rem, 1fr) [center-start] repeat(
+                4,
+                [col-start] minmax(min-content, 40rem) [col-end]
+            )
+            [center-end]
+            minmax(3rem, 1fr) [full-end];
+    }
+    @include respond(phone) {
+        grid-template-rows: 20vh repeat(3, min-content) 30vh;
+        grid-template-columns:
+            [full-start] minmax(1rem, 1fr) [center-start] repeat(
+                4,
+                [col-start] minmax(min-content, 40rem) [col-end]
+            )
+            [center-end]
+            minmax(1rem, 1fr) [full-end];
+    }
 }
 
 .nav-bar-uefa {
-  background-color: $color-primary-blue;
-  grid-row: 1 / 2;
-  grid-column: full-start / full-end;
-
-  display: flex;
-  flex-direction: row;
-
-  justify-content: space-between;
-  align-items: center;
-
-  &__logo {
-    height: 10rem;
-    width: 10rem;
-    z-index: 100;
-    margin: 5rem;
-  }
-
-  &__links {
-    list-style-type: none;
+    background-color: $color-primary-blue;
+    grid-row: 1 / 2;
+    grid-column: full-start / full-end;
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-  }
 
-  &__link {
-    font-size: 1.7rem;
-    margin: 2rem;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+        height: 10rem;
+        width: 10rem;
+        z-index: 100;
+        margin: 5rem;
+    }
+
+    &__links {
+        list-style-type: none;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    &__link {
+        font-size: 1.7rem;
+        margin: 2rem;
+        padding: 1rem;
+
+        &:link,
+        &:visited {
+            color: $color-primary-grey-light;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            // background-color: $color-primary-blue-dark;
+            transition: all 0.2s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary-red;
+            box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
+            transform: scaleX(1.1) scaleY(1.1);
+            font-weight: 600;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+}
+
+.header-uefa {
+    overflow: hidden;
+
+    grid-row: 2 / 3;
+    grid-column: full-start / full-end;
+
+    position: relative;
+}
+
+.header-uefa-left {
+    // position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 88rem;
+    // height: 60rem;
+    min-height: 50rem;
+    width: 60%;
+    background-color: rgb(230, 230, 238);
+
+    transition: transform 0.5s ease-in-out;
+    // @include respond(phone) {
+    @include respond(tab-land-small) {
+        width: 100%;
+    }
+    @include respond(phone) {
+        padding: 0.5rem;
+    }
+    //thanks to height we are able to add it property to slider
+    &--text {
+        min-height: 100%;
+        width: 100%;
+        color: #fff;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // gap: 1rem;
+
+        // &__4 {
+        //   background-color: rgb(221, 22, 22);
+        // }
+        // &__3 {
+        //   background-color: #f49819;
+        // }
+        // &__2 {
+        //   background-color: lightskyblue;
+        // }
+        // &__1 {
+        //   background-color: #009965;
+        // }
+    }
+}
+.header-uefa-mid {
+    background-color: rgb(230, 230, 238);
+    min-height: 100%;
+    padding: 4rem 0;
+}
+.header-uefa-right {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    height: 100%;
+    width: 40%;
+    background-color: rgb(230, 230, 238);
+
+    transition: transform 0.5s ease-in-out;
+    @include respond(tab-land-small) {
+        // width: 100%;
+        display: none;
+    }
+    &--photo {
+        width: 100%;
+        height: 100%;
+        background-position: center center;
+        background-size: contain;
+        // background-size: cover;
+        background-repeat: no-repeat;
+
+        &__80 {
+            background-image: url(../img/Aballforall-EventPoster2026.jpg);
+        }
+        &__79 {
+            background-image: url(../img/EU\ logo\ disclaimer.jpg);
+        }
+        &__78 {
+            background-image: url(../img/Youthorama&UEFA-Foundation-for-Children-Conference.jpg);
+        }
+        &__77 {
+            background-image: url(../img/OLYMPOS_greeklogo.jpg);
+        }
+        &__76 {
+            background-image: url(../img/Elias-Mastoras-speaker-WFS.jfif);
+        }
+        &__75 {
+            background-image: url(../img/EU\ logo\ disclaimer.jpg);
+        }
+        &__74 {
+            background-image: url(../img/Lions\ USA\ CANADA.jfif);
+        }
+        &__73 {
+            background-image: url(../img/aballforall-ai.jpg);
+        }
+        &__72 {
+            background-image: url(../img/A\ ball\ for\ GOAL\ in\ 215\ countries\ and\ territories.jpg);
+        }
+        &__71 {
+            background-image: url(../img/unilever.jpg);
+        }
+
+        &__70 {
+            background-image: url(../img/A\ ball\ for\ all\ Greek\ FA.jpg);
+        }
+        &__69 {
+            background-image: url(../img/Banner-Municipality-Pilea-Hortiatis.jfif);
+        }
+        &__68 {
+            background-image: url(../img/aballforall-documentary.jpg);
+        }
+        &__67 {
+            background-image: url(../img/documentary-social-football.PNG);
+        }
+        &__66 {
+            background-image: url(../img/map-aballforall.PNG);
+        }
+        &__65 {
+            background-image: url(../img/chess-festival-hungary.PNG);
+        }
+        &__64 {
+            background-image: url(../img/a-ball-for-all-scp.PNG);
+        }
+        &__63 {
+            background-image: url(../img/a-ball-for-all-scp.PNG);
+        }
+        &__62 {
+            background-image: url(../img/legacy-paris-2024.PNG);
+        }
+        &__61 {
+            background-image: url(../img/skip-ab.PNG);
+        }
+        &__60 {
+            background-image: url(../img/deloitte-and-balls.jpg);
+        }
+        &__59 {
+            background-image: url(../img/jf_costopoulos.png);
+        }
+        &__58 {
+            background-image: url(../img/anakem.jpg);
+        }
+        &__57 {
+            background-image: url(../img/enaon.jpg);
+        }
+        &__56 {
+            background-image: url(../img/pfizer.jpg);
+        }
+
+        &__54 {
+            background-image: url(../img/check-mate.png);
+        }
+        &__53 {
+            background-image: url(../img/voy!-league.png);
+        }
+        &__52 {
+            background-image: url(../img/BETSSON-FOUNDATION.png);
+        }
+        &__51 {
+            background-image: url(../img/equall-eu.png);
+        }
+
+        &__50 {
+            background-image: url(../img/A-ball-for-all-National-Schools-competition.png);
+        }
+        &__49 {
+            background-image: url(../img/A-ball-for-all-Ambassade-de-France-en-Greece.png);
+        }
+        &__48 {
+            background-image: url(../img/Digital-Photo-campaign.png);
+        }
+        &__47 {
+            background-image: url(../img/A-ball-for-all-UEFA-Super-Cup.png);
+        }
+        &__46 {
+            background-image: url(../img/Paris2024-Paralympic-Games-initiation.png);
+        }
+        &__45 {
+            background-image: url(../img/agirl.jpg);
+        }
+        &__44 {
+            background-image: url(../img/Ireland.jpg);
+        }
+        &__43 {
+            background-image: url(../img/Ireland.jpg);
+        }
+        &__42 {
+            background-image: url(../img/aballforall.jpg);
+        }
+        &__41 {
+            background-image: url(../img/gal-2.jpg);
+        }
+        &__25 {
+            background-image: url(../img/Elias-Mastoras-Tallberg.jpg);
+        }
+        &__24 {
+            background-image: url(../img/Elias-Mastoras-FIFA.jpg);
+        }
+        &__23 {
+            background-image: url(../img/inclusion.jpg);
+        }
+        &__22 {
+            background-image: url(../img/local-hero.jpg);
+        }
+        &__21 {
+            background-image: url(../img/aballforall.jpg);
+        }
+        &__20 {
+            background-image: url(../img/Municipality2.jpg);
+        }
+        &__19 {
+            background-image: url(../img/paok_leandros.jpg);
+        }
+        &__18 {
+            background-image: url(../img/Thessaloniki.jpg);
+        }
+        &__17 {
+            background-image: url(../img/guide_dog.jpg);
+        }
+        &__16 {
+            background-image: url(../img/uefa2020-budapest.jpg);
+        }
+        &__15 {
+            background-image: url(../img/aboywithawhitecane.jpg);
+        }
+        &__14 {
+            background-image: url(../img/School\ for\ the\ Blind\ Thessaloniki.jpg);
+        }
+        &__13 {
+            background-image: url(../img/sevilla_white_flag.jpg);
+        }
+        &__12 {
+            background-image: url(../img/sidapharm_kenya.jpg);
+        }
+        &__11 {
+            background-image: url(../img/stone-group.png);
+        }
+        &__10 {
+            background-image: url(../img/theatre.jpg);
+        }
+        &__9 {
+            background-image: url(../img/unison.jpg);
+        }
+        &__8 {
+            background-image: url(../img/kids\ save\ lives.png);
+        }
+        &__7 {
+            background-image: url(../img/guidedog2.jpg);
+        }
+        &__6 {
+            background-image: url(../img/stavros_2019.jpg);
+        }
+        &__5 {
+            background-image: url(../img/Save-the-Dream-Launches-the-“A-Ball-for-All”-project-Head-1155x570.jpg);
+        }
+        &__4 {
+            background-image: url(../img/acutegirl.jpg);
+        }
+        &__3 {
+            background-image: url(../img/uefa5.png);
+        }
+        &__2 {
+            background-image: url(../img/gal-11.jpg);
+        }
+        &__1 {
+            background-image: url(../img/gal-13.jpg);
+        }
+    }
+}
+
+.header-card-right {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    height: 100%;
+    width: 60%;
+
+    transition: transform 0.5s ease-in-out;
+    &--photo {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &__4 {
+            background-image: url(../img/acutegirl.jpg);
+        }
+        &__3 {
+            background-image: url(../img/1.jpg);
+        }
+        &__2 {
+            background-image: url(../img/gal-11.jpg);
+        }
+        &__1 {
+            background-image: url(../img/boy-support.jpg);
+        }
+    }
+}
+
+button {
+    background-color: #aaa;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
     padding: 1rem;
 
-    &:link,
-    &:visited {
-      color: $color-primary-grey-light;
-      text-decoration: none;
-      text-transform: uppercase;
+    transition: all 0.3s;
+}
 
-      // background-color: $color-primary-blue-dark;
-      transition: all 0.2s;
+button:hover {
+    color: #222;
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+    background-color: lightgrey;
+}
+.header-uefa-buttons {
+    position: absolute;
+    top: 85%;
+    left: 40%;
+    z-index: 10;
+
+    //its going to move left 100% of the element width
+    transform: translateX(-51.5%);
+
+    &--down {
+        transform: translateX(7.5%);
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+    &--up {
+        transform: translateY(-100%);
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+}
+///BUTTON TO APPLY
+.button-uefa-main {
+    grid-row: 3 / 4;
+    grid-column: col-start 2 / col-end 3;
+
+    margin: 5rem auto;
+    padding: 3rem;
+
+    transition: all 0.3s;
+
+    &__photo {
+        height: 8rem;
+        width: 18rem;
+        border-radius: 2rem;
+        box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
     }
 
     &:hover,
     &:active {
-      color: $color-primary-red;
-      box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
-      transform: scaleX(1.1) scaleY(1.1);
-      font-weight: 600;
-      padding-left: 1rem;
-      padding-right: 1rem;
+        transform: scaleX(0.9) scaleY(0.9);
     }
-  }
-}
-
-.header-uefa {
-  overflow: hidden;
-
-  grid-row: 2 / 3;
-  grid-column: full-start / full-end;
-
-  position: relative;
-}
-
-.header-uefa-left {
-  // position: absolute;
-  top: 0;
-  left: 0;
-  max-height: 88rem;
-  // height: 60rem;
-  min-height: 50rem;
-  width: 60%;
-  background-color: rgb(230, 230, 238);
-
-  transition: transform 0.5s ease-in-out;
-  // @include respond(phone) {
-  @include respond(tab-land-small) {
-    width: 100%;
-  }
-  @include respond(phone) {
-    padding: 0.5rem;
-  }
-  //thanks to height we are able to add it property to slider
-  &--text {
-    min-height: 100%;
-    width: 100%;
-    color: #fff;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    // gap: 1rem;
-
-    // &__4 {
-    //   background-color: rgb(221, 22, 22);
-    // }
-    // &__3 {
-    //   background-color: #f49819;
-    // }
-    // &__2 {
-    //   background-color: lightskyblue;
-    // }
-    // &__1 {
-    //   background-color: #009965;
-    // }
-  }
-}
-.header-uefa-mid {
-  background-color: rgb(230, 230, 238);
-  min-height: 100%;
-  padding: 4rem 0;
-}
-.header-uefa-right {
-  position: absolute;
-  top: 0;
-  left: 60%;
-  height: 100%;
-  width: 40%;
-  background-color: rgb(230, 230, 238);
-
-  transition: transform 0.5s ease-in-out;
-  @include respond(tab-land-small) {
-    // width: 100%;
-    display: none;
-  }
-  &--photo {
-    width: 100%;
-    height: 100%;
-    background-position: center center;
-    background-size: contain;
-    // background-size: cover;
-    background-repeat: no-repeat;
-
-    &__80 {
-      background-image: url(../img/Aballforall-EventPoster2026.jpg);
-    }
-    &__79 {
-      background-image: url(../img/EU\ logo\ disclaimer.jpg);
-    }
-    &__78 {
-      background-image: url(../img/Youthorama&UEFA-Foundation-for-Children-Conference.jpg);
-    }
-    &__77 {
-      background-image: url(../img/OLYMPOS_greeklogo.jpg);
-    }
-    &__76 {
-      background-image: url(../img/Elias-Mastoras-speaker-WFS.jfif);
-    }
-    &__75 {
-      background-image: url(../img/EU\ logo\ disclaimer.jpg);
-    }
-    &__74 {
-      background-image: url(../img/Lions\ USA\ CANADA.jfif);
-    }
-    &__73 {
-      background-image: url(../img/aballforall-ai.jpg);
-    }
-    &__72 {
-      background-image: url(../img/A\ ball\ for\ GOAL\ in\ 215\ countries\ and\ territories.jpg);
-    }
-    &__71 {
-      background-image: url(../img/unilever.jpg);
-    }
-
-    &__70 {
-      background-image: url(../img/A\ ball\ for\ all\ Greek\ FA.jpg);
-    }
-    &__69 {
-      background-image: url(../img/Banner-Municipality-Pilea-Hortiatis.jfif);
-    }
-    &__68 {
-      background-image: url(../img/aballforall-documentary.jpg);
-    }
-    &__67 {
-      background-image: url(../img/documentary-social-football.PNG);
-    }
-    &__66 {
-      background-image: url(../img/map-aballforall.PNG);
-    }
-    &__65 {
-      background-image: url(../img/chess-festival-hungary.PNG);
-    }
-    &__64 {
-      background-image: url(../img/a-ball-for-all-scp.PNG);
-    }
-    &__63 {
-      background-image: url(../img/a-ball-for-all-scp.PNG);
-    }
-    &__62 {
-      background-image: url(../img/legacy-paris-2024.PNG);
-    }
-    &__61 {
-      background-image: url(../img/skip-ab.PNG);
-    }
-    &__60 {
-      background-image: url(../img/deloitte-and-balls.jpg);
-    }
-    &__59 {
-      background-image: url(../img/jf_costopoulos.png);
-    }
-    &__58 {
-      background-image: url(../img/anakem.jpg);
-    }
-    &__57 {
-      background-image: url(../img/enaon.jpg);
-    }
-    &__56 {
-      background-image: url(../img/pfizer.jpg);
-    }
-
-    &__54 {
-      background-image: url(../img/check-mate.png);
-    }
-    &__53 {
-      background-image: url(../img/voy!-league.png);
-    }
-    &__52 {
-      background-image: url(../img/BETSSON-FOUNDATION.png);
-    }
-    &__51 {
-      background-image: url(../img/equall-eu.png);
-    }
-
-    &__50 {
-      background-image: url(../img/A-ball-for-all-National-Schools-competition.png);
-    }
-    &__49 {
-      background-image: url(../img/A-ball-for-all-Ambassade-de-France-en-Greece.png);
-    }
-    &__48 {
-      background-image: url(../img/Digital-Photo-campaign.png);
-    }
-    &__47 {
-      background-image: url(../img/A-ball-for-all-UEFA-Super-Cup.png);
-    }
-    &__46 {
-      background-image: url(../img/Paris2024-Paralympic-Games-initiation.png);
-    }
-    &__45 {
-      background-image: url(../img/agirl.jpg);
-    }
-    &__44 {
-      background-image: url(../img/Ireland.jpg);
-    }
-    &__43 {
-      background-image: url(../img/Ireland.jpg);
-    }
-    &__42 {
-      background-image: url(../img/aballforall.jpg);
-    }
-    &__41 {
-      background-image: url(../img/gal-2.jpg);
-    }
-    &__25 {
-      background-image: url(../img/Elias-Mastoras-Tallberg.jpg);
-    }
-    &__24 {
-      background-image: url(../img/Elias-Mastoras-FIFA.jpg);
-    }
-    &__23 {
-      background-image: url(../img/inclusion.jpg);
-    }
-    &__22 {
-      background-image: url(../img/local-hero.jpg);
-    }
-    &__21 {
-      background-image: url(../img/aballforall.jpg);
-    }
-    &__20 {
-      background-image: url(../img/Municipality2.jpg);
-    }
-    &__19 {
-      background-image: url(../img/paok_leandros.jpg);
-    }
-    &__18 {
-      background-image: url(../img/Thessaloniki.jpg);
-    }
-    &__17 {
-      background-image: url(../img/guide_dog.jpg);
-    }
-    &__16 {
-      background-image: url(../img/uefa2020-budapest.jpg);
-    }
-    &__15 {
-      background-image: url(../img/aboywithawhitecane.jpg);
-    }
-    &__14 {
-      background-image: url(../img/School\ for\ the\ Blind\ Thessaloniki.jpg);
-    }
-    &__13 {
-      background-image: url(../img/sevilla_white_flag.jpg);
-    }
-    &__12 {
-      background-image: url(../img/sidapharm_kenya.jpg);
-    }
-    &__11 {
-      background-image: url(../img/stone-group.png);
-    }
-    &__10 {
-      background-image: url(../img/theatre.jpg);
-    }
-    &__9 {
-      background-image: url(../img/unison.jpg);
-    }
-    &__8 {
-      background-image: url(../img/kids\ save\ lives.png);
-    }
-    &__7 {
-      background-image: url(../img/guidedog2.jpg);
-    }
-    &__6 {
-      background-image: url(../img/stavros_2019.jpg);
-    }
-    &__5 {
-      background-image: url(../img/Save-the-Dream-Launches-the-“A-Ball-for-All”-project-Head-1155x570.jpg);
-    }
-    &__4 {
-      background-image: url(../img/acutegirl.jpg);
-    }
-    &__3 {
-      background-image: url(../img/uefa5.png);
-    }
-    &__2 {
-      background-image: url(../img/gal-11.jpg);
-    }
-    &__1 {
-      background-image: url(../img/gal-13.jpg);
-    }
-  }
-}
-
-.header-card-right {
-  position: absolute;
-  top: 0;
-  left: 40%;
-  height: 100%;
-  width: 60%;
-
-  transition: transform 0.5s ease-in-out;
-  &--photo {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    &__4 {
-      background-image: url(../img/acutegirl.jpg);
-    }
-    &__3 {
-      background-image: url(../img/1.jpg);
-    }
-    &__2 {
-      background-image: url(../img/gal-11.jpg);
-    }
-    &__1 {
-      background-image: url(../img/boy-support.jpg);
-    }
-  }
-}
-
-button {
-  background-color: #aaa;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 2rem;
-  padding: 1rem;
-
-  transition: all 0.3s;
-}
-
-button:hover {
-  color: #222;
-  outline: none;
-}
-
-button:focus {
-  outline: none;
-  background-color: lightgrey;
-}
-.header-uefa-buttons {
-  position: absolute;
-  top: 85%;
-  left: 40%;
-  z-index: 10;
-
-  //its going to move left 100% of the element width
-  transform: translateX(-51.5%);
-
-  &--down {
-    transform: translateX(7.5%);
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius: 0.5rem;
-  }
-  &--up {
-    transform: translateY(-100%);
-    border-top-right-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-  }
-}
-///BUTTON TO APPLY
-.button-uefa-main {
-  grid-row: 3 / 4;
-  grid-column: col-start 2 / col-end 3;
-
-  margin: 5rem auto;
-  padding: 3rem;
-
-  transition: all 0.3s;
-
-  &__photo {
-    height: 8rem;
-    width: 18rem;
-    border-radius: 2rem;
-    box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
-  }
-
-  &:hover,
-  &:active {
-    transform: scaleX(0.9) scaleY(0.9);
-  }
 }
 //// DETAILS
 .details-uefa {
-  margin: 6rem 2rem;
-  background-color: lightskyblue;
-  border-radius: 2rem;
-  padding: 4rem 6rem;
-  box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
+    margin: 6rem 2rem;
+    background-color: lightskyblue;
+    border-radius: 2rem;
+    padding: 4rem 6rem;
+    box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
 
-  grid-row: 4 / 5;
-  grid-column: center-start / center-end;
+    grid-row: 4 / 5;
+    grid-column: center-start / center-end;
 
-  @include respond(tab-land-small) {
-    padding: 3rem 1rem;
-  }
+    @include respond(tab-land-small) {
+        padding: 3rem 1rem;
+    }
 }
 
 .details-uefa-tab {
-  background-color: transparent;
-  border: 1px solid #9fa4a8;
-  border-radius: 10px;
-  margin: 2rem 0;
-  padding: 3rem;
-  position: relative;
-  overflow: hidden;
-  transition: 0.3s ease;
+    background-color: transparent;
+    border: 1px solid #9fa4a8;
+    border-radius: 10px;
+    margin: 2rem 0;
+    padding: 3rem;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
 }
 .details-uefa-tab.active {
-  background-color: #fff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow:
+        0 3px 6px rgba(0, 0, 0, 0.1),
+        0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 .details-uefa-tab.active::before,
 .details-uefa-tab.active::after {
-  content: "\f075";
-  font-family: "Font Awesome 5 Free";
-  color: #2ecc71;
-  font-size: 7rem;
-  position: absolute;
-  opacity: 0.2;
-  top: 2rem;
-  left: 2rem;
-  z-index: 0;
+    content: "\f075";
+    font-family: "Font Awesome 5 Free";
+    color: #2ecc71;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 2rem;
+    left: 2rem;
+    z-index: 0;
 }
 
 .details-uefa-tab.active::before {
-  color: #3498db;
-  top: -1rem;
-  left: -3rem;
-  transform: rotateY(180deg);
+    color: #3498db;
+    top: -1rem;
+    left: -3rem;
+    transform: rotateY(180deg);
 }
 
 .details-uefa-title {
-  margin: 0 3.5rem 0 0;
+    margin: 0 3.5rem 0 0;
 }
 
 .details-uefa-text {
-  display: none;
-  margin: 3rem 0 0;
+    display: none;
+    margin: 3rem 0 0;
 }
 
 .details-uefa-tab.active .details-uefa-text {
-  display: block;
+    display: block;
 }
 
 .details-uefa-tab-toggle {
-  background-color: transparent;
-  border: 0;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
-  padding: 0;
-  position: absolute;
-  top: 3rem;
-  right: 3rem;
-  height: 3rem;
-  width: 3rem;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    padding: 0;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    height: 3rem;
+    width: 3rem;
 }
 
 .details-uefa-tab-toggle:focus {
-  outline: 0;
+    outline: 0;
 }
 
 .details-uefa-tab-toggle .fa-times {
-  display: none;
+    display: none;
 }
 
 .details-uefa-tab.active .details-uefa-tab-toggle .fa-times {
-  color: #fff;
-  display: block;
+    color: #fff;
+    display: block;
 }
 
 .details-uefa-tab.active .details-uefa-tab-toggle .fa-chevron-down {
-  display: none;
+    display: none;
 }
 
 .details-uefa-tab.active .details-uefa-tab-toggle {
-  background-color: #9fa4a8;
+    background-color: #9fa4a8;
 }
 
 .footer-uefa {
-  font-size: 1.65rem;
-  background-color: $color-primary-blue;
-  grid-row: 5 / 6;
-  grid-column: full-start / full-end;
+    font-size: 1.65rem;
+    background-color: $color-primary-blue;
+    grid-row: 5 / 6;
+    grid-column: full-start / full-end;
 
-  &__links {
-    list-style: none;
-    margin: 3rem 0;
+    &__links {
+        list-style: none;
+        margin: 3rem 0;
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-  }
-  &__link {
-    &:link,
-    &:visited {
-      color: $color-primary-grey-light;
-      text-decoration: none;
-      text-transform: uppercase;
-      padding: 2rem;
-
-      // background-color: $color-primary-blue-dark;
-      transition: all 0.2s;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
     }
+    &__link {
+        &:link,
+        &:visited {
+            color: $color-primary-grey-light;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 2rem;
 
-    &:hover,
-    &:active {
-      color: $color-primary-red;
-      box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
-      transform: scaleX(1.1) scaleY(1.1);
-      font-weight: 600;
-      padding-left: 1rem;
-      padding-right: 1rem;
+            // background-color: $color-primary-blue-dark;
+            transition: all 0.2s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary-red;
+            box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
+            transform: scaleX(1.1) scaleY(1.1);
+            font-weight: 600;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
     }
-  }
 }
 
 //typography
 .uefa-heading {
 }
 .uefa-heading1 {
-  // font-family: "Chango", cursive;
-  font-size: 2.5rem;
-  color: $color-primary-blue-dark;
-  font-weight: 600;
-  // margin-top: -4rem;
-  padding: 0 2rem;
-  margin-bottom: 2rem;
-  // padding: 0.5rem;
-  text-align: center;
-  text-shadow: 0.3rem 1rem 2rem rgba($color-primary-black, 0.25);
-  // white-space: normal;
-  text-wrap: balance;
-  &__kenya {
-    color: rgba(3, 33, 65, 0.842);
-    text-align: center;
-  }
-
-  @include respond(tab-land-small) {
+    // font-family: "Chango", cursive;
     font-size: 2.5rem;
-    letter-spacing: 0.05rem;
+    color: $color-primary-blue-dark;
+    font-weight: 600;
+    // margin-top: -4rem;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    // padding: 0.5rem;
+    text-align: center;
+    text-shadow: 0.3rem 1rem 2rem rgba($color-primary-black, 0.25);
+    // white-space: normal;
+    text-wrap: balance;
     &__kenya {
-      color: rgba(3, 33, 65, 0.842);
-      text-align: center;
-    }
-  }
-
-  &--special {
-    // font-size: 4.1rem;
-    &__kenya {
-      color: rgba(3, 33, 65, 0.842);
-      text-align: center;
+        color: rgba(3, 33, 65, 0.842);
+        text-align: center;
     }
 
-    @include respond(phone) {
-      font-size: 2rem;
-      // word-break: break-all;
+    @include respond(tab-land-small) {
+        font-size: 2.5rem;
+        letter-spacing: 0.05rem;
+        &__kenya {
+            color: rgba(3, 33, 65, 0.842);
+            text-align: center;
+        }
     }
-  }
+
+    &--special {
+        // font-size: 4.1rem;
+        &__kenya {
+            color: rgba(3, 33, 65, 0.842);
+            text-align: center;
+        }
+
+        @include respond(phone) {
+            font-size: 2rem;
+            // word-break: break-all;
+        }
+    }
 }
 
 .uefa-heading2 {
-  font-family: "Chango", cursive;
-  font-size: 4rem;
-  color: #fff;
-  font-weight: 400;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  text-shadow: 0.3rem 1rem 2rem rgba($color-primary-black, 0.25);
-  &__kenya {
-    color: rgba(3, 33, 65, 0.842);
+    font-family: "Chango", cursive;
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 400;
+    padding: 2rem;
+    margin-bottom: 2rem;
     text-align: center;
-  }
+    text-shadow: 0.3rem 1rem 2rem rgba($color-primary-black, 0.25);
+    &__kenya {
+        color: rgba(3, 33, 65, 0.842);
+        text-align: center;
+    }
 }
 
 .uefa-heading4 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: orangered;
-  margin-bottom: 3rem;
-  text-align: center;
-  text-shadow: 0.3rem 0.1rem 2rem rgba($color-primary-black, 0.25);
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  padding: 0 2rem;
-  &__kenya {
-    color: rgba(3, 33, 65, 0.842);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: orangered;
+    margin-bottom: 3rem;
     text-align: center;
-  }
+    text-shadow: 0.3rem 0.1rem 2rem rgba($color-primary-black, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 0 2rem;
+    &__kenya {
+        color: rgba(3, 33, 65, 0.842);
+        text-align: center;
+    }
 }
 
 .uefa-heading5 {
-  font-size: 1.4rem;
-  color: #fff;
-  font-weight: 300;
-  margin-bottom: 3rem;
-  text-align: center;
-  text-shadow: 0.3rem 0.1rem 2rem rgba($color-primary-black, 0.25);
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  padding: 2rem;
-  &__kenya {
-    color: rgba(3, 33, 65, 0.842);
-    text-align: center;
-  }
-  & > a,
-  & > a:visited {
-    text-decoration: none;
+    font-size: 1.4rem;
     color: #fff;
-  }
-  & > a:hover {
-    color: rgba(3, 33, 65, 0.842);
-  }
-  &__partnership {
-    color: $color-primary-blue;
-    margin: 0 2rem;
-    font-size: 1.35rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.15rem;
-    padding: 1rem;
-    text-wrap: balance;
-    @include respond(phone) {
-      font-size: 1.2rem;
-      margin: 0.25rem;
-      padding: 0.25rem;
-      line-height: 1.4rem;
-      letter-spacing: 0.1rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    text-align: center;
+    text-shadow: 0.3rem 0.1rem 2rem rgba($color-primary-black, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 2rem;
+    &__kenya {
+        color: rgba(3, 33, 65, 0.842);
+        text-align: center;
     }
-  }
+    & > a,
+    & > a:visited {
+        text-decoration: none;
+        color: #fff;
+    }
+    & > a:hover {
+        color: rgba(3, 33, 65, 0.842);
+    }
+    &__partnership {
+        color: $color-primary-blue;
+        margin: 0 2rem;
+        font-size: 1.35rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.15rem;
+        padding: 1rem;
+        text-wrap: balance;
+        @include respond(phone) {
+            font-size: 1.2rem;
+            margin: 0.25rem;
+            padding: 0.25rem;
+            line-height: 1.4rem;
+            letter-spacing: 0.1rem;
+        }
+    }
 }
 .uefa-heading6 {
-  font-size: 1.4rem;
-  // color: #fff;
-  font-weight: 300;
-  margin-bottom: 3rem;
-  text-align: center;
-  text-shadow: 0.3rem 0.1rem 2rem rgba($color-primary-black, 0.25);
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  padding: 2rem;
-  &__kenya {
-    color: rgba(3, 33, 65, 0.842);
+    font-size: 1.4rem;
+    // color: #fff;
+    font-weight: 300;
+    margin-bottom: 3rem;
     text-align: center;
-  }
-  & > a,
-  & > a:visited {
-    text-decoration: none;
-    color: #fff;
-  }
-  & > a:hover {
-    color: rgba(3, 33, 65, 0.842);
-  }
-  &__partnership {
-    color: $color-primary-blue;
-    margin: 0 2rem;
-    font-size: 1.35rem;
-    line-height: 1.5rem;
-    letter-spacing: 0.15rem;
-    padding: 1rem;
-    text-wrap: balance;
-    @include respond(phone) {
-      font-size: 1.25rem;
-      wrap-text: auto;
+    text-shadow: 0.3rem 0.1rem 2rem rgba($color-primary-black, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 2rem;
+    &__kenya {
+        color: rgba(3, 33, 65, 0.842);
+        text-align: center;
     }
-  }
+    & > a,
+    & > a:visited {
+        text-decoration: none;
+        color: #fff;
+    }
+    & > a:hover {
+        color: rgba(3, 33, 65, 0.842);
+    }
+    &__partnership {
+        color: $color-primary-blue;
+        margin: 0 2rem;
+        font-size: 1.35rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.15rem;
+        padding: 1rem;
+        text-wrap: balance;
+        @include respond(phone) {
+            font-size: 1.25rem;
+            wrap-text: auto;
+        }
+    }
 }
 
 .uefa-bold {
-  font-weight: 700;
+    font-weight: 700;
 }
 
+.margin-top-very-small {
+    margin-top: 0.5rem;
+}
 .margin-top-small {
-  margin-top: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .margin-top {
-  margin-top: 2rem;
+    margin-top: 2rem;
 }
 
 .make-a-donation {
-  margin-inline: 3rem;
+    margin-inline: 3rem;
 }
 
 .button-support-main {
-  grid-row: 3 / 4;
-  grid-column: col-start 2 / col-end 3;
+    grid-row: 3 / 4;
+    grid-column: col-start 2 / col-end 3;
 
-  margin: auto;
-  // padding-top: 2rem;
+    margin: auto;
+    // padding-top: 2rem;
 
-  transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .nav-bar-donation,
 .nav-bar-program,
 .nav-bar-donation-option {
-  // background-color: $color-primary-blue;
-  grid-row: 1 / 2;
-  grid-column: full-start / full-end;
-
-  display: flex;
-  flex-direction: row;
-
-  justify-content: space-between;
-  align-items: flex-start;
-
-  &__logo {
-    height: 7rem;
-    width: 7rem;
-    z-index: 100;
-    margin: 1.5rem 3rem;
-  }
-  &__elias {
-    font-size: 1.6rem;
-    letter-spacing: 0.1em;
-    // color: rgb(221, 22, 22);
-    // color: #5eb9ff;
-    font-weight: 600;
-    transition: transform 0.2s;
-    // color: rgba(3, 33, 65, 0.842);
-    &:link,
-    &:visited {
-      color: #5eb9ff;
-      // color: rgba(3, 33, 65, 0.942);
-      font-weight: 400;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      // background-color: $color-primary-blue-dark;
-      transition: all 0.2s;
-    }
-    &:hover {
-      // color: #5eb9ff;
-      color: rgb(221, 22, 22);
-      transform: scale(1.1);
-      text-decoration: underline;
-    }
-  }
-  &__vision {
-    font-size: 1.6rem;
-    letter-spacing: 0.1em;
-    color: rgb(221, 22, 22);
-    // color: #5eb9ff;
-    font-weight: 600;
-    transition: transform 0.2s;
-    // color: rgba(3, 33, 65, 0.842);
-    &:link,
-    &:visited {
-      // color: pink;
-      color: rgb(221, 22, 22);
-      font-weight: 400;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      // background-color: $color-primary-blue-dark;
-      transition: all 0.2s;
-    }
-    &:hover {
-      color: $color-primary-blue-dark;
-      // color: #5eb9ff;
-      // color: rgb(221, 22, 22);
-      transform: scale(1.1);
-      text-decoration: underline;
-    }
-  }
-
-  &__links {
-    list-style-type: none;
+    // background-color: $color-primary-blue;
+    grid-row: 1 / 2;
+    grid-column: full-start / full-end;
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 2rem;
-    background-color: rgba(222, 227, 233, 0.89);
-    padding: 2rem 1rem;
-  }
 
-  &__link {
-    font-size: 1.7rem;
-    margin: 2rem;
-    letter-spacing: 0.1em;
-    // padding: 1rem;
+    justify-content: space-between;
+    align-items: flex-start;
 
-    &:link,
-    &:visited {
-      color: rgba(3, 33, 65, 0.842);
-      font-weight: 400;
-      text-decoration: none;
-      text-transform: uppercase;
+    &__logo {
+        height: 7rem;
+        width: 7rem;
+        z-index: 100;
+        margin: 1.5rem 3rem;
+    }
+    &__elias {
+        font-size: 1.6rem;
+        letter-spacing: 0.1em;
+        // color: rgb(221, 22, 22);
+        // color: #5eb9ff;
+        font-weight: 600;
+        transition: transform 0.2s;
+        // color: rgba(3, 33, 65, 0.842);
+        &:link,
+        &:visited {
+            color: #5eb9ff;
+            // color: rgba(3, 33, 65, 0.942);
+            font-weight: 400;
+            text-decoration: none;
+            text-transform: uppercase;
 
-      // background-color: $color-primary-blue-dark;
-      transition: all 0.2s;
+            // background-color: $color-primary-blue-dark;
+            transition: all 0.2s;
+        }
+        &:hover {
+            // color: #5eb9ff;
+            color: rgb(221, 22, 22);
+            transform: scale(1.1);
+            text-decoration: underline;
+        }
+    }
+    &__vision {
+        font-size: 1.6rem;
+        letter-spacing: 0.1em;
+        color: rgb(221, 22, 22);
+        // color: #5eb9ff;
+        font-weight: 600;
+        transition: transform 0.2s;
+        // color: rgba(3, 33, 65, 0.842);
+        &:link,
+        &:visited {
+            // color: pink;
+            color: rgb(221, 22, 22);
+            font-weight: 400;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            // background-color: $color-primary-blue-dark;
+            transition: all 0.2s;
+        }
+        &:hover {
+            color: $color-primary-blue-dark;
+            // color: #5eb9ff;
+            // color: rgb(221, 22, 22);
+            transform: scale(1.1);
+            text-decoration: underline;
+        }
     }
 
-    &:hover,
-    &:active {
-      color: $color-primary-red;
-      // box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
-      // transform: scaleX(1.01) scaleY(1.01);
-      font-weight: 500;
-      // padding-left: 1rem;
-      // padding-right: 1rem;
-      border-bottom: 2px solid $color-primary-red;
+    &__links {
+        list-style-type: none;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 2rem;
+        background-color: rgba(222, 227, 233, 0.89);
+        padding: 2rem 1rem;
     }
-    &.active {
-      color: $color-primary-red;
+
+    &__link {
+        font-size: 1.7rem;
+        margin: 2rem;
+        letter-spacing: 0.1em;
+        // padding: 1rem;
+
+        &:link,
+        &:visited {
+            color: rgba(3, 33, 65, 0.842);
+            font-weight: 400;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            // background-color: $color-primary-blue-dark;
+            transition: all 0.2s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary-red;
+            // box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
+            // transform: scaleX(1.01) scaleY(1.01);
+            font-weight: 500;
+            // padding-left: 1rem;
+            // padding-right: 1rem;
+            border-bottom: 2px solid $color-primary-red;
+        }
+        &.active {
+            color: $color-primary-red;
+        }
     }
-  }
 }
 
 .nav-bar-donation-option {
-  &__links {
-    background-color: rgba(3, 33, 65, 0.842);
-    // background-color: rgba(222, 227, 233, 0.89);
-  }
-
-  &__link {
-    &:link,
-    &:visited {
-      color: rgba(222, 227, 233, 0.89);
+    &__links {
+        background-color: rgba(3, 33, 65, 0.842);
+        // background-color: rgba(222, 227, 233, 0.89);
     }
-  }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: rgba(222, 227, 233, 0.89);
+        }
+    }
 }
 
 .nav-bar-program {
-  &__links {
-    background-color: #222650;
-    // background-color: rgba(222, 227, 233, 0.89);
-  }
-
-  &__link {
-    font-size: 1.7rem;
-    margin: 2rem;
-    letter-spacing: 0.1em;
-    // padding: 1rem;
-
-    &:link,
-    &:visited {
-      color: rgba(222, 227, 233, 0.89);
-      // color: rgba(3, 33, 65, 0.842);
+    &__links {
+        background-color: #222650;
+        // background-color: rgba(222, 227, 233, 0.89);
     }
 
-    &:hover,
-    &:active {
-      color: white;
-      border-bottom: 1px solid white;
-      // color: #5eb9ff;
-      // border-bottom: 3px solid #5eb9ff;
+    &__link {
+        font-size: 1.7rem;
+        margin: 2rem;
+        letter-spacing: 0.1em;
+        // padding: 1rem;
+
+        &:link,
+        &:visited {
+            color: rgba(222, 227, 233, 0.89);
+            // color: rgba(3, 33, 65, 0.842);
+        }
+
+        &:hover,
+        &:active {
+            color: white;
+            border-bottom: 1px solid white;
+            // color: #5eb9ff;
+            // border-bottom: 3px solid #5eb9ff;
+        }
+        &.active {
+            color: #5eb9ff;
+        }
     }
-    &.active {
-      color: #5eb9ff;
-    }
-  }
 }
 
 .padding-bottom {
-  padding-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .logo-lions {
-  max-height: 12rem;
+    max-height: 12rem;
 }
 
 .logo-box {
-  display: flex;
-  margin: 2rem;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .copyright-year {
-  display: inline;
+    display: inline;
 }

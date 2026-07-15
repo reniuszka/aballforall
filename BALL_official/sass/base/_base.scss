@@ -1,9 +1,9 @@
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
 /* universal selector * for all elements in the page, to celar extra padding and margins in diff websites */
 /* border box borders and paadings are not added to the total width and heigh of the box that we specify for a box*/
@@ -11,43 +11,43 @@
 /* 1rem is 16px, but If I want to change the font size I can do html and define new font size then 10px=1rem so it is 62.5% to make our life easier, 
 it needs to be in % because if we set it in px then readers are not able to zoom it, it would be blocked to zoom, rem not supported by internet explorer */
 html {
-  // font-size: 65%;
-  font-size: 62.5%;
-  // 1rem = 10px
-  // it defines what 1 rem is = 10px; 100%=16px-1rem, so if we change it its gonna be scalled automatically
-  // order is important here: always the larger ones before the smaller ones,
+    // font-size: 65%;
+    font-size: 62.5%;
+    // 1rem = 10px
+    // it defines what 1 rem is = 10px; 100%=16px-1rem, so if we change it its gonna be scalled automatically
+    // order is important here: always the larger ones before the smaller ones,
 
-  @include respond(tab-land) {
-    // width <1200px
-    font-size: 60.25%; //1rem=8px, 8/16= 50%
-    // font-size: 56.25%; //1rem=8px, 8/16= 50%
-  }
+    @include respond(tab-land) {
+        // width <1200px
+        font-size: 60.25%; //1rem=8px, 8/16= 50%
+        // font-size: 56.25%; //1rem=8px, 8/16= 50%
+    }
 
-  // for ex 700 firstly 1200 will be applied and then 900px
-  @include respond(tab-port) {
-    // width <900px
-    font-size: 55%; //1rem=6px, 6/16=
-    // font-size: 50%; //1rem=6px, 6/16=
-  }
+    // for ex 700 firstly 1200 will be applied and then 900px
+    @include respond(tab-port) {
+        // width <900px
+        font-size: 55%; //1rem=6px, 6/16=
+        // font-size: 50%; //1rem=6px, 6/16=
+    }
 
-  @include respond(phone) {
-    // width <600px
-    font-size: 50%; //1rem=6px, 6/16=
-    // font-size: 45%; //1rem=6px, 6/16=
-  }
+    @include respond(phone) {
+        // width <600px
+        font-size: 50%; //1rem=6px, 6/16=
+        // font-size: 45%; //1rem=6px, 6/16=
+    }
 
-  @include respond(big-desktop) {
-    // width >1800px
-    font-size: 75%; //1rem=12px, 12/16=
-  }
+    @include respond(big-desktop) {
+        // width >1800px
+        font-size: 75%; //1rem=12px, 12/16=
+    }
 }
 
 body {
-  box-sizing: border-box;
-  padding: 1.5rem;
+    box-sizing: border-box;
+    padding: 1.5rem;
 
-  @include respond(tab-port) {
-    // width <900px
-    padding: 0;
-  }
+    @include respond(tab-port) {
+        // width <900px
+        padding: 0;
+    }
 }

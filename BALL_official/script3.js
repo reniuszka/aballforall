@@ -44,10 +44,10 @@ let activeSlideIndex = 0;
 //   }px)`;
 // };
 
-const toggles = document.querySelectorAll('.details-uefa-tab-toggle');
+const toggles = document.querySelectorAll(".details-uefa-tab-toggle");
 
 toggles.forEach((toggle) => {
-  toggle.addEventListener('click', () => {
-    toggle.parentNode.classList.toggle('active');
-  });
+    toggle.addEventListener("click", () => {
+        toggle.parentNode.classList.toggle("active");
+    });
 });

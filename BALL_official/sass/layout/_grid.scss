@@ -1,72 +1,72 @@
 .row {
-	max-width: $grid-width;
-	// standard width 1140px, but here we use rems, 10px is 1 rem as we set it, so if the desktop is bigger we are setting the max width, if it is smaller its shrinking
-	// margin 0 auto - its the easiest way to center the  block elements inside the other block element, it will give the same margin on the left and right side, so it will be centered
+    max-width: $grid-width;
+    // standard width 1140px, but here we use rems, 10px is 1 rem as we set it, so if the desktop is bigger we are setting the max width, if it is smaller its shrinking
+    // margin 0 auto - its the easiest way to center the  block elements inside the other block element, it will give the same margin on the left and right side, so it will be centered
 
-	margin: 0 auto;
+    margin: 0 auto;
 
-	// pseduo element not to add the margin to the last row- selects everything expect the last element
-	&:not(:last-child) {
-		margin-bottom: $gutter-vertical;
+    // pseduo element not to add the margin to the last row- selects everything expect the last element
+    &:not(:last-child) {
+        margin-bottom: $gutter-vertical;
 
-		@include respond(tab-land-small) {
-			margin-bottom: $gutter-vertical-small;
-		}
-	}
+        @include respond(tab-land-small) {
+            margin-bottom: $gutter-vertical-small;
+        }
+    }
 
-	@include respond(tab-land-small) {
-		max-width: 50rem;
-		padding: 0 1rem;
-	}
+    @include respond(tab-land-small) {
+        max-width: 50rem;
+        padding: 0 1rem;
+    }
 
-	@include clearfix;
-	// row is 100%, which is 2 columns and gutter, we use te function called calc
+    @include clearfix;
+    // row is 100%, which is 2 columns and gutter, we use te function called calc
 
-	// attribute selector which refers to all elements starting with the class .col-
-	// ^ means begining - which starts; * means select any classes which contain ..; $ any class that ends with class..; we can select anchor elements, src, alt..
-	// so all clases width .col- will have that property:
-	[class^="col-"] {
-		float: left;
-		// we create a mixins clearfix - after floating we need to use clearfix, because if not, the row has 0px height and there is no margin below because of it, as it floats, so we need to stop that floating for next elements
+    // attribute selector which refers to all elements starting with the class .col-
+    // ^ means begining - which starts; * means select any classes which contain ..; $ any class that ends with class..; we can select anchor elements, src, alt..
+    // so all clases width .col- will have that property:
+    [class^="col-"] {
+        float: left;
+        // we create a mixins clearfix - after floating we need to use clearfix, because if not, the row has 0px height and there is no margin below because of it, as it floats, so we need to stop that floating for next elements
 
-		// we do not want the ight margin on the last element in the row
-		&:not(:last-child) {
-			margin-right: $gutter-horizontal;
+        // we do not want the ight margin on the last element in the row
+        &:not(:last-child) {
+            margin-right: $gutter-horizontal;
 
-			@include respond(tab-land-small) {
-				margin-right: 0;
-				margin-bottom: $gutter-vertical-small;
-			}
-		}
+            @include respond(tab-land-small) {
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
 
-		@include respond(tab-land-small) {
-			width: 100% !important;
-		}
-	}
+        @include respond(tab-land-small) {
+            width: 100% !important;
+        }
+    }
 
-	.col-1-of-2 {
-		width: calc((100% - #{$gutter-horizontal}) / 2);
-		// od calosc odejmujemy przerwy miedzy columnami i dzielimy na 2 by miec 1 kolumne, jesli w totalu chcemy 2:)
-	}
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+        // od calosc odejmujemy przerwy miedzy columnami i dzielimy na 2 by miec 1 kolumne, jesli w totalu chcemy 2:)
+    }
 
-	.col-1-of-3 {
-		width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
-	}
+    .col-1-of-3 {
+        width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    }
 
-	.col-1-of-4 {
-		width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
-	}
+    .col-1-of-4 {
+        width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+    }
 
-	.col-2-of-3 {
-		width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
-		// od calosc odejmujemy przerwy miedzy 2columnami i dzielimy na 3 by miec 1 kolumne, by ta 2 of 3 miala szerokosc 2 musimy dodac do niej gutter, ktory jest pomiedzy 2 a 3 kolumna w rzedzie :)
-	}
+    .col-2-of-3 {
+        width: calc(2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal});
+        // od calosc odejmujemy przerwy miedzy 2columnami i dzielimy na 3 by miec 1 kolumne, by ta 2 of 3 miala szerokosc 2 musimy dodac do niej gutter, ktory jest pomiedzy 2 a 3 kolumna w rzedzie :)
+    }
 
-	.col-2-of-4 {
-		width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
-	}
+    .col-2-of-4 {
+        width: calc(2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal});
+    }
 
-	.col-3-of-4 {
-		width: calc(3 *((100% - 3 * #{$gutter-horizontal}) / 4) + (2 * #{$gutter-horizontal}));
-	}
+    .col-3-of-4 {
+        width: calc(3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + (2 * #{$gutter-horizontal}));
+    }
 }

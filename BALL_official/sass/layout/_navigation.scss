@@ -1,583 +1,582 @@
 .nav {
-  position: relative;
-  background-color: $color-primary-blue-dark;
-  font-size: 1.25rem;
-  padding: 1.2rem 2rem 1rem 0.75rem;
-  letter-spacing: 0.15rem;
-  font-weight: 300;
-  color: $color-primary-grey-light;
-  text-decoration: none;
-  text-transform: uppercase;
-  // margin-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  // align-items: center;
-  // height: 9rem;
-  // width: 100%;
-  // padding: 0 6rem;
-  // z-index: 100;
-  // background-color: $color-primary-grey-light;
-  @include respond(phone) {
-    // padding: 0.25rem 0.25rem;
-    padding-left: 0;
-    padding-right: 0;
-    letter-spacing: 0.05rem;
-  }
+    position: relative;
+    background-color: $color-primary-blue-dark;
+    font-size: 1.25rem;
+    padding: 1.2rem 2rem 1rem 0.75rem;
+    letter-spacing: 0.15rem;
+    font-weight: 300;
+    color: $color-primary-grey-light;
+    text-decoration: none;
+    text-transform: uppercase;
+    // margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    // align-items: center;
+    // height: 9rem;
+    // width: 100%;
+    // padding: 0 6rem;
+    // z-index: 100;
+    // background-color: $color-primary-grey-light;
+    @include respond(phone) {
+        // padding: 0.25rem 0.25rem;
+        padding-left: 0;
+        padding-right: 0;
+        letter-spacing: 0.05rem;
+    }
 }
 
 /* nav and stickly class at the same time */
 .nav.sticky {
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .nav__logo {
-  margin: 0.5rem 0 0 1.2rem;
-  height: 8.7rem;
-  transition: all 0.3s;
-  cursor: pointer;
-  transition: all 0.5s;
-  width: 8.7rem;
+    margin: 0.5rem 0 0 1.2rem;
+    height: 10rem;
+    width: 10rem;
+    // height: 8.7rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    transition: all 0.5s;
+    // width: 8.7rem;
 
-  &:hover {
-    scale: 0.9;
-  }
+    &:hover {
+        scale: 0.9;
+    }
 }
 
 .nav__links--left {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  list-style: none;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    list-style: none;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 1099.99px) {
-  .nav__links--left {
-    justify-content: center;
-  }
+    .nav__links--left {
+        justify-content: center;
+    }
 }
 
 .nav__links--right {
-  margin-top: 0.5rem;
-  gap: 0.35rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  list-style: none;
-  flex-wrap: wrap;
+    margin-top: 0.5rem;
+    gap: 0.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    flex-wrap: wrap;
 }
 @media (max-width: 1099.99px) {
-  .nav__links--right {
-    justify-content: center;
-  }
+    .nav__links--right {
+        justify-content: center;
+    }
 }
 
 .nav__links--bottom {
-  //   background-color: $color-primary-blue-light;
-  // margin-top: 2rem;
-  padding: 0.1rem;
-  display: flex;
-  // flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
+    //   background-color: $color-primary-blue-light;
+    // margin-top: 2rem;
+    padding: 0.1rem;
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
 
-  justify-content: center;
-  list-style: none;
-  gap: 2rem;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
 
-  @include respond(tab-port) {
-    gap: 1rem;
-    align-items: flex-start;
-  }
+    @include respond(tab-port) {
+        gap: 1rem;
+        align-items: flex-start;
+    }
 }
 .nav__item {
-  margin-inline: 0.15rem;
-  flex-wrap: nowrap;
-  font-family: 400;
-  &:first-child {
-    font-weight: 600;
-  }
-  &:hover {
-    font-weight: 500;
-  }
-  &--kenya {
-    @include respond(tab-port) {
-      display: none;
+    margin-inline: 0.15rem;
+    flex-wrap: nowrap;
+    font-family: 400;
+    &:first-child {
+        font-weight: 600;
     }
-  }
+    &:hover {
+        font-weight: 500;
+    }
+    &--kenya {
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
 }
 
 .nav__img {
-  height: 2.68rem;
-  border-radius: 50%;
+    height: 2.68rem;
+    border-radius: 50%;
 }
 
 .nav__link {
-  display: block;
-  &--parents {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-  }
-  // transition: all 0.3s;
-  &:link,
-  &:visited {
-    color: $color-primary-grey-light;
-    text-decoration: none;
-    text-transform: uppercase;
-    // display: inline-block;
-    // background-color: $color-primary-blue-dark;
-    transition: all 0.1s;
-  }
-
-  &:hover,
-  &:active {
-    color: $color-primary-blue-dark;
-    // box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
-    transform: scaleX(1.01);
-    // font-weight: 400;
-    // padding-left: 1rem;
-    // padding-right: 1rem;
-  }
-  // &:link,
-  // &:visited {
-  // 	font-size: 1.15rem;
-  // 	letter-spacing: 0.15rem;
-  // 	font-weight: 700;
-  // 	color: $color-primary-blue-dark;
-
-  // 	text-decoration: none;
-  // 	text-transform: uppercase;
-  // 	display: block;
-  // 	transition: all 0.3s;
-  // }
-
-  // &:hover,
-  // &:active {
-  // 	transform: translateY(-0.2rem);
-  // 	font-size: 1.6rem;
-  // 	letter-spacing: 0.15rem;
-  // 	color: $color-primary-red;
-  // 	text-decoration: none;
-  // 	font-weight: 600;
-  // 	transition: all 0.3s;
-  // }
-}
-
-.navigation {
-  &__checkbox {
-    display: none;
-  }
-
-  &__button {
-    background-color: $color-primary-white;
-    height: 7rem;
-    width: 7rem;
-    position: fixed;
-    top: 6rem;
-    right: 6rem;
-    border-radius: 50%;
-    z-index: 2000;
-    box-shadow: 0 1rem 3rem $color-primary-black;
-
-    text-align: center;
-    cursor: pointer;
-  }
-  // we want to cover the background circle with the button
-  // firstly we need to make a circle - toggler to create the background, weput id on header thanks to position fixed
-  &__background {
-    position: fixed;
-    top: 6.5rem;
-    right: 6.5rem;
-
-    height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
-    background-image: radial-gradient(
-      $color-primary-blue-dark,
-      $color-primary-blue-light
-    );
-    z-index: 1000;
-
-    transition: transform 0.5s cubic-bezier(0.17, 0.67, 0.97, 0.64);
-
-    // transform: scale(80);
-    // cubic is pretty cool, bunch of different ways how to present the effect
-
-    // radial-gradent - starts in the middle and goes around - must be back image
-  }
-  // nav its gonna cover all page
-  // z index needs to be higher than background
-  &__nav {
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1500;
-
-    opacity: 0;
-    width: 0;
-    visibility: hidden;
-
-    transition: all 0.4s cubic-bezier(0.17, 0.67, 0.97, 0.64);
-  }
-
-  // to make the nav disappear we use opacity and widht 0, opacity was not enough because the links were still on the header
-  // list its adjusted based on nav
-  &__list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    text-align: center;
-
-    width: 100%;
-    // without widht it didnt work properly
-  }
-
-  &__item {
-    margin: 0.5rem;
-  }
-
-  &__link {
+    display: block;
+    &--parents {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+    // transition: all 0.3s;
     &:link,
     &:visited {
-      display: inline-block;
-      font-size: 3rem;
-      font-weight: 300;
-      letter-spacing: 0.15rem;
-      padding: 0.8rem 2rem;
-      color: $color-primary-white;
-      text-decoration: none;
-      text-transform: uppercase;
-      background-image: linear-gradient(
-        120deg,
-        transparent 0%,
-        transparent 50%,
-        $color-primary-white 50%
-      );
-      background-size: 300%;
-      transition: all 0.4s;
-
-      span {
-        margin-right: 1.5rem;
-        display: inline-block;
-      }
-      //    background size is showing the back side, it is shifting the cover    so at 220% the first layer is hidden - shifted to the right, only 2nd layer is visible              //
-      // background-position: puts thefist layer on while hovering from right to left;
-      // if i want to use transition I need to have inline block
+        color: $color-primary-grey-light;
+        text-decoration: none;
+        text-transform: uppercase;
+        // display: inline-block;
+        // background-color: $color-primary-blue-dark;
+        transition: all 0.1s;
     }
 
     &:hover,
     &:active {
-      background-position: 100%;
-      color: $color-primary-blue-dark;
-      transform: translateY(1rem);
+        color: $color-primary-blue-dark;
+        // box-shadow: 0 1rem 2rem rgba($color-primary-black, 0.3);
+        transform: scaleX(1.01);
+        // font-weight: 400;
+        // padding-left: 1rem;
+        // padding-right: 1rem;
     }
-  }
-  // functionality
-  &__checkbox:checked ~ &__background {
-    transform: scale(80);
-  }
+    // &:link,
+    // &:visited {
+    // 	font-size: 1.15rem;
+    // 	letter-spacing: 0.15rem;
+    // 	font-weight: 700;
+    // 	color: $color-primary-blue-dark;
 
-  &__checkbox:checked ~ &__nav {
-    opacity: 1;
-    width: 100%;
-    visibility: visible;
-  }
-  // when it wasnt added visibility, then still it got stuck on the left side , the link and the cursor was active and buttons on the left side didnt work
-  //    icon, we need to creat pseudo elements before and after, only a line in the middle is the icon, if we want psuedo elements visible we need to add content"" and display!
-  // icon is created as a space with the width, heigh and color inside, its not a line like a border
-  &__icon {
-    position: relative;
-    margin-top: 3.5rem;
+    // 	text-decoration: none;
+    // 	text-transform: uppercase;
+    // 	display: block;
+    // 	transition: all 0.3s;
+    // }
 
-    &,
-    &::before,
-    &::after {
-      width: 3rem;
-      height: 2px;
-      background-color: $color-primary-blue-dark;
-      display: inline-block;
-    }
+    // &:hover,
+    // &:active {
+    // 	transform: translateY(-0.2rem);
+    // 	font-size: 1.6rem;
+    // 	letter-spacing: 0.15rem;
+    // 	color: $color-primary-red;
+    // 	text-decoration: none;
+    // 	font-weight: 600;
+    // 	transition: all 0.3s;
+    // }
+}
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      transition: all 0.2s;
+.navigation {
+    &__checkbox {
+        display: none;
     }
 
-    &::before {
-      top: -0.8rem;
+    &__button {
+        background-color: $color-primary-white;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem $color-primary-black;
+
+        text-align: center;
+        cursor: pointer;
+    }
+    // we want to cover the background circle with the button
+    // firstly we need to make a circle - toggler to create the background, weput id on header thanks to position fixed
+    &__background {
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        background-image: radial-gradient($color-primary-blue-dark, $color-primary-blue-light);
+        z-index: 1000;
+
+        transition: transform 0.5s cubic-bezier(0.17, 0.67, 0.97, 0.64);
+
+        // transform: scale(80);
+        // cubic is pretty cool, bunch of different ways how to present the effect
+
+        // radial-gradent - starts in the middle and goes around - must be back image
+    }
+    // nav its gonna cover all page
+    // z index needs to be higher than background
+    &__nav {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1500;
+
+        opacity: 0;
+        width: 0;
+        visibility: hidden;
+
+        transition: all 0.4s cubic-bezier(0.17, 0.67, 0.97, 0.64);
     }
 
-    &::after {
-      top: 0.8rem;
+    // to make the nav disappear we use opacity and widht 0, opacity was not enough because the links were still on the header
+    // list its adjusted based on nav
+    &__list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+
+        width: 100%;
+        // without widht it didnt work properly
     }
-    // transform origin rotates the icon before around the left side, here in ur example rotats in the center
-    // to centre it we add text-align: in button ; then added margin top 3.5rem in icon                   //
-    // icon is a child element of the button
-  }
-  &__button:hover &__icon::before {
-    top: -1rem;
-  }
 
-  &__button:hover &__icon::after {
-    top: 1rem;
-  }
-  // json sibling so +, when the checkbox is selected we want to select the button (checkbox's brother) and then the icon {botton's child) inside
-  // to make that X we need to add icon as transparent, and then after and before will rotate to cross to make the X, we had to move them to the middle so top=0 the position of icon :)
-  &__checkbox:checked + &__button &__icon {
-    background-color: transparent;
-  }
+    &__item {
+        margin: 0.5rem;
+    }
 
-  &__checkbox:checked + &__button &__icon::after {
-    top: 0;
-    transform: rotate(135deg);
-  }
-  // we want see the full movement sa instead of 45deg we will put 135deg
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 0.15rem;
+            padding: 0.8rem 2rem;
+            color: $color-primary-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-image: linear-gradient(
+                120deg,
+                transparent 0%,
+                transparent 50%,
+                $color-primary-white 50%
+            );
+            background-size: 300%;
+            transition: all 0.4s;
 
-  &__checkbox:checked + &__button &__icon::before {
-    top: 0;
-    transform: rotate(-135deg);
-  }
+            span {
+                margin-right: 1.5rem;
+                display: inline-block;
+            }
+            //    background size is showing the back side, it is shifting the cover    so at 220% the first layer is hidden - shifted to the right, only 2nd layer is visible              //
+            // background-position: puts thefist layer on while hovering from right to left;
+            // if i want to use transition I need to have inline block
+        }
+
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-primary-blue-dark;
+            transform: translateY(1rem);
+        }
+    }
+    // functionality
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        width: 100%;
+        visibility: visible;
+    }
+    // when it wasnt added visibility, then still it got stuck on the left side , the link and the cursor was active and buttons on the left side didnt work
+    //    icon, we need to creat pseudo elements before and after, only a line in the middle is the icon, if we want psuedo elements visible we need to add content"" and display!
+    // icon is created as a space with the width, heigh and color inside, its not a line like a border
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-primary-blue-dark;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+        }
+
+        &::before {
+            top: -0.8rem;
+        }
+
+        &::after {
+            top: 0.8rem;
+        }
+        // transform origin rotates the icon before around the left side, here in ur example rotats in the center
+        // to centre it we add text-align: in button ; then added margin top 3.5rem in icon                   //
+        // icon is a child element of the button
+    }
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+    // json sibling so +, when the checkbox is selected we want to select the button (checkbox's brother) and then the icon {botton's child) inside
+    // to make that X we need to add icon as transparent, and then after and before will rotate to cross to make the X, we had to move them to the middle so top=0 the position of icon :)
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__button &__icon::after {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    // we want see the full movement sa instead of 45deg we will put 135deg
+
+    &__checkbox:checked + &__button &__icon::before {
+        top: 0;
+        transform: rotate(-135deg);
+    }
 }
 
 .navbar {
-  ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    list-style: none;
-    li {
-      position: relative;
-      font-weight: 500;
-      white-space: nowrap;
-      font-size: 0.5rem;
-      &:hover ul {
+    ul {
         display: flex;
-        flex-direction: column;
-        gap: 0;
-        z-index: 10;
-      }
-      a,
-      span {
-        font-size: 1.7rem;
-        color: white;
-        padding: 1rem;
-        display: block;
-        text-decoration: none;
-        // &:visited {
-        //   background: goldenrod;
-        // }
-        &:hover {
-          background: $color-primary-blue-light;
-          border-radius: 0.15rem;
-        }
-      }
-      ul {
-        position: absolute;
-        left: 0;
-        min-width: 15rem;
-        background: #ad1f24;
-        // border: 3px solid $color-primary-blue-dark;
-        display: none;
-        border-radius: 0.15rem;
-        // display: flex;
-        // flex-direction: column;
-        // z-index: 10;
-
+        flex-direction: row;
+        gap: 1rem;
+        list-style: none;
         li {
-          width: 100%;
+            position: relative;
+            font-weight: 500;
+            white-space: nowrap;
+            font-size: 0.5rem;
+            &:hover ul {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                z-index: 10;
+            }
+            a,
+            span {
+                font-size: 1.7rem;
+                color: white;
+                padding: 1rem;
+                display: block;
+                text-decoration: none;
+                // &:visited {
+                //   background: goldenrod;
+                // }
+                &:hover {
+                    background: $color-primary-blue-light;
+                    border-radius: 0.15rem;
+                }
+            }
+            ul {
+                position: absolute;
+                left: 0;
+                min-width: 15rem;
+                background: #ad1f24;
+                // border: 3px solid $color-primary-blue-dark;
+                display: none;
+                border-radius: 0.15rem;
+                // display: flex;
+                // flex-direction: column;
+                // z-index: 10;
+
+                li {
+                    width: 100%;
+                }
+            }
         }
-      }
     }
-  }
 }
 
 .icons div,
 .icons a {
-  font-size: 2.5rem;
-  color: green;
-  cursor: pointer;
-  margin-left: 2rem;
+    font-size: 2.5rem;
+    color: green;
+    cursor: pointer;
+    margin-left: 2rem;
 
-  &:hover {
-    color: pink;
-  }
+    &:hover {
+        color: pink;
+    }
 }
 
 #menu-btn {
-  // display: none;
-  display: inline-block;
+    // display: none;
+    display: inline-block;
 }
 // .nav.active {
 //   right: 300px;
 // }
 .toggle {
-  margin-right: 2rem;
-  position: relative;
-  top: 0;
-  right: 0;
-  width: 3.5rem;
-  height: 3.5rem;
-  background: url(../images/menu.png);
-  background-repeat: no-repeat;
-  background-size: 2.25rem;
-  background-position: center;
-  border: 1px solid $color-primary-blue-light;
-  border-radius: 15%;
-  padding: 0.5rem;
-  cursor: pointer;
-  &:hover {
-    transition: scale 0.5s;
-    scale: 1.2;
-  }
+    margin-right: 2rem;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: url(../images/menu.png);
+    background-repeat: no-repeat;
+    background-size: 2.25rem;
+    background-position: center;
+    border: 1px solid $color-primary-blue-light;
+    border-radius: 15%;
+    padding: 0.5rem;
+    cursor: pointer;
+    &:hover {
+        transition: scale 0.5s;
+        scale: 1.2;
+    }
 }
 
 .toggle.active {
-  background: url(../images/close.png);
-  background-repeat: no-repeat;
-  background-size: 1.5rem;
-  background-position: center;
-  z-index: 10000;
-  &:hover {
-    // transition: all 0.5s;
-    background-color: $color-primary-blue-dark;
-    border-radius: 20%;
-  }
-  // @include respond(tab-land-small) {
-  //   left: -150rem;
-  // }
+    background: url(../images/close.png);
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: center;
+    z-index: 10000;
+    &:hover {
+        // transition: all 0.5s;
+        background-color: $color-primary-blue-dark;
+        border-radius: 20%;
+    }
+    // @include respond(tab-land-small) {
+    //   left: -150rem;
+    // }
 }
 .toggle.active {
-  display: block;
+    display: block;
 }
 
 .menu {
-  font-size: 2rem;
-  font-weight: 600;
-  color: $color-primary-blue-dark;
-  position: absolute;
-  display: flex;
-  gap: 3rem;
-  flex-direction: column;
-  // margin: 2rem;
-  padding: 2rem;
-  // top: -1000%;
-  // right: -100%;
-  min-width: 40rem;
-  max-width: 70rem;
-  min-height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-primary-blue-dark;
+    position: absolute;
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    // margin: 2rem;
+    padding: 2rem;
+    // top: -1000%;
+    // right: -100%;
+    min-width: 40rem;
+    max-width: 70rem;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  background-color: $color-primary-blue-light;
-  // overflow-y: scroll;
-  z-index: -1;
-  & h4 {
-    padding: 0.5rem;
-  }
+    background-color: $color-primary-blue-light;
+    // overflow-y: scroll;
+    z-index: -1;
+    & h4 {
+        padding: 0.5rem;
+    }
 }
 .child {
-  margin-left: 4rem;
+    margin-left: 4rem;
 }
 @media (min-width: 1100px) {
-  .toggle {
-    display: none;
-  }
-  .menu {
-    display: none;
-  }
+    .toggle {
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
 }
 @media (max-width: 1099.99px) {
-  .navbar.nav__links--bottom {
-    display: none;
-  }
-  .menu {
-    display: none;
-  }
+    .navbar.nav__links--bottom {
+        display: none;
+    }
+    .menu {
+        display: none;
+    }
 }
 .menu.active {
-  display: block;
-  top: 0;
-  right: 0;
-  z-index: 100;
+    display: block;
+    top: 0;
+    right: 0;
+    z-index: 100;
 }
 
 .menu ul {
-  position: relative;
-  list-style: none;
+    position: relative;
+    list-style: none;
 }
 
 .menu ul li a {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 2rem;
-  padding: 1rem;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 1rem;
 
-  color: aliceblue;
-  transition: all 1s;
+    color: aliceblue;
+    transition: all 1s;
 }
 
 .menu ul li a:hover {
-  /* color: var(--overlay-color); */
-  transform: translateX(0.3em);
-  color: #ad1f24;
-  letter-spacing: 0.1px;
+    /* color: var(--overlay-color); */
+    transform: translateX(0.3em);
+    color: #ad1f24;
+    letter-spacing: 0.1px;
 }
 
 .menu__category > li {
-  margin-left: 3rem;
+    margin-left: 3rem;
 }
 
 .nav__a::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #ad1f24;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-  border-radius: 0.15rem;
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ad1f24;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    border-radius: 0.15rem;
 }
 
 .nav__a:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
 
 li a.nav__parent {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .nav__links--bottom li:hover > .nav__parent,
 .nav__links--bottom li:hover .nav__parent {
-  border: solid 1px rgb(94, 185, 255);
-  background: #003f6f;
-  color: #ad1f24;
+    border: solid 1px rgb(94, 185, 255);
+    background: #003f6f;
+    color: #ad1f24;
 }
 
 .menu-icons-flags {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 35%;
 }
 
 @media (max-width: 1099.99px) {
-  .menu-icons-flags {
-    max-width: 60%;
-  }
+    .menu-icons-flags {
+        max-width: 60%;
+    }
 }

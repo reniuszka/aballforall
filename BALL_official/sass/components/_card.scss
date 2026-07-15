@@ -1,532 +1,538 @@
 .card {
-  // FUNCTTIONALITY
-  perspective: 150rem;
-  -moz-perspective: 150rem;
-  -webkit-perspective: 150rem;
-  position: relative;
-  height: 42rem;
-  // we need to specify the height here too, if not it would be 0
-  &__side {
+    // FUNCTTIONALITY
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    -webkit-perspective: 150rem;
+    position: relative;
     height: 42rem;
-    width: 100%;
-    transition: all 0.8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba($color-primary-black, 0.25);
-    &--back {
-      -webkit-transform: rotateY(180deg);
-      -moz-transform: rotateY(180deg);
-      -ms-transform: rotateY(180deg);
-      -o-transform: rotateY(180deg);
-      transform: rotateY(180deg);
-      &-1 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-green-light,
-          $color-primary-green
-        );
-      }
+    // we need to specify the height here too, if not it would be 0
+    &__side {
+        height: 42rem;
+        width: 100%;
+        transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-primary-black, 0.25);
+        &--back {
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateY(180deg);
+            -ms-transform: rotateY(180deg);
+            -o-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+            &-1 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-primary-green-light,
+                    $color-primary-green
+                );
+            }
 
-      &-2 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-red-light,
-          $color-primary-red
-        );
-      }
+            &-2 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-primary-red-light,
+                    $color-primary-red
+                );
+            }
 
-      &-3 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-blue-light,
-          $color-primary-blue
-        );
-      }
-      &-4 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-red-light,
-          #ad1f24
-        );
-      }
-    }
-  }
-
-  &:hover &__side--front {
-    -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
-    -o-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-  }
-
-  &:hover &__side--back {
-    -webkit-transform: rotateY(0);
-    -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-
-  // FRONT SIDE STYLING
-  &__picture {
-    background-size: cover;
-    height: 24rem;
-
-    // Jonas is using additional attributes to add the filtr on the photo:
-    // background-blend-mode: screen;
-    // clip-path: polygon ;
-
-    &--1 {
-      background-image: url(../img/aballforall.jpg);
+            &-3 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-primary-blue-light,
+                    $color-primary-blue
+                );
+            }
+            &-4 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-primary-red-light,
+                    #ad1f24
+                );
+            }
+        }
     }
 
-    &--2 {
-      background-image: url(../img/blind_girl.jpg);
+    &:hover &__side--front {
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
     }
 
-    &--3 {
-      background-image: url(../img/blind_ball_family.jpg);
-    }
-    &--4 {
-      background-image: url(../img/EU\ Sports\ Awards\ 2022.jpg);
-    }
-
-    &--5 {
-      background-image: url(../img/Tallberg\ SNF\ Eliasson\ Global\ Leadership\ prize\ 2022.jpg);
+    &:hover &__side--back {
+        -webkit-transform: rotateY(0);
+        -moz-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+        -o-transform: rotateY(0);
+        transform: rotateY(0);
     }
 
-    &--6 {
-      background-image: url(../img/EU\ Be\ Active\ Sports\ Local\ Hero\ 2022.jpg);
-    }
-  }
+    // FRONT SIDE STYLING
+    &__picture {
+        background-size: cover;
+        height: 24rem;
 
-  &__heading {
-    font-size: 2.4rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: $color-primary-white;
-    letter-spacing: 0.3rem;
-    margin: 3rem auto;
+        // Jonas is using additional attributes to add the filtr on the photo:
+        // background-blend-mode: screen;
+        // clip-path: polygon ;
 
-    // position: absolute;
-    // top: 20rem;
-    // right: 2rem;
-    text-align: center;
+        &--1 {
+            background-image: url(../img/aballforall.jpg);
+        }
 
-    // line-height: 3rem;
-  }
+        &--2 {
+            background-image: url(../img/blind_girl.jpg);
+        }
 
-  &__heading-span {
-    text-decoration: none;
-    color: white;
-    padding: 0.5rem 1rem;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    border-radius: 0.5rem;
-    // to add padiing when one sentence is divided into two lines, it doesnt work on chrome do had to add -webkit-box-decoration-break: clone; which is cloning the padding 1.3rem to the beginning of a new line
+        &--3 {
+            background-image: url(../img/blind_ball_family.jpg);
+        }
+        &--4 {
+            background-image: url(../img/EU\ Sports\ Awards\ 2022.jpg);
+        }
 
-    &--1 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-green-light, 0.85),
-        rgba($color-primary-green, 0.85)
-      );
+        &--5 {
+            background-image: url(../img/Tallberg\ SNF\ Eliasson\ Global\ Leadership\ prize\ 2022.jpg);
+        }
+
+        &--6 {
+            background-image: url(../img/EU\ Be\ Active\ Sports\ Local\ Hero\ 2022.jpg);
+        }
     }
 
-    &--2 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-red-light, 0.85),
-        rgba($color-primary-red, 0.85)
-      );
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $color-primary-white;
+        letter-spacing: 0.3rem;
+        margin: 3rem auto;
+
+        // position: absolute;
+        // top: 20rem;
+        // right: 2rem;
+        text-align: center;
+
+        // line-height: 3rem;
     }
 
-    &--3 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-blue-light, 0.8),
-        rgba($color-primary-blue, 0.8)
-      );
+    &__heading-span {
+        text-decoration: none;
+        color: white;
+        padding: 0.5rem 1rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        border-radius: 0.5rem;
+        // to add padiing when one sentence is divided into two lines, it doesnt work on chrome do had to add -webkit-box-decoration-break: clone; which is cloning the padding 1.3rem to the beginning of a new line
+
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-green-light, 0.85),
+                rgba($color-primary-green, 0.85)
+            );
+        }
+
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-red-light, 0.85),
+                rgba($color-primary-red, 0.85)
+            );
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-blue-light, 0.8),
+                rgba($color-primary-blue, 0.8)
+            );
+        }
+        &--4 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-red, 0.75),
+                #ad1f24
+            );
+        }
+        &--5 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-red-light, 0.75),
+                #ad7e1f
+            );
+        }
     }
-    &--4 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-red, 0.75),
-        #ad1f24
-      );
+
+    &_cta {
+        position: absolute;
+        top: 0;
+        left: 0;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // here he wanted to use the same technic as in the header to put in th middle the text but I had too much text so put it with padding
+        padding: 0 2rem;
+        text-align: center;
     }
-    &--5 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-red-light, 0.75),
-        #ad7e1f
-      );
+
+    &__details-box {
+        color: $color-primary-white;
+        margin-bottom: 6rem;
+        margin-top: 6rem;
     }
-  }
 
-  &_cta {
-    position: absolute;
-    top: 0;
-    left: 0;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // here he wanted to use the same technic as in the header to put in th middle the text but I had too much text so put it with padding
-    padding: 0 2rem;
-    text-align: center;
-  }
+    &__details-donation {
+        font-size: 1.9rem;
+        font-weight: 300;
 
-  &__details-box {
-    color: $color-primary-white;
-    margin-bottom: 6rem;
-    margin-top: 6rem;
-  }
-
-  &__details-donation {
-    font-size: 1.9rem;
-    font-weight: 300;
-
-    @include respond(tab-land-small) {
-      font-size: 2rem;
+        @include respond(tab-land-small) {
+            font-size: 2rem;
+        }
     }
-  }
 
-  &__details-donation--portuguese {
-    font-size: 1.8rem;
-    font-weight: 300;
+    &__details-donation--portuguese {
+        font-size: 1.8rem;
+        font-weight: 300;
 
-    @include respond(tab-land-small) {
-      font-size: 2rem;
+        @include respond(tab-land-small) {
+            font-size: 2rem;
+        }
     }
-  }
 
-  &__details-donation--greek {
-    font-size: 1.6rem;
-    font-weight: 300;
-    letter-spacing: 0.1rem;
+    &__details-donation--greek {
+        font-size: 1.6rem;
+        font-weight: 300;
+        letter-spacing: 0.1rem;
 
-    @include respond(tab-land-small) {
-      font-size: 2rem;
+        @include respond(tab-land-small) {
+            font-size: 2rem;
+        }
     }
-  }
 
-  &__details-donation--french {
-    font-size: 1.7rem;
-    font-weight: 300;
-    letter-spacing: 0.1rem;
+    &__details-donation--french {
+        font-size: 1.7rem;
+        font-weight: 300;
+        letter-spacing: 0.1rem;
 
-    @include respond(tab-land-small) {
-      font-size: 2.2rem;
+        @include respond(tab-land-small) {
+            font-size: 2.2rem;
+        }
     }
-  }
 }
 
 .card-news {
-  // FUNCTTIONALITY
-  perspective: 150rem;
-  -moz-perspective: 150rem;
-  -webkit-perspective: 150rem;
-  position: relative;
-  height: 42rem;
-  // we need to specify the height here too, if not it would be 0
-  &__side {
+    // FUNCTTIONALITY
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    -webkit-perspective: 150rem;
+    position: relative;
     height: 42rem;
-    width: 100%;
-    transition: all 0.8s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 1.5rem 4rem rgba($color-primary-black, 0.25);
-    &--back {
-      -webkit-transform: rotateY(180deg);
-      -moz-transform: rotateU(180deg);
-      -ms-transform: rotateU(180deg);
-      -o-transform: rotateu(180deg);
-      transform: rotateY(180deg);
-      &-1 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-green-light,
-          $color-primary-green
-        );
-      }
+    // we need to specify the height here too, if not it would be 0
+    &__side {
+        height: 42rem;
+        width: 100%;
+        transition: all 0.8s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-primary-black, 0.25);
+        &--back {
+            -webkit-transform: rotateY(180deg);
+            -moz-transform: rotateU(180deg);
+            -ms-transform: rotateU(180deg);
+            -o-transform: rotateu(180deg);
+            transform: rotateY(180deg);
+            &-1 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-primary-green-light,
+                    $color-primary-green
+                );
+            }
 
-      &-2 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-red-light,
-          $color-primary-red
-        );
-      }
+            &-2 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-primary-red-light,
+                    $color-primary-red
+                );
+            }
 
-      &-3 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-blue-light,
-          $color-primary-blue
-        );
-      }
-      &-4 {
-        background-image: linear-gradient(
-          to right bottom,
-          $color-primary-red-light,
-          #ad1f24
-        );
-      }
-    }
-  }
-
-  &:hover &__side--front {
-    -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
-    -o-transform: rotateY(-180deg);
-    transform: rotateY(-180deg);
-  }
-
-  &:hover &__side--back {
-    -webkit-transform: rotateY(0);
-    -moz-transform: rotateY(0);
-    -ms-transform: rotateY(0);
-    -o-transform: rotateY(0);
-    transform: rotateY(0);
-  }
-
-  // FRONT SIDE STYLING
-  &__picture {
-    background-size: cover;
-    width: 100%;
-    object-fit: contain;
-    height: 30rem;
-    background-position: center center;
-    margin-bottom: 3rem;
-
-    // Jonas is using additional attributes to add the filtr on the photo:
-    // background-blend-mode: screen;
-    // clip-path: polygon ;
-
-    &--4 {
-      background-image: url(../img/EU\ Sports\ Awards\ 2022.jpg);
+            &-3 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-primary-blue-light,
+                    $color-primary-blue
+                );
+            }
+            &-4 {
+                background-image: linear-gradient(
+                    to right bottom,
+                    $color-primary-red-light,
+                    #ad1f24
+                );
+            }
+        }
     }
 
-    &--5 {
-      background-image: url(../img/Tallberg\ SNF\ Eliasson\ Global\ Leadership\ prize\ 2022.jpg);
+    &:hover &__side--front {
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
     }
 
-    &--6 {
-      background-image: url(../img/EU\ Be\ Active\ Sports\ Local\ Hero\ 2022.jpg);
-    }
-    &--7 {
-      background-image: url(../img/fifa-qatar-funfestival.jpg);
-    }
-
-    &--8 {
-      background-image: url(../img/leandros-goal\ for\ inclusion.png);
+    &:hover &__side--back {
+        -webkit-transform: rotateY(0);
+        -moz-transform: rotateY(0);
+        -ms-transform: rotateY(0);
+        -o-transform: rotateY(0);
+        transform: rotateY(0);
     }
 
-    &--9 {
-      background-image: url(../img/healthy\ body\ sound\ mind.png);
-    }
-    &--10 {
-      background-image: url(../img/angelos\ and\ leandros.jpg);
+    // FRONT SIDE STYLING
+    &__picture {
+        background-size: cover;
+        width: 100%;
+        object-fit: contain;
+        height: 30rem;
+        background-position: center center;
+        margin-bottom: 3rem;
+
+        // Jonas is using additional attributes to add the filtr on the photo:
+        // background-blend-mode: screen;
+        // clip-path: polygon ;
+
+        &--4 {
+            background-image: url(../img/EU\ Sports\ Awards\ 2022.jpg);
+        }
+
+        &--5 {
+            background-image: url(../img/Tallberg\ SNF\ Eliasson\ Global\ Leadership\ prize\ 2022.jpg);
+        }
+
+        &--6 {
+            background-image: url(../img/EU\ Be\ Active\ Sports\ Local\ Hero\ 2022.jpg);
+        }
+        &--7 {
+            background-image: url(../img/fifa-qatar-funfestival.jpg);
+        }
+
+        &--8 {
+            background-image: url(../img/leandros-goal\ for\ inclusion.png);
+        }
+
+        &--9 {
+            background-image: url(../img/healthy\ body\ sound\ mind.png);
+        }
+        &--10 {
+            background-image: url(../img/angelos\ and\ leandros.jpg);
+        }
+
+        &--11 {
+            background-image: url(../img/blind\ kids\ can\ save\ lives.png);
+        }
+
+        &--12 {
+            background-image: url(../img/kids\ save\ lives.png);
+        }
+        &--13 {
+            background-image: url(../img/theatre.jpg);
+        }
+
+        &--14 {
+            background-image: url(../img/youth\ exchange\ lss\ 2022.png);
+        }
+
+        &--15 {
+            background-image: url(../img/kenya\ 2022.png);
+        }
+        &--16 {
+            background-image: url(../img/elias-monaco.png);
+        }
+
+        &--17 {
+            background-image: url(../img/elias-tedex.png);
+        }
+        &--18 {
+            background-image: url(../img/kenya2023.png);
+        }
+        &--19 {
+            background-image: url(../img/competition2023.png);
+        }
+        &--20 {
+            background-image: url(../img/2024_Paris_aballforall.jpg);
+        }
+
+        &--21 {
+            background-image: url(../img/2024_LA_Galaxy_USA.jpg);
+        }
+        &--22 {
+            background-image: url(../img/Greek_FA_Cup.jpg);
+        }
+        &--23 {
+            background-image: url(../img/UEFA_EURO_2024.jpg);
+        }
+        &--24 {
+            background-image: url(../img/aballforall_1000pupils_2024.jpg);
+        }
+        &--25 {
+            background-image: url(../img/documentary-social-football.PNG);
+        }
+        &--26 {
+            background-image: url(../img/aballforall-documentary.jpg);
+        }
+        &--27 {
+            background-image: url(../img/THE-2NIGHT-SHOW-ΗΛΙΑΣ-ΜΑΣΤΟΡΑΣ.jpg);
+        }
+        &--28 {
+            background-image: url(../img/Aballforall-Silent-wave-trademark.jpg);
+        }
+        &--29 {
+            background-image: url(../img/A\ ball\ for\ all\ RWANDA.jpg);
+        }
+        &--30 {
+            background-image: url(../img/Founder\ Elias\ Mastoras\ presentation.jpg);
+        }
+        &--31 {
+            background-image: url(../img/A\ ball\ for\ all\ 78.800.000\ views.jfif);
+        }
+        &--32 {
+            background-image: url(../img/aballfor\ all\ logo_official.jpg);
+        }
+        &--33 {
+            background-image: url(../img/A-ball-for-all-documentary.jpg);
+        }
+        &--34 {
+            background-image: url(../img/aballforall-documentary-gr.png);
+        }
+        &--35 {
+            background-image: url(../img/event2026.jpg);
+        }
+        &--36 {
+            background-image: url(../img/Loukia-Youthorama&UEFA-Foundation-for-Children-Conference.jpg);
+        }
+        &--37 {
+            background-image: url(../img/interview2026.png);
+        }
+        &--38 {
+            background-image: url(../img/ERT3-interview2026.png);
+        }
     }
 
-    &--11 {
-      background-image: url(../img/blind\ kids\ can\ save\ lives.png);
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $color-primary-white;
+        letter-spacing: 0.3rem;
+        margin: 3rem auto;
+
+        // position: absolute;
+        // top: 20rem;
+        // right: 2rem;
+        text-align: center;
+
+        // line-height: 3rem;
     }
 
-    &--12 {
-      background-image: url(../img/kids\ save\ lives.png);
-    }
-    &--13 {
-      background-image: url(../img/theatre.jpg);
+    &__heading-span {
+        padding: 0.5rem 1rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        border-radius: 0.5rem;
+        // to add padiing when one sentence is divided into two lines, it doesnt work on chrome do had to add -webkit-box-decoration-break: clone; which is cloning the padding 1.3rem to the beginning of a new line
+
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-green-light, 0.85),
+                rgba($color-primary-green, 0.85)
+            );
+        }
+
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-red-light, 0.85),
+                rgba($color-primary-red, 0.85)
+            );
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-blue-light, 0.8),
+                rgba($color-primary-blue, 0.8)
+            );
+        }
+        &--4 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-red, 0.75),
+                #ad1f24
+            );
+        }
+        &--5 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-red, 0.75),
+                #dcdf27
+            );
+        }
+        &--6 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-grey, 0.5),
+                rgba($color-primary-blue-light, 0.9)
+            );
+        }
+        & > a {
+            color: aliceblue;
+            text-decoration: none;
+        }
     }
 
-    &--14 {
-      background-image: url(../img/youth\ exchange\ lss\ 2022.png);
+    &_cta {
+        position: absolute;
+        top: 0;
+        left: 0;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // here he wanted to use the same technic as in the header to put in th middle the text but I had too much text so put it with padding
+        padding: 0 2rem;
+        text-align: center;
     }
 
-    &--15 {
-      background-image: url(../img/kenya\ 2022.png);
-    }
-    &--16 {
-      background-image: url(../img/elias-monaco.png);
-    }
-
-    &--17 {
-      background-image: url(../img/elias-tedex.png);
-    }
-    &--18 {
-      background-image: url(../img/kenya2023.png);
-    }
-    &--19 {
-      background-image: url(../img/competition2023.png);
-    }
-    &--20 {
-      background-image: url(../img/2024_Paris_aballforall.jpg);
+    &__details-box {
+        color: $color-primary-white;
+        margin-bottom: 6rem;
+        margin-top: 6rem;
     }
 
-    &--21 {
-      background-image: url(../img/2024_LA_Galaxy_USA.jpg);
-    }
-    &--22 {
-      background-image: url(../img/Greek_FA_Cup.jpg);
-    }
-    &--23 {
-      background-image: url(../img/UEFA_EURO_2024.jpg);
-    }
-    &--24 {
-      background-image: url(../img/aballforall_1000pupils_2024.jpg);
-    }
-    &--25 {
-      background-image: url(../img/documentary-social-football.PNG);
-    }
-    &--26 {
-      background-image: url(../img/aballforall-documentary.jpg);
-    }
-    &--27 {
-      background-image: url(../img/THE-2NIGHT-SHOW-ΗΛΙΑΣ-ΜΑΣΤΟΡΑΣ.jpg);
-    }
-    &--28 {
-      background-image: url(../img/Aballforall-Silent-wave-trademark.jpg);
-    }
-    &--29 {
-      background-image: url(../img/A\ ball\ for\ all\ RWANDA.jpg);
-    }
-    &--30 {
-      background-image: url(../img/Founder\ Elias\ Mastoras\ presentation.jpg);
-    }
-    &--31 {
-      background-image: url(../img/A\ ball\ for\ all\ 78.800.000\ views.jfif);
-    }
-    &--32 {
-      background-image: url(../img/aballfor\ all\ logo_official.jpg);
-    }
-    &--33 {
-      background-image: url(../img/A-ball-for-all-documentary.jpg);
-    }
-    &--34 {
-      background-image: url(../img/aballforall-documentary-gr.png);
-    }
-    &--35 {
-      background-image: url(../img/aballforall-event-with-30-countries.jpg);
-    }
-    &--36 {
-      background-image: url(../img/Loukia-Youthorama&UEFA-Foundation-for-Children-Conference.jpg);
-    }
-  }
+    &__details-donation {
+        font-size: 1.64rem;
+        font-weight: 300;
 
-  &__heading {
-    font-size: 2.4rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: $color-primary-white;
-    letter-spacing: 0.3rem;
-    margin: 3rem auto;
-
-    // position: absolute;
-    // top: 20rem;
-    // right: 2rem;
-    text-align: center;
-
-    // line-height: 3rem;
-  }
-
-  &__heading-span {
-    padding: 0.5rem 1rem;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-    border-radius: 0.5rem;
-    // to add padiing when one sentence is divided into two lines, it doesnt work on chrome do had to add -webkit-box-decoration-break: clone; which is cloning the padding 1.3rem to the beginning of a new line
-
-    &--1 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-green-light, 0.85),
-        rgba($color-primary-green, 0.85)
-      );
+        @include respond(tab-land-small) {
+            font-size: 2rem;
+        }
     }
-
-    &--2 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-red-light, 0.85),
-        rgba($color-primary-red, 0.85)
-      );
-    }
-
-    &--3 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-blue-light, 0.8),
-        rgba($color-primary-blue, 0.8)
-      );
-    }
-    &--4 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-red, 0.75),
-        #ad1f24
-      );
-    }
-    &--5 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-red, 0.75),
-        #dcdf27
-      );
-    }
-    &--6 {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-grey, 0.5),
-        rgba($color-primary-blue-light, 0.9)
-      );
-    }
-    & > a {
-      color: aliceblue;
-      text-decoration: none;
-    }
-  }
-
-  &_cta {
-    position: absolute;
-    top: 0;
-    left: 0;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // here he wanted to use the same technic as in the header to put in th middle the text but I had too much text so put it with padding
-    padding: 0 2rem;
-    text-align: center;
-  }
-
-  &__details-box {
-    color: $color-primary-white;
-    margin-bottom: 6rem;
-    margin-top: 6rem;
-  }
-
-  &__details-donation {
-    font-size: 1.64rem;
-    font-weight: 300;
-
-    @include respond(tab-land-small) {
-      font-size: 2rem;
-    }
-  }
 }
 // perspective we need to define at the parent to rotate it nicely
 // -moz-perspective: 150rem; for mozilla to work it there, it needs to be a high number

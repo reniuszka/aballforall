@@ -1,253 +1,253 @@
 .composition {
-  position: relative;
+    position: relative;
 
-  &__photo {
-    width: 52%;
-    box-shadow: 0 1.5rem 4rem rgba($color-primary-black, 0.4);
-    border-radius: 8px;
-    position: absolute;
-    z-index: 10;
-    transition: all 0.2s;
-    outline-offset: 1rem;
-
-    @include respond(tab-land-small) {
-      float: left;
-      position: relative;
-      width: 33.33333333%;
-      box-shadow: 0 1.5rem 3rem rgba($color-primary-black, 0.2);
-      margin: 5rem 0;
-    }
-    // outline properties are for borders to give the space b
-    &--p1 {
-      left: 5rem;
-      top: 5rem;
-      @include respond(tab-land-small) {
-        top: 5rem;
-        left: 5rem;
-        transform: scale(1.9);
-      }
-
-      @include respond(phone) {
-        top: 5rem;
-        left: 8rem;
-        transform: scale(1.7);
-      }
-    }
-
-    &-p1 {
-      left: 5rem;
-      top: 5rem;
-      scale: 2.9;
-      @include respond(tab-land-small) {
-        top: 5rem;
-        left: 5rem;
-        transform: scale(1.9);
-      }
-
-      @include respond(phone) {
-        top: 5rem;
-        left: 8rem;
-        transform: scale(1.7);
-      }
-    }
-
-    &--p2 {
-      width: 42%;
-      right: 2rem;
-      top: 10rem;
-
-      @include respond(tab-land-small) {
-        top: 15rem;
-        left: -2rem;
-        transform: scale(1.1);
-        z-index: 1000;
-      }
-    }
-
-    &--p3 {
-      left: 21%;
-      top: 21rem;
-
-      @include respond(tab-land-small) {
-        top: -30rem;
-        left: 30rem;
-        transform: scale(1.5);
-        z-index: 100;
-      }
-
-      @include respond(phone) {
-        // top: -1rem;
-        // left: 4rem;
-        top: -32rem;
-        left: 22rem;
-        transform: scale(1.3);
-        z-index: 100;
-      }
-    }
-
-    &--p4 {
-      right: 10rem;
-      top: 33rem;
-
-      @include respond(tab-land-small) {
-        top: 1rem;
-        left: 0;
-        transform: scale(1.4);
-        z-index: 10000;
-      }
-    }
-
-    &--p5 {
-      left: 21%;
-      top: 21rem;
-
-      @include respond(tab-land-small) {
-        top: -15rem;
-        left: 35rem;
-        transform: scale(1.5);
-        z-index: 100;
-      }
-
-      @include respond(phone) {
-        top: -10rem;
-        left: 20rem;
-      }
-    }
-
-    &-p3 {
-      left: 21%;
-      top: 21rem;
-      scale: 1.3;
-
-      @include respond(tab-land-small) {
-        top: -30rem;
-        left: 30rem;
-        transform: scale(1.5);
-        z-index: 100;
-      }
-
-      @include respond(phone) {
-        // top: -1rem;
-        // left: 4rem;
-        top: -32rem;
-        left: 22rem;
-        transform: scale(1.3);
-        z-index: 100;
-      }
-    }
-
-    &:hover {
-      // outline: 0.1rem solid $color-primary-blue;
-      // border-radius: 12px;
-      // transform: scale(1.15) translateY(-0.5rem);
-      box-shadow: 0 2.5rem 4rem rgba($color-primary-black, 0.5);
-      z-index: 20000;
-      scale: 1.4;
-    }
-  }
-  // to shrink two photos in the background when one is hovered
-  &:hover &__photo:not(:hover) {
-    // transform: scale(0.98);
-  }
-  &__photongo {
-    width: 50%;
-    box-shadow: 0 1.5rem 4rem rgba($color-primary-black, 0.4);
-    border-radius: 2px;
-    position: absolute;
-    z-index: 10;
-    transition: all 0.2s;
-    outline-offset: 1rem;
-    // outline properties are for borders to give the space b
-
-    @include respond(tab-land-small) {
-      float: left;
-      position: relative;
-      width: 33.33333333%;
-      box-shadow: 0 1.5rem 3rem rgba($color-primary-black, 0.2);
-    }
-
-    &--p1 {
-      left: 0;
-      top: 0rem;
-
-      @include respond(tab-land-small) {
-        top: 11rem;
-        left: -1rem;
-        transform: scale(1.29);
-        z-index: 100;
-      }
-    }
-    &-p1 {
-      left: 8rem;
-      top: 8rem;
-      scale: 2.1;
-
-      @include respond(tab-land-small) {
-        top: 6rem;
-        left: 13rem;
-        transform: scale(1);
-        z-index: 100;
-      }
-
-      @include respond(phone) {
-        top: 6rem;
-        left: 12rem;
-        transform: scale(1.2);
-      }
-    }
-
-    &--p2 {
-      right: 1rem;
-      top: 7rem;
-
-      @include respond(tab-land-small) {
-        top: 2rem;
-        left: -5rem;
-        transform: scale(1.3);
+    &__photo {
+        width: 52%;
+        box-shadow: 0 1.5rem 4rem rgba($color-primary-black, 0.4);
+        border-radius: 8px;
+        position: absolute;
         z-index: 10;
-      }
+        transition: all 0.2s;
+        outline-offset: 1rem;
+
+        @include respond(tab-land-small) {
+            float: left;
+            position: relative;
+            width: 33.33333333%;
+            box-shadow: 0 1.5rem 3rem rgba($color-primary-black, 0.2);
+            margin: 5rem 0;
+        }
+        // outline properties are for borders to give the space b
+        &--p1 {
+            left: 5rem;
+            top: 5rem;
+            @include respond(tab-land-small) {
+                top: 5rem;
+                left: 5rem;
+                transform: scale(1.9);
+            }
+
+            @include respond(phone) {
+                top: 5rem;
+                left: 8rem;
+                transform: scale(1.7);
+            }
+        }
+
+        &-p1 {
+            left: 5rem;
+            top: 5rem;
+            scale: 2.9;
+            @include respond(tab-land-small) {
+                top: 5rem;
+                left: 5rem;
+                transform: scale(1.9);
+            }
+
+            @include respond(phone) {
+                top: 5rem;
+                left: 8rem;
+                transform: scale(1.7);
+            }
+        }
+
+        &--p2 {
+            width: 42%;
+            right: 2rem;
+            top: 10rem;
+
+            @include respond(tab-land-small) {
+                top: 15rem;
+                left: -2rem;
+                transform: scale(1.1);
+                z-index: 1000;
+            }
+        }
+
+        &--p3 {
+            left: 21%;
+            top: 21rem;
+
+            @include respond(tab-land-small) {
+                top: -30rem;
+                left: 30rem;
+                transform: scale(1.5);
+                z-index: 100;
+            }
+
+            @include respond(phone) {
+                // top: -1rem;
+                // left: 4rem;
+                top: -32rem;
+                left: 22rem;
+                transform: scale(1.3);
+                z-index: 100;
+            }
+        }
+
+        &--p4 {
+            right: 10rem;
+            top: 33rem;
+
+            @include respond(tab-land-small) {
+                top: 1rem;
+                left: 0;
+                transform: scale(1.4);
+                z-index: 10000;
+            }
+        }
+
+        &--p5 {
+            left: 21%;
+            top: 21rem;
+
+            @include respond(tab-land-small) {
+                top: -15rem;
+                left: 35rem;
+                transform: scale(1.5);
+                z-index: 100;
+            }
+
+            @include respond(phone) {
+                top: -10rem;
+                left: 20rem;
+            }
+        }
+
+        &-p3 {
+            left: 21%;
+            top: 21rem;
+            scale: 1.3;
+
+            @include respond(tab-land-small) {
+                top: -30rem;
+                left: 30rem;
+                transform: scale(1.5);
+                z-index: 100;
+            }
+
+            @include respond(phone) {
+                // top: -1rem;
+                // left: 4rem;
+                top: -32rem;
+                left: 22rem;
+                transform: scale(1.3);
+                z-index: 100;
+            }
+        }
+
+        &:hover {
+            // outline: 0.1rem solid $color-primary-blue;
+            // border-radius: 12px;
+            // transform: scale(1.15) translateY(-0.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-primary-black, 0.5);
+            z-index: 20000;
+            scale: 1.4;
+        }
     }
-
-    &--p3 {
-      left: 12%;
-      top: 18rem;
-
-      // @include respond(tab-land-small) {
-      // 	display: none;
-      // }
-
-      @include respond(tab-land-small) {
-        top: 5rem;
-        left: -1rem;
-        transform: scale(1.4);
-        z-index: 1000;
-      }
+    // to shrink two photos in the background when one is hovered
+    &:hover &__photo:not(:hover) {
+        // transform: scale(0.98);
     }
+    &__photongo {
+        width: 50%;
+        box-shadow: 0 1.5rem 4rem rgba($color-primary-black, 0.4);
+        border-radius: 2px;
+        position: absolute;
+        z-index: 10;
+        transition: all 0.2s;
+        outline-offset: 1rem;
+        // outline properties are for borders to give the space b
 
-    &--p4 {
-      right: -2rem;
-      top: 25rem;
+        @include respond(tab-land-small) {
+            float: left;
+            position: relative;
+            width: 33.33333333%;
+            box-shadow: 0 1.5rem 3rem rgba($color-primary-black, 0.2);
+        }
 
-      @include respond(tab-land-small) {
-        top: 1rem;
-        left: -7rem;
-        transform: scale(1.4);
-        z-index: 10000;
-      }
+        &--p1 {
+            left: 0;
+            top: 0rem;
+
+            @include respond(tab-land-small) {
+                top: 11rem;
+                left: -1rem;
+                transform: scale(1.29);
+                z-index: 100;
+            }
+        }
+        &-p1 {
+            left: 8rem;
+            top: 8rem;
+            scale: 2.1;
+
+            @include respond(tab-land-small) {
+                top: 6rem;
+                left: 13rem;
+                transform: scale(1);
+                z-index: 100;
+            }
+
+            @include respond(phone) {
+                top: 6rem;
+                left: 12rem;
+                transform: scale(1.2);
+            }
+        }
+
+        &--p2 {
+            right: 1rem;
+            top: 7rem;
+
+            @include respond(tab-land-small) {
+                top: 2rem;
+                left: -5rem;
+                transform: scale(1.3);
+                z-index: 10;
+            }
+        }
+
+        &--p3 {
+            left: 12%;
+            top: 18rem;
+
+            // @include respond(tab-land-small) {
+            // 	display: none;
+            // }
+
+            @include respond(tab-land-small) {
+                top: 5rem;
+                left: -1rem;
+                transform: scale(1.4);
+                z-index: 1000;
+            }
+        }
+
+        &--p4 {
+            right: -2rem;
+            top: 25rem;
+
+            @include respond(tab-land-small) {
+                top: 1rem;
+                left: -7rem;
+                transform: scale(1.4);
+                z-index: 10000;
+            }
+        }
+
+        &:hover {
+            // outline: 0.3rem solid $color-primary-blue;
+            // border-radius: 12px;
+            scale: 1.4;
+            transform: scale(1.2) translateY(-0.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-primary-black, 0.5);
+            z-index: 20000;
+        }
     }
-
-    &:hover {
-      // outline: 0.3rem solid $color-primary-blue;
-      // border-radius: 12px;
-      scale: 1.4;
-      transform: scale(1.2) translateY(-0.5rem);
-      box-shadow: 0 2.5rem 4rem rgba($color-primary-black, 0.5);
-      z-index: 20000;
+    // to shrink two photos in the background when one is hovered
+    &:hover &__photongo:not(:hover) {
+        transform: scale(0.95);
     }
-  }
-  // to shrink two photos in the background when one is hovered
-  &:hover &__photongo:not(:hover) {
-    transform: scale(0.95);
-  }
 }
 // its always the best way to set width of photos in %
