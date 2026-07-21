@@ -1156,7 +1156,7 @@ a.disabled {
   background-image: url(../img/interview2026.png);
 }
 .card-news__picture--38 {
-  background-image: url(../img/ERT3-interview2026.png);
+  background-image: url(../img/aballforall-event-with-30-countries.jpg);
 }
 .card-news__heading {
   font-size: 2.4rem;
@@ -3751,8 +3751,13 @@ h1 {
 }
 .header__logo {
   border-radius: 50%;
-  height: 10.2rem;
-  width: 10rem;
+  height: 8.5rem;
+  width: auto;
+}
+@media (max-width: 65.7em) {
+  .header__logo {
+    margin: 0.5rem;
+  }
 }
 .header__text-box {
   position: absolute;

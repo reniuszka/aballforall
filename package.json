@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "lint": "npx prettier --check \"**/*.html\" && npx --yes htmlhint \"BALL_official/**/*.html\"",
+    "prettier": "prettier --write \"**/*.html\"",
+    "prettier:check": "prettier --check \"**/*.html\""
+  },
   "devDependencies": {
     "prettier": "^3.9.5"
   },

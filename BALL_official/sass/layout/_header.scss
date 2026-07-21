@@ -19,13 +19,13 @@
     }
     &__logo {
         border-radius: 50%;
-        height: 10.2rem;
-        width: 10rem;
+        height: 8.5rem;
+        width: auto;
+        // height: 10.2rem;
         // width: auto;
-        // @include respond(tab-land-small) {
-        //   height: 7rem;
-        //   // margin: 0.5rem;
-        // }
+        @include respond(tab-land-small) {
+            margin: 0.5rem;
+        }
     }
     &__text-box {
         position: absolute;

@@ -1,922 +1,1786 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-<head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
 
-          <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="ie=edge"
+        />
 
-          <meta name="description" content="A Ball for All - a mini ball for blind children">
-          <meta name="keywords" content="DIVENTA IL NOSTRO SUPEREROE, DIVENTA IL NOSTRO SUPEREROEd, A Ball for All, DIVENTA IL NOSTRO SUPEREROE, PARALIMPICO, Elias Mastoras, GRiiiS, Global Research Institute Innovation Inclusion Sport, Grecia ">
-          <!-- css -->
-          <link rel="stylesheet" href="sass/main.css">
-          <link rel="stylesheet" href="css/icon-font-styles.css">
-          <!-- icons as fonts from linea from folder basic copied to css and changed name of styles folder -->
+        <meta
+            name="description"
+            content="A Ball for All - a mini ball for blind children"
+        />
+        <meta
+            name="keywords"
+            content="DIVENTA IL NOSTRO SUPEREROE, DIVENTA IL NOSTRO SUPEREROEd, A Ball for All, DIVENTA IL NOSTRO SUPEREROE, PARALIMPICO, Elias Mastoras, GRiiiS, Global Research Institute Innovation Inclusion Sport, Grecia "
+        />
+        <!-- css -->
+        <link
+            rel="stylesheet"
+            href="sass/main.css"
+        />
+        <link
+            rel="stylesheet"
+            href="css/icon-font-styles.css"
+        />
+        <!-- icons as fonts from linea from folder basic copied to css and changed name of styles folder -->
 
-          <!-- font -->
-          <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;600;700;800&display=swap" rel="stylesheet">
-          <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-          <link
+        <!-- font -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@100;200;300;400;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-          />
-
-          <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-          <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-          <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-          <link rel="manifest" href="/site.webmanifest">
-
-
-          <title>A Ball for All</title>
-</head>
-
-
-<body>
-  <nav class="nav">
-		<div class="nav__logo">
-			<a class="nav__link" href="index.html"><img  src="img/aballforAllLogo10YearsOfInclusion.jpg" alt="Logo A Ball For All 10 years of inclusion" class="header__logo"></a>
-			
-		</div>
-
-		<div class="navbar nav__links--bottom">
-			<ul>
-				<li><span class="nav__link nav__a nav__parent">campaign</span>
-					<ul class=" nav__link--parents">
-						<li><a class="nav__link nav__link--child nav__a" href="our-vision.html">Our vision &rarr;</a></li>
-						<li><a class="nav__link nav__link--child" href="aballforall-around-the-world.html">A Ball For All around the world &rarr;</a></li>
-						<li><a class="nav__link nav__link--child" href="gallery.html">Gallery &rarr;</a></li>
-					</ul>
-				</li>
-				<li><span class="nav__link nav__a  nav__parent">partnership</span>
-					<ul class=" nav__link--parents">
-						<li><a class="nav__link nav__link--child nav__a" href="our-programmes.html">Programmes &rarr;</a></li>
-					</ul>
-				</li>
-				<li><span class="nav__link nav__a  nav__parent">founder</span>
-					<ul class=" nav__link--parents">
-						<li><a class="nav__link nav__link--child nav__a" href="mastoras.html">Elias Mastoras &rarr;</a></li>
-						<li><a class="nav__link nav__link--child nav__a" href="griiis.html">GRiiiS - Global Research Institute Innovation Inclusion Sport &rarr;</a></li>
-					</ul>
-				</li>
-				<li><a class="nav__link nav__a" href="education.html">Education</a></li>
-				<li><a class="nav__link nav__a" href="support-us.html">Support</a></li>
-				<li><a class="nav__link nav__a" href="news.html">News</a></li>
-			</ul>
-		</div>
-
-		<div class="menu-icons-flags">
-
-			<ul class="nav__links--right">
-				<li class="nav__item">
-					<a class="nav__link" target="_blank" href="https://www.facebook.com/aballforallyouthorama"><img  class="nav__img" src="img/Square Color/Facebook_3.png" alt="facebook"></a>
-				</li>
-				<li class="nav__item">
-					<a class="nav__link" target="_blank" href="https://www.instagram.com/aballforall.eu/"><img class="nav__img" src="img/Square Color/Instagram_3.png" alt="instagram"></a>
-				</li>
-				<li class="nav__item">
-					<a class="nav__link" target="_blank" href="https://www.youtube.com/@aballforall"><img  class="nav__img" src="img/Square Color/Youtube_3.png" alt="youtube"></a>
-				</li>
-				<li class="nav__item">
-					<a class="nav__link" target="_blank" href="https://www.linkedin.com/company/aballforall/"><img  class="nav__img" src="img/Square Color/Linkedin_3.png" alt="Linkedin"></a>
-				</li>
-				<li class="nav__item">
-					<a class="nav__link" target="_blank" href="https://www.tiktok.com/@aballforall"><img  class="nav__img" src="img/Square Color/TikTok_3.png" alt="Tik Tok"></a>
-				</li>
-			</ul>
-
-			<ul class="nav__links--left">
-				<li class="nav__item">
-					<a class="nav__link" href="index.html" title="English">
-						<img src="./img/united-kingdom.png" alt="change the language to english" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="greek.html" title="Greek">
-						<img src="./img/greece.png" alt="change the language to greek" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="arabic.html" title="Arabic">
-						<img src="./img/arabic.jpg" alt="change the language to arabic" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="austrian.html" title="Austrian">
-						<img src="./img/austria.png" alt="change the language to austrian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="belgian.html" title="Belgian">
-						<img src="./img/belgium.png" alt="change the language to belgian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="bulgarian.html" title="Bulgarian">
-						<img src="./img/bulgaria.png" alt="change the language to bulgarian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="chinese.html" title="Chinese">
-						<img src="./img/chinese.png" alt="change the language to chinese" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="croatian.html" title="Croatian">
-						<img src="./img/croatia.png" alt="change the language to croatian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="czech.html" title="Czech">
-						<img src="./img/czech-republic.png" alt="change the language to czech" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="estonian.html" title="Estonian">
-						<img src="./img/estonia.png" alt="change the language to estonian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="finnish.html" title="Finnish">
-						<img src="./img/finland.png" alt="change the language to finnish" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="french.html" title="French">
-						<img src="./img/france.png" alt="change the language to french" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="german.html" title="German">
-						<img src="./img/germany.png" alt="change the language to german" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="hungarian.html" title="Hungarian">
-						<img src="./img/hungary.png" alt="change the language to hungarian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="icelandic.html" title="Icelandic">
-						<img src="./img/iceland.png" alt="change the language to icelandic" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="irish.html" title="Irish">
-						<img src="./img/ireland.png" alt="change the language to irish" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="italian.html" title="Italian">
-						<img src="./img/italy.png" alt="change the language to italian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="latvian.html" title="Latvian">
-						<img src="./img/latvia.png" alt="change the language to latvian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="lithuanian.html" title="Lithuanian">
-						<img src="./img/lithuania.png" alt="change the language to lithuanian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="maltese.html" title="Maltese">
-						<img src="./img/malta.png" alt="change the language to maltese" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="dutch.html" title="Dutch">
-						<img src="./img/netherlands.png" alt="change the language to dutch" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="macedonian.html" title="Macedonian">
-						<img src="./img/republic-of-macedonia.png" alt="change the language to macedonian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="norwegian.html" title="Norwegian">
-						<img src="./img/norway.png" alt="change the language to norwegian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="polish.html" title="Polish">
-						<img src="./img/poland.png" alt="change the language to polish" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="portuguese.html" title="Portuguese">
-						<img src="./img/portugal.png" alt="change the language to portuguese" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="romanian.html" title="Romanian">
-						<img src="./img/romania.png" alt="change the language to romanian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="serbian.html" title="Serbian">
-						<img src="./img/serbia.png" alt="change the language to serbian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="slovak.html" title="Slovak">
-						<img src="./img/slovakia.png" alt="change the language to slovak" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="slovenian.html" title="Slovenian">
-						<img src="./img/slovenia.png" alt="change the language to slovenian" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="spanish.html" title="Spanish">
-						<img src="./img/spain.png" alt="change the language to spanish" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="swedish.html" title="Swedish">
-						<img src="./img/sweden.png" alt="change the language to swedish" class="nav__img" />
-					</a>
-				</li>
-
-				<li class="nav__item">
-					<a class="nav__link" href="turkish.html" title="Turkish">
-						<img src="./img/turkey.png" alt="change the language to turkish" class="nav__img" />
-					</a>
-				</li>
-			</ul>
-				
-		</div>
-
-		<div class="toggle"></div>
-  </nav>
-  
-	<div class="menu">
-		<div>
-
-      <ul>
-				<li><a class="menu__item" href="index.html">Home &rarr;</a></li>
-				<li><h4 class="menu__category" href="#">Campaign:</h4>
-					<ul>
-						<li><a class="menu__item child" href="our-vision.html">Our vision &rarr; </a></li>
-						<li><a class="menu__item child" href="aballforall-around-the-world.html">A Ball For All around the world &rarr; </a></li>
-						<li><a class="menu__item child" href="gallery.html">Gallery &rarr; </a></li>
-					</ul>
-				</li>
-				<li><h4 class="menu__category"href="#">Partnership:</h4>
-					<ul>
-						<li><a class="menu__item child" href="our-programmes.html">Programmes &rarr; </a></li>
-					</ul>
-				</li>
-				<li><h4 class="menu__category" href="#">Founder:</h4>
-					<ul>
-						<li><a class="menu__item child" href="mastoras.html">Elias Mastoras &rarr; </a></li>
-						<li><a class="menu__item child" href="griiis.html">GRiiiS - Global Research Institute Innovation Inclusion Sport &rarr; </a></li>
-					</ul>
-				</li>
-				<li><a class="menu__item" href="education.html">Education &rarr;</a></li>
-				<li><a class="menu__item" href="support-us.html">Support &rarr;</a></li>
-				<li><a class="menu__item" href="news.html">News &rarr;</a>				</li>
-			</ul>
-		</div>
-		
-  </div>
-                
-          
-          <header class="header">
-                    <div class="header__text-box">
-                              <h1 class="heading-primary">
-                                        <span class="heading-primary--main">A Ball For All</span>
-                                        <span class="heading-primary--sub">Calcio per non vedenti</span>
-                              </h1>
-                              <a href="#section-donation" class="btn btn--white btn--animated">Dona</a>                              
-                    </div>         
-          </header>
-<!-- those IDs are created to connect the buttons with the parts of the page, id and then #id -->
-<!-- main part of our web, it is saying the screen readers that it is the main part of the site, it is a container-->
-          <main>
-                    <section class="section-about" id="section-about">
-                              <div class="u-center-text u-margin-bottom-medium">
-                              <!-- u - it is an utility class, a simply class to reuse it later -->
-                                        <h2 class="heading-secondary">
-                                          Aiutiamoli a giocare e ad apprendere: il calcio per bambini non vedenti
-                                        </h2>
-                              </div>
-
-                              <div class="row">
-                                        <div class="col-1-of-2">
-                                                  <h3 class="heading-tertiary u-margin-bottom-small">
-                                                    A tutti noi piace il calcio!
-                                                  </h3>
-                                                  <p class="paragraph">
-                                                    I bambini non vedenti non possono vedere la palla, ma possono sentirla! 
-                                                    Per questo abbiamo realizzato una mini-palla speciale che produce un rumore singolare, in modo che tutti i bambini possano giocarci ed interagirci. E la cosa più importante è che non è in vendita, può solo essere donata. Ci aiuterai?
-                                                    
-                                                  </p>
-
-                                                  <h3 class="heading-tertiary u-margin-bottom-small">
-                                                    Il calcio per non vedenti è uno sport paralimpico
-                                                  </h3>
-                                                  <p class="paragraph">
-                                                    I palloni da calcio per adulti non vedenti sono in vendita sul mercato, ma sono troppo pesanti per un bambino. Pesano più di mezzo chilogrammo. Elias Mastoras, fondatore della ONG GRiiiS, ha creato la prima mini-palla al mondo per bambini non vedenti. La cosa più importante è che questo pallone da calcio leggero, che contiene delle campanelle all'interno, non può essere acquistato in un negozio. Può essere donato solo a bambini o giovani non vedenti o ipovedenti e alle loro scuole. Insieme possiamo cambiare le loro vite!
-                                                  </p>
-                                                
-
-                                                    <a href="#section-about__ngo" class="btn-text">Scopri di più &rarr;</a>
-                                                  
-                                        </div>
-                                        <div class="col-1-of-2">
-                                                  <div class="composition">
-                                                    <img src="img/aboywithawhitecane4.jpg" alt="aballforall" class="composition__photo composition__photo--p1">
-                                                    <img src="img/Guyana.jpg" alt="aballforall" class="composition__photo composition__photo--p2">
-                                                    <img src="img/acuteboy.jpg" alt="aballforall" class="composition__photo composition__photo--p3">
-                                                  </div>    
-                                        </div>
-                                        
-                              </div>
-                              
-                    </section>
-
-                   
-
-    <section class="section-awards">
-			<div class="u-center-text u-margin-bottom-medium">
-				<h2 class="heading-secondary">
-					Premi e Realizzazioni
-				</h2>
-			</div>
-
-			<div class="award__row">
-				<div class="col-1-of-3">
-						<img src="img/EU Sports Awards 2022.jpg" alt="EU Sports Awards 2022" class="award__img">
-				</div>
-
-				<div class="col-1-of-3">
-						<img src="img/Tallberg SNF Eliasson Global Leadership prize 2022.jpg" alt="Tallberg SNF Eliasson Global Leadership prize 2022" class="award__img">
-				</div>
-
-				<div class="col-1-of-3">
-						<img src="img/EU Be Active Sports Local Hero 2022.jpg" alt="EU Be Active Sports Local Hero 2022" class="award__img">
-				</div>
-			</div>
-
-			<div class="award__row award__achievements">
-				<div class="col-1-of-4 award__achievement">
-						<i class="fas fa-trophy"></i>
-						<h2>3</h2>
-						<p>Premi Internazionali</p>
-				</div>
-
-				<div class="col-1-of-4 award__achievement">
-						<i class="fas fa-globe"></i>
-						<h2>219</h2>
-						<p>Paesi e Territori raggiunti</p>
-				</div>
-
-				<div class="col-1-of-4 award__achievement">
-						<i class="fas fa-user-graduate"></i>
-						<h2>4 000</h2>
-						<p>Scuole che seguono il nostro programma educativo</p>
-				</div>
-
-				<div class="col-1-of-4 award__achievement">
-						<i class="fas fa-futbol"></i>
-						<h2>50 000</h2>
-						<p>Palloni da calcio mini per non vedenti donati</p>
-				</div>
-			</div>
-
-      <div class="award__row award__social-media">
-				<div class="col-1-of-3">
-						<img src="img/12m-views-aballforall.jpeg" alt="12 milion views for A Ball For All" class="award__img-social-media">
-				</div>
-
-				<video 
-					autoplay 
-					muted 
-					loop 
-					playsinline
-					preload="auto"
-					width="340" 
-					height="420"
-					class="col-1-of-3 video-one margin-bottom"
-					poster="img/aballfor all logo_official.jpg">
-					<source src="img/jack-grealish-aballforall.mp4" type="video/mp4">
-				</video>
-
-				<div class="col-1-of-3">
-						<img src="img/12,7-views-stats-aballforall.jpg" alt="number of views instagram" class="award__img-social-media">
-				</div>
-			</div>
-		</section>
-
-		<section class="section-video">
-			<div class="u-center-text u-margin-bottom-medium">
-				<h2 class="heading-secondary">
-					Guarda la nostra storia
-				</h2>
-			</div>
-			<div class="bg-video">
-				<iframe width="440" height="360" frameborder="0" class="video-one"
-					src="https://www.youtube.com/embed/EfiOBSNeTJk?playlist=EfiOBSNeTJk&loop=1&autoplay=1&mute=1"
-					>
-				</iframe>
-				<iframe width="440" height="360" frameborder="0" class="video-two"
-					src="https://www.youtube.com/embed/4tUEOh5ym5U?playlist=4tUEOh5ym5U&loop=1&autoplay=1&mute=1">
-				</iframe>
-			</div>                                                              
-		</section> 
-
-		
-		<section class="section-facts">
-			<div class="documentary-kenya-facts-title">
-		<div class="u-center-text u-margin-bottom-medium">                                        
-				<h2 class="heading-secondary">
-					 Alcuni fatti sull'impairment visivo
-				</h2>
-			</div>
-
-    <div class="documentary-kenya-facts">
-      <div class="documentary-kenya-feature-facts">
-        <h4 class="heading4-documentary-kenya--dark">La cecità in numeri</h4>
-        <p class="paragraph-documentary-kenya-small">
-          Nel mondo, 285 milioni di persone hanno problemi di vista; 39 milioni sono ciechi e 246 milioni hanno una vista bassa. Si stima che 500.000 bambini diventino ciechi ogni anno, ma nei paesi in via di sviluppo fino al 60% si pensa muoia entro un anno dalla cecità.
-        </p>
-      </div>
-
-      <div class="documentary-kenya-feature-facts">
-        <h4 class="heading4-documentary-kenya--dark">Come inizia la cecità</h4>
-        <p class="paragraph-documentary-kenya-small">
-          Alcune persone sono completamente cieche dalla nascita, mentre altre possono avere una visione che declina lentamente da decenni. I milioni di persone cieche o ipovedenti possiedono tutti diversi gradi di vista e hanno esigenze e abilità molto diverse legate alla perdita della vista.
-        </p>
-      </div>
-
-      <div class="documentary-kenya-feature-facts">
-        <h4 class="heading4-documentary-kenya--dark">Cane guida</h4>
-        <p class="paragraph-documentary-kenya-small">
-          Solo l'1-2% delle persone ipovedenti usa un cane guida anche se la maggior parte dei cani viene fornita gratuitamente. Questi animali da servizio vengono addestrati attentamente per guidare i loro proprietari tra altre persone e ostacoli. Il primo cane guida è stato consegnato nel 1916 a un veterano accecato, Paul Feyen.
-        </p>
-      </div>
-
-      <div class="documentary-kenya-feature-facts">
-        <h4 class="heading4-documentary-kenya--dark">Bastone bianco</h4>
-        <p class="paragraph-documentary-kenya-small">
-          James Biggs di Bristol ha dichiarato di aver inventato il bastone bianco nel 1921. Dopo un incidente che ha compromesso la sua vista, l'artista ha dovuto adattarsi al suo ambiente. Sentendosi minacciato dall'aumento del traffico veicolare intorno a casa sua, Biggs ha deciso di dipingere il suo bastone bianco per rendersi più visibile ai conducenti.
-        </p>
-      </div>
-
-      <div class="documentary-kenya-feature-facts">
-        <h4 class="heading4-documentary-kenya--dark">Sport</h4>
-        <p class="paragraph-documentary-kenya-small">
-          Essere diagnosticati come ciechi o ipovedenti non significa che una persona debba rinunciare allo sport. Infatti, ci sono molti sport adattati per chi è cieco o ipovedente, così come sport completamente nuovi aperti solo a persone con problemi di vista.
-        </p>
-      </div>
-
-      <div class="documentary-kenya-feature-facts">
-        <h4 class="heading4-documentary-kenya--dark">Persone cieche famose</h4>
-        <p class="paragraph-documentary-kenya-small">
-          Andrea Bocelli è diventato completamente cieco all'età di 12 anni, uno dei musicisti più di successo di tutti i tempi. Il 25 maggio 2001, Erik Weihenmayer è diventato il primo cieco a raggiungere la vetta dell'Everest. Marla Runyan è la prima atleta legalmente cieca a gareggiare alle Olimpiadi. Trischa Zorn, cieca dalla nascita, ha vinto 55 medaglie, diventando l'atleta più vincente nella storia dei Giochi Paralimpici.
-        </p>
-      </div>
-    </div>
-		</section>
-
-      
-      <section class="section-features">
-        <div class="u-center-text u-margin-bottom-medium">
-          <h2 class="heading-secondary">
-            I nostri valori
-          </h2>
+        />
+
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="img/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="img/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="img/favicon-16x16.png"
+        />
+        <link
+            rel="manifest"
+            href="/site.webmanifest"
+        />
+
+        <title>A Ball for All</title>
+    </head>
+
+    <body>
+        <nav class="nav">
+            <div class="nav__logo">
+                <a
+                    class="nav__link"
+                    href="index.html"
+                    ><img
+                        src="img/aballfor all logo_official.jpg"
+                        alt="Logo A Ball For All"
+                        class="header__logo"
+                /></a>
+            </div>
+
+            <div class="navbar nav__links--bottom">
+                <ul>
+                    <li>
+                        <span class="nav__link nav__a nav__parent">campaign</span>
+                        <ul class="nav__link--parents">
+                            <li>
+                                <a
+                                    class="nav__link nav__link--child nav__a"
+                                    href="our-vision.html"
+                                    >Our vision &rarr;</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="nav__link nav__link--child"
+                                    href="aballforall-around-the-world.html"
+                                    >A Ball For All around the world &rarr;</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="nav__link nav__link--child"
+                                    href="gallery.html"
+                                    >Gallery &rarr;</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="nav__link nav__a nav__parent">partnership</span>
+                        <ul class="nav__link--parents">
+                            <li>
+                                <a
+                                    class="nav__link nav__link--child nav__a"
+                                    href="our-programmes.html"
+                                    >Programmes &rarr;</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="nav__link nav__a nav__parent">founder</span>
+                        <ul class="nav__link--parents">
+                            <li>
+                                <a
+                                    class="nav__link nav__link--child nav__a"
+                                    href="mastoras.html"
+                                    >Elias Mastoras &rarr;</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="nav__link nav__link--child nav__a"
+                                    href="griiis.html"
+                                    >GRiiiS - Global Research Institute Innovation Inclusion Sport
+                                    &rarr;</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a
+                            class="nav__link nav__a"
+                            href="education.html"
+                            >Education</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="nav__link nav__a"
+                            href="support-us.html"
+                            >Support</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="nav__link nav__a"
+                            href="news.html"
+                            >News</a
+                        >
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-icons-flags">
+                <ul class="nav__links--right">
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.facebook.com/aballforallyouthorama"
+                            ><img
+                                class="nav__img"
+                                src="img/Square Color/Facebook_3.png"
+                                alt="facebook"
+                        /></a>
+                    </li>
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.instagram.com/aballforall.eu/"
+                            ><img
+                                class="nav__img"
+                                src="img/Square Color/Instagram_3.png"
+                                alt="instagram"
+                        /></a>
+                    </li>
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.youtube.com/@aballforall"
+                            ><img
+                                class="nav__img"
+                                src="img/Square Color/Youtube_3.png"
+                                alt="youtube"
+                        /></a>
+                    </li>
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.linkedin.com/company/aballforall/"
+                            ><img
+                                class="nav__img"
+                                src="img/Square Color/Linkedin_3.png"
+                                alt="Linkedin"
+                        /></a>
+                    </li>
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.tiktok.com/@aballforall"
+                            ><img
+                                class="nav__img"
+                                src="img/Square Color/TikTok_3.png"
+                                alt="Tik Tok"
+                        /></a>
+                    </li>
+                </ul>
+
+                <ul class="nav__links--left">
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="index.html"
+                            title="English"
+                        >
+                            <img
+                                src="./img/united-kingdom.png"
+                                alt="change the language to english"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="greek.html"
+                            title="Greek"
+                        >
+                            <img
+                                src="./img/greece.png"
+                                alt="change the language to greek"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="arabic.html"
+                            title="Arabic"
+                        >
+                            <img
+                                src="./img/arabic.jpg"
+                                alt="change the language to arabic"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="austrian.html"
+                            title="Austrian"
+                        >
+                            <img
+                                src="./img/austria.png"
+                                alt="change the language to austrian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="belgian.html"
+                            title="Belgian"
+                        >
+                            <img
+                                src="./img/belgium.png"
+                                alt="change the language to belgian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="bulgarian.html"
+                            title="Bulgarian"
+                        >
+                            <img
+                                src="./img/bulgaria.png"
+                                alt="change the language to bulgarian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="chinese.html"
+                            title="Chinese"
+                        >
+                            <img
+                                src="./img/chinese.png"
+                                alt="change the language to chinese"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="croatian.html"
+                            title="Croatian"
+                        >
+                            <img
+                                src="./img/croatia.png"
+                                alt="change the language to croatian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="czech.html"
+                            title="Czech"
+                        >
+                            <img
+                                src="./img/czech-republic.png"
+                                alt="change the language to czech"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="estonian.html"
+                            title="Estonian"
+                        >
+                            <img
+                                src="./img/estonia.png"
+                                alt="change the language to estonian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="finnish.html"
+                            title="Finnish"
+                        >
+                            <img
+                                src="./img/finland.png"
+                                alt="change the language to finnish"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="french.html"
+                            title="French"
+                        >
+                            <img
+                                src="./img/france.png"
+                                alt="change the language to french"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="german.html"
+                            title="German"
+                        >
+                            <img
+                                src="./img/germany.png"
+                                alt="change the language to german"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="hungarian.html"
+                            title="Hungarian"
+                        >
+                            <img
+                                src="./img/hungary.png"
+                                alt="change the language to hungarian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="icelandic.html"
+                            title="Icelandic"
+                        >
+                            <img
+                                src="./img/iceland.png"
+                                alt="change the language to icelandic"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="irish.html"
+                            title="Irish"
+                        >
+                            <img
+                                src="./img/ireland.png"
+                                alt="change the language to irish"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="italian.html"
+                            title="Italian"
+                        >
+                            <img
+                                src="./img/italy.png"
+                                alt="change the language to italian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="latvian.html"
+                            title="Latvian"
+                        >
+                            <img
+                                src="./img/latvia.png"
+                                alt="change the language to latvian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="lithuanian.html"
+                            title="Lithuanian"
+                        >
+                            <img
+                                src="./img/lithuania.png"
+                                alt="change the language to lithuanian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="maltese.html"
+                            title="Maltese"
+                        >
+                            <img
+                                src="./img/malta.png"
+                                alt="change the language to maltese"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="dutch.html"
+                            title="Dutch"
+                        >
+                            <img
+                                src="./img/netherlands.png"
+                                alt="change the language to dutch"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="macedonian.html"
+                            title="Macedonian"
+                        >
+                            <img
+                                src="./img/republic-of-macedonia.png"
+                                alt="change the language to macedonian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="norwegian.html"
+                            title="Norwegian"
+                        >
+                            <img
+                                src="./img/norway.png"
+                                alt="change the language to norwegian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="polish.html"
+                            title="Polish"
+                        >
+                            <img
+                                src="./img/poland.png"
+                                alt="change the language to polish"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="portuguese.html"
+                            title="Portuguese"
+                        >
+                            <img
+                                src="./img/portugal.png"
+                                alt="change the language to portuguese"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="romanian.html"
+                            title="Romanian"
+                        >
+                            <img
+                                src="./img/romania.png"
+                                alt="change the language to romanian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="serbian.html"
+                            title="Serbian"
+                        >
+                            <img
+                                src="./img/serbia.png"
+                                alt="change the language to serbian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="slovak.html"
+                            title="Slovak"
+                        >
+                            <img
+                                src="./img/slovakia.png"
+                                alt="change the language to slovak"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="slovenian.html"
+                            title="Slovenian"
+                        >
+                            <img
+                                src="./img/slovenia.png"
+                                alt="change the language to slovenian"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="spanish.html"
+                            title="Spanish"
+                        >
+                            <img
+                                src="./img/spain.png"
+                                alt="change the language to spanish"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="swedish.html"
+                            title="Swedish"
+                        >
+                            <img
+                                src="./img/sweden.png"
+                                alt="change the language to swedish"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a
+                            class="nav__link"
+                            href="turkish.html"
+                            title="Turkish"
+                        >
+                            <img
+                                src="./img/turkey.png"
+                                alt="change the language to turkish"
+                                class="nav__img"
+                            />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="toggle"></div>
+        </nav>
+
+        <div class="menu">
+            <div>
+                <ul>
+                    <li>
+                        <a
+                            class="menu__item"
+                            href="index.html"
+                            >Home &rarr;</a
+                        >
+                    </li>
+                    <li>
+                        <h4 class="menu__category">Campaign:</h4>
+                        <ul>
+                            <li>
+                                <a
+                                    class="menu__item child"
+                                    href="our-vision.html"
+                                    >Our vision &rarr;
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="menu__item child"
+                                    href="aballforall-around-the-world.html"
+                                    >A Ball For All around the world &rarr;
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="menu__item child"
+                                    href="gallery.html"
+                                    >Gallery &rarr;
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4 class="menu__category">Partnership:</h4>
+                        <ul>
+                            <li>
+                                <a
+                                    class="menu__item child"
+                                    href="our-programmes.html"
+                                    >Programmes &rarr;
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4 class="menu__category">Founder:</h4>
+                        <ul>
+                            <li>
+                                <a
+                                    class="menu__item child"
+                                    href="mastoras.html"
+                                    >Elias Mastoras &rarr;
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    class="menu__item child"
+                                    href="griiis.html"
+                                    >GRiiiS - Global Research Institute Innovation Inclusion Sport
+                                    &rarr;
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a
+                            class="menu__item"
+                            href="education.html"
+                            >Education &rarr;</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="menu__item"
+                            href="support-us.html"
+                            >Support &rarr;</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            class="menu__item"
+                            href="news.html"
+                            >News &rarr;</a
+                        >
+                    </li>
+                </ul>
+            </div>
         </div>
-                              
-        <div class="row">
-          <div class="col-1-of-4">
-            <div class="feature-box">
-                      <i class="feature-box__icon icon-basic-lightbulb"></i>
-                      <h3 class="heading-tertiary u-margin-bottom-small">INNOVAZIONE</h3>
-                      <p class="feature-box__text">Tutto è iniziato con l'idea di creare la prima mini-palla al mondo per bambini non vedenti.
-                                </p>
+
+        <header class="header">
+            <div class="header__text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary--main">A Ball For All</span>
+                    <span class="heading-primary--sub">Calcio per non vedenti</span>
+                </h1>
+                <a
+                    href="#section-donation"
+                    class="btn btn--white btn--animated"
+                    >Dona</a
+                >
             </div>
-          </div>
-
-          <div class="col-1-of-4">
-            <div class="feature-box">
-                      <i class="feature-box__icon icon-basic-world"></i>
-                      <h3 class="heading-tertiary u-margin-bottom-small">GLOBALE</h3>
-                      <p class="feature-box__text">Abbbiamo l'obiettivo di inviare le nostre mini-palle in ogni paese del mondo. 
-                        Abbiamo raggiunto 219 paesi.  
-                      </p>
-            </div>
-          </div>
-
-          <div class="col-1-of-4">
-                    <div class="feature-box">
-                              <i class="feature-box__icon icon-basic-target"></i>
-                              <h3 class="heading-tertiary u-margin-bottom-small">INCLUSIONE</h3>
-                              <p class="feature-box__text">Contribuiamo a sostenere i sogni dei bambini ciechi attraverso lo sport e l'educazione
-                              </p>
-                    </div>
-          </div>
-
-          <div class="col-1-of-4">
-            <div class="feature-box">
-                      <i class="feature-box__icon icon-basic-heart"></i>
-                      <h3 class="heading-tertiary u-margin-bottom-small">CURA</h3>
-                      <p class="feature-box__text">
-                        Sappiamo che la nostra non è solo una mini-palla, ma sta cambiando la percezione del mondo per i bambini ciechi e le loro famiglie.
-                      </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-                    <section class="section-donation" id="section-donation">
-                              <div class="u-center-text u-margin-bottom-medium">
-                                        
-                                        <h2 class="heading-secondary">
-                                          Aiutiamo insieme
-                                        </h2>
-                              </div>
-                              
-
-                              <div class="row">
-                                        <div class="col-1-of-3">
-                                                 <div class="card">
-                                                           <div class=" card__side card__side--front card__side--front-1">
-                                                                     <div class="card__picture card__picture--1">
-                                                                                &nbsp;
-
-                                                                     </div>
-                                                                     <h4 class="card__heading">
-                                                                               <span class="card__heading-span card__heading-span--1">
-                                                                                Donazione <br>una tantum
-                                                                                </span>                                                                               
-                                                                     </h4>                                                                     
-                                                           </div>
-
-                                                           <div class="card__side card__side--back card__side--back-1">
-                                                                      <div class="card_cta">
-                                                                        <div class="card__details-box">
-                                                                          <p class="card__details-donation">
-                                                                            Apprezziamo l'aiuto che puoi darci con A Ball For All. La nostra mini-palla è portatrice di gioia. La nostra campagna unisce le persone e questo è ciò di cui hanno bisogno i bambini affetti da cecità.
-                                                                          </p>
-
-                                                                        </div>
-                                                                          <a href="#popup1" class="btn btn--white">Dona ora</a>
-                                                                                                                                                                
-                                                                      </div>
-                                                            </div>
-                                                 </div>
-                                        </div>
-                                        <div class="col-1-of-3">
-                                                  <div class="card">
-                                                            <div class=" card__side card__side--front card__side--front-2">
-                                                                      <div class="card__picture card__picture--2">
-                                                                                 &nbsp;
-                                                                      </div>
-                                                                      <h4 class="card__heading">
-                                                                                <span class="card__heading-span card__heading-span--2">
-                                                                                  Adotta <br> una mini-palla
-                                                                                 </span>                                                                                 
-                                                                      </h4>                                                                     
-                                                            </div>
- 
-                                                            <div class="card__side card__side--back card__side--back-2">
-                                                              <div class="card_cta">
-                                                                <div class="card__details-box">
-                                                                  <p class="card__details-donation">
-                                                                    Conosci qualcuno che ha bisogno di una mini-palla? Siete interessati a sostenere un bambino non vedente, una scuola o un paese specifico? Facciamolo insieme! 
-                                                                  </p>
-
-                                                                </div>
-                                                                  <a href="#popup2" class="btn btn--white">Donate una mini-palla</a>
-                                                                                                                                                        
-                                                              </div>
-                                                                      
-                                                             </div> 
-                                                  </div>
-                                         </div><div class="col-1-of-3">
-                                                  <div class="card">
-                                                            <div class=" card__side card__side--front card__side--front-3">
-                                                                      <div class="card__picture card__picture--3">
-                                                                                 &nbsp;
-                                                                      </div>
-                                                                      <h4 class="card__heading">
-                                                                                <span class="card__heading-span card__heading-span--3">
-                                                                                  Diventa il nostro <br>Supereroe
-                                                                                 </span>
-                                                                      </h4>
-                                                             </div>
- 
-                                                            <div class="card__side card__side--back card__side--back-3">
-                                                              <div class="card_cta">
-                                                                <div class="card__details-box">
-                                                                  <p class="card__details-donation">
-                                                                    Un potenziale sostenitore ha una varietà di scelte su come sostenere la nostra Campagna Internazionale, personalizzando il logo stampato sulla mini-palla
-                                                                  </p>
-
-                                                                </div>
-                                                                  <a href="#popup3" class="btn btn--white">Dona le mini-palle</a>
-                                                                                                                                                        
-                                                              </div>
-                                                              
-                                                             </div> 
-                                                  </div>
-                                         </div>
-                                         
-                              </div>
-                              
-                              <div class="u-center-text u-margin-bottom-medium u-margin-top-medium">
-                                 
-                                <ul class="feature-box--btns">
-
-                                  <li class="feature-box--btns-li">
-                                    <a href="#section-contact" class="btn btn--blue btn--animated">Contatto &DownArrow;</a>
-                                  </li>
-
-                                  <li class="feature-box--btns-li">
-                                    <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                                      <input type="hidden" name="hosted_button_id" value="4N993Z9F5SXZ8" />
-                                      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                                      <img alt="a ball for all paypal" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
-                                      </form>
-                                  </li>
-                                  <li class="feature-box--btns-li">
-                                    <a href="#section-contact" class="btn btn--blue btn--animated">coordinate bancarie &DownArrow;</a>
-                                  </li>
-                                </ul>
-                                  
-                            
-                            </div>    
-                                     
-                    </section>
-
-                    <section class="section-about__ngo" id="section-about__ngo">
-                      <div class="u-center-text u-margin-bottom-medium">
-                        <h2 class="heading-secondary">
-                          Qualche parola su di noi!
-                        </h2>
-                      </div>
-
-                      <div class="row">
-    
-                                <div class="col-2-of-3">
-                                          <h3 class="heading-quaternary u-margin-bottom-xsmall">
-                                            Il nostro fondatore Elias Mastoras
-                                          </h3>
-                                          <p class="paragraph__ngo">
-                                            <a href="/mastoras.html" class="nav-bar-donation__elias">
-                                              Elias Mastoras</a> è stato Presidente dell'IBSA Blind Football dal 2021 al 2025. Elias è stato il Direttore Tecnico del Calcio Paralimpico di Parigi 2024, gestendo l'edizione di maggior successo di sempre presso lo Stadio di Blind Football della Torre Eiffel. È un educatore per adulti e un formatore giovanile presso le Agenzie Nazionali Erasmus+ Gioventù e Corpo Europeo di Solidarietà di Grecia e Cipro. È un Allenatore di Scacchi FIDE e un Maestro FIDE come giocatore di scacchi. È stato Coordinatore degli Arbitri a Rio 2016 e Coordinatore Mondiale degli Arbitri dal 2013 al 2017, nonché Arbitro delle partite per la Medaglia d'Oro ad Atene 2004 e Pechino 2008. Ha ricevuto il 1° posto vincendo l'annuale EU Sport Award “Eroe Locale”; è stato premiato come “Leader Globale Emergente” annuale della Tallberg Foundation – Stavros Niarchos Foundation; 1° posto e attuale vincitore degli EU Be Inclusive awards nella categoria “Cambio Ispiratore”.
-
-                                          </p>
-                                          <p class="paragraph__ngo">
-                                           Ha brevettato una mini-palla speciale che produce un rumore singolare, in modo che tutti i bambini possano giocarci ed interagire, disponibile solo tramite donazione. Nei primi sette anni della campagna #ABallforAll, oltre 50 000 di queste mini palloni da blind football sono stati distribuiti in 219 paesi e territori su 5 continenti. Elias è il rappresentante legale di GRiiiS – Global Research institute innovation inclusion Sport, fondato nel 2003. Puoi contattarlo direttamente all'indirizzo mastorasgreece@gmail.com
-                                          </p>
-
-                                          <h3 class="heading-quaternary u-margin-bottom-xsmall">
-                                           GRiiiS NGO
-                                          </h3>
-                                          <p class="paragraph__ngo">
-                                            Global Research institute innovation inclusion Sport è stato fondato nel 2003. Le attività di GRiiiS sono state ospitate e supportate da allora dal Comune di Pilea-Hortiatis, Grecia. Nel campo dello sport, abbiamo organizzato e partecipato a decine di programmi europei supportati sia dalla Commissione Europea Erasmus+ che dagli stakeholder del calcio come UEFA, FIFA, UEFA Foundation for Children ecc. Negli ultimi anni, in particolare attraverso la nostra campagna #ABallforAll, ci siamo concentrati sull'integrazione di bambini e giovani con minori opportunità attraverso lo sport. Lottiamo per un futuro e un mondo migliori. Siamo l'unica ONG sportiva che è stata invitata ad educare interattivamente il pubblico durante l'intero ciclo calcistico quadriennale 2021-2024: UEFA EURO 2020 & 2024, FIFA World Cup 2022, UEFA Super Cup 2023, finale UEFA Conference League 2024, finale UEFA Europa League 2022 & 2023 & 2024, finale UEFA Champions League 2023 & 2024, Giochi Paralimpici di Parigi 2024 davanti alla Torre Eiffel. Abbiamo creato il marchio della “silent wave” – un gesto unico negli stadi di calcio per non vedenti, dove i tifosi eseguono l'onda in silenzio, rispettando le regole del gioco.
-
-                                          </p>
-
-                                          <h3 class="heading-quaternary u-margin-bottom-xsmall">
-                                            A Ball for All - Una Palla per Tutti (#ABallforAll)
-                                          </h3>
-                                          <p class="paragraph__ngo">
-                                            GRiiiS, lanciando la campagna #ABallforAll, si è posta l'obiettivo di viaggiare in tutti gli angoli della terra per distribuire le nostre palle sonore speciali brevettate, che producono un rumore caratteristico, permettendo a tutti i bambini di giocarci e interagire, disponibili solo tramite donazione. Siamo sulla buona strada affinché le palle raggiungano anche le aree più remote; abbiamo una rete attiva in 219 paesi e territori. Con il vostro supporto otterremo ancora di più e la palla tintinnerà in ogni casa e scuola di bambino cieco in tutto il mondo. Abbiamo ricevuto 3 premi internazionali: attuale vincitore del premio annuale EU Be Inclusive nella categoria “Cambio Ispiratore”, EU Be Active Sport Award nella categoria “Eroe Locale” per il fondatore di "Una palla per tutti", vincitore del premio “Leader Globale Emergente” del premio annuale della Tallberg Foundation – Stavros Niarchos Foundation per il fondatore di "Una palla per tutti". Il nostro fondatore Elias Mastoras è stato Presidente dell'IBSA Blind Football 2021-2025 e Direttore Tecnico del calcio paralimpico di Parigi 2024, organizzando l'edizione di maggior successo nello stadio di calcio più bello di sempre; lo Stadio di Blind Football della Torre Eiffel.
-
-                                          </p>
-                                                
-
-                                            
-                                          
-                                </div>
-
-                                <div class="col-1-of-3">
-                          <div class="composition">
-                                    <img src="img/elias.jpg" alt="aballforall" class="composition__photongo composition__photongo--p1">
-                                    <img src="img/ablindball.png" alt="aballforall" class="composition__photongo composition__photongo--p2">
-                                    <img src="img/inclusion.jpg" alt="aballforall" class="composition__photongo composition__photongo--p3">
-                                    <img src="img/boy.jpg" alt="aballforall" class="composition__photongo composition__photongo--p4">
-                                    <!-- .composition>(img.composition__photo.composition__photo--p1)*3 and tab -->
-                          </div>    
+        </header>
+        <!-- those IDs are created to connect the buttons with the parts of the page, id and then #id -->
+        <!-- main part of our web, it is saying the screen readers that it is the main part of the site, it is a container-->
+        <main>
+            <section
+                class="section-about"
+                id="section-about"
+            >
+                <div class="u-center-text u-margin-bottom-medium">
+                    <!-- u - it is an utility class, a simply class to reuse it later -->
+                    <h2 class="heading-secondary">
+                        Aiutiamoli a giocare e ad apprendere: il calcio per bambini non vedenti
+                    </h2>
                 </div>
-                               
-                                
-                      </div>
-                      
+
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <h3 class="heading-tertiary u-margin-bottom-small">
+                            A tutti noi piace il calcio!
+                        </h3>
+                        <p class="paragraph">
+                            I bambini non vedenti non possono vedere la palla, ma possono sentirla!
+                            Per questo abbiamo realizzato una mini-palla speciale che produce un
+                            rumore singolare, in modo che tutti i bambini possano giocarci ed
+                            interagirci. E la cosa più importante è che non è in vendita, può solo
+                            essere donata. Ci aiuterai?
+                        </p>
+
+                        <h3 class="heading-tertiary u-margin-bottom-small">
+                            Il calcio per non vedenti è uno sport paralimpico
+                        </h3>
+                        <p class="paragraph">
+                            I palloni da calcio per adulti non vedenti sono in vendita sul mercato,
+                            ma sono troppo pesanti per un bambino. Pesano più di mezzo chilogrammo.
+                            Elias Mastoras, fondatore della ONG GRiiiS, ha creato la prima
+                            mini-palla al mondo per bambini non vedenti. La cosa più importante è
+                            che questo pallone da calcio leggero, che contiene delle campanelle
+                            all'interno, non può essere acquistato in un negozio. Può essere donato
+                            solo a bambini o giovani non vedenti o ipovedenti e alle loro scuole.
+                            Insieme possiamo cambiare le loro vite!
+                        </p>
+
+                        <a
+                            href="#section-about__ngo"
+                            class="btn-text"
+                            >Scopri di più &rarr;</a
+                        >
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="composition">
+                            <img
+                                src="img/aboywithawhitecane4.jpg"
+                                alt="aballforall"
+                                class="composition__photo composition__photo--p1"
+                            />
+                            <img
+                                src="img/Guyana.jpg"
+                                alt="aballforall"
+                                class="composition__photo composition__photo--p2"
+                            />
+                            <img
+                                src="img/acuteboy.jpg"
+                                alt="aballforall"
+                                class="composition__photo composition__photo--p3"
+                            />
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section class="section-contact" id="section-contact">
-                          <div class="u-center-text u-margin-bottom-medium">                                        
-                            <h2 class="heading-secondary">
-                              Una mini-palla che unisce il mondo
-                            </h2>
-                          </div>
-            
-                          <div class="row">
-                            <div class="contactus">                                                                                
-                              <div class="contactus__form">
-                                <div class="col-4-of-5">
-                                        <div>
-                                                <h3 class="heading-tertiary u-margin-bottom-small">Contattateci!<i class="contact__icon icon-basic-mail-open-text"></i></h3>
-                                                
-                                                  <ul class="contact__form--box contact__form--text">
-                                                    <li>A Ball for All e-mail: <span class="contact__form--textbold">aballforall.ngo@gmail.com</span> </li>
-                                                    
-                                                    <li>Elias Mastoras e-mail: <span class="contact__form--textbold">mastorasgreece@gmail.com</span> </li>
-                                                  </ul>
-                                        </div>
-                                        <div>
-                                                <h3 class="heading-tertiary u-margin-bottom-small">
-                                                  coordinate bancarie<i class="contact__icon icon-basic-info"></i></h3>
-                                               
-                                                <ul class="contact__form--box contact__form--text">
-                                                  <li>ACCOUNT HOLDER: <span class="contact__form--textbold">GRiiiS</li>
-                                                  <li>BANCA: <span class="contact__form--textbold">ALPHA BANK</span></li>
-                                                  <li>IBAN: <span class="contact__form--textbold">GR5801407100710002101194342</span></li>
-                                                  <li>SWIFT BIC: <span class="contact__form--textbold">CRBAGRAA</span></li>
-                                                  <li>BRANCH ADDRESS: <span class="contact__form--textbold">VAS. OLGAS 103</span></li>
-                                                  <li>(BRANCH ANALIPSEOS THESSALONIKI GREECE)</li>
-                                                </ul>
-                                        </div>
-                                </div>
-                              </div>
+
+            <section class="section-awards">
+                <div class="u-center-text u-margin-bottom-medium">
+                    <h2 class="heading-secondary">Premi e Realizzazioni</h2>
+                </div>
+
+                <div class="award__row">
+                    <div class="col-1-of-3">
+                        <img
+                            src="img/EU Sports Awards 2022.jpg"
+                            alt="EU Sports Awards 2022"
+                            class="award__img"
+                        />
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <img
+                            src="img/Tallberg SNF Eliasson Global Leadership prize 2022.jpg"
+                            alt="Tallberg SNF Eliasson Global Leadership prize 2022"
+                            class="award__img"
+                        />
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <img
+                            src="img/EU Be Active Sports Local Hero 2022.jpg"
+                            alt="EU Be Active Sports Local Hero 2022"
+                            class="award__img"
+                        />
+                    </div>
+                </div>
+
+                <div class="award__row award__achievements">
+                    <div class="col-1-of-4 award__achievement">
+                        <i class="fas fa-trophy"></i>
+                        <h2>3</h2>
+                        <p>Premi Internazionali</p>
+                    </div>
+
+                    <div class="col-1-of-4 award__achievement">
+                        <i class="fas fa-globe"></i>
+                        <h2>219</h2>
+                        <p>Paesi e Territori raggiunti</p>
+                    </div>
+
+                    <div class="col-1-of-4 award__achievement">
+                        <i class="fas fa-user-graduate"></i>
+                        <h2>4 000</h2>
+                        <p>Scuole che seguono il nostro programma educativo</p>
+                    </div>
+
+                    <div class="col-1-of-4 award__achievement">
+                        <i class="fas fa-futbol"></i>
+                        <h2>50 000</h2>
+                        <p>Palloni da calcio mini per non vedenti donati</p>
+                    </div>
+                </div>
+
+                <div class="award__row award__social-media">
+                    <div class="col-1-of-3">
+                        <img
+                            src="img/12m-views-aballforall.jpeg"
+                            alt="12 milion views for A Ball For All"
+                            class="award__img-social-media"
+                        />
+                    </div>
+
+                    <video
+                        autoplay
+                        muted
+                        loop
+                        playsinline
+                        preload="auto"
+                        width="340"
+                        height="420"
+                        class="col-1-of-3 video-one margin-bottom"
+                        poster="img/aballfor all logo_official.jpg"
+                    >
+                        <source
+                            src="img/jack-grealish-aballforall.mp4"
+                            type="video/mp4"
+                        />
+                    </video>
+
+                    <div class="col-1-of-3">
+                        <img
+                            src="img/12,7-views-stats-aballforall.jpg"
+                            alt="number of views instagram"
+                            class="award__img-social-media"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-video">
+                <div class="u-center-text u-margin-bottom-medium">
+                    <h2 class="heading-secondary">Guarda la nostra storia</h2>
+                </div>
+                <div class="bg-video">
+                    <iframe
+                        width="440"
+                        height="360"
+                        frameborder="0"
+                        class="video-one"
+                        src="https://www.youtube.com/embed/EfiOBSNeTJk?playlist=EfiOBSNeTJk&loop=1&autoplay=1&mute=1"
+                    >
+                    </iframe>
+                    <iframe
+                        width="440"
+                        height="360"
+                        frameborder="0"
+                        class="video-two"
+                        src="https://www.youtube.com/embed/4tUEOh5ym5U?playlist=4tUEOh5ym5U&loop=1&autoplay=1&mute=1"
+                    >
+                    </iframe>
+                </div>
+            </section>
+
+            <section class="section-facts">
+                <div class="documentary-kenya-facts-title">
+                    <div class="u-center-text u-margin-bottom-medium">
+                        <h2 class="heading-secondary">Alcuni fatti sull'impairment visivo</h2>
+                    </div>
+
+                    <div class="documentary-kenya-facts">
+                        <div class="documentary-kenya-feature-facts">
+                            <h4 class="heading4-documentary-kenya--dark">La cecità in numeri</h4>
+                            <p class="paragraph-documentary-kenya-small">
+                                Nel mondo, 285 milioni di persone hanno problemi di vista; 39
+                                milioni sono ciechi e 246 milioni hanno una vista bassa. Si stima
+                                che 500.000 bambini diventino ciechi ogni anno, ma nei paesi in via
+                                di sviluppo fino al 60% si pensa muoia entro un anno dalla cecità.
+                            </p>
+                        </div>
+
+                        <div class="documentary-kenya-feature-facts">
+                            <h4 class="heading4-documentary-kenya--dark">Come inizia la cecità</h4>
+                            <p class="paragraph-documentary-kenya-small">
+                                Alcune persone sono completamente cieche dalla nascita, mentre altre
+                                possono avere una visione che declina lentamente da decenni. I
+                                milioni di persone cieche o ipovedenti possiedono tutti diversi
+                                gradi di vista e hanno esigenze e abilità molto diverse legate alla
+                                perdita della vista.
+                            </p>
+                        </div>
+
+                        <div class="documentary-kenya-feature-facts">
+                            <h4 class="heading4-documentary-kenya--dark">Cane guida</h4>
+                            <p class="paragraph-documentary-kenya-small">
+                                Solo l'1-2% delle persone ipovedenti usa un cane guida anche se la
+                                maggior parte dei cani viene fornita gratuitamente. Questi animali
+                                da servizio vengono addestrati attentamente per guidare i loro
+                                proprietari tra altre persone e ostacoli. Il primo cane guida è
+                                stato consegnato nel 1916 a un veterano accecato, Paul Feyen.
+                            </p>
+                        </div>
+
+                        <div class="documentary-kenya-feature-facts">
+                            <h4 class="heading4-documentary-kenya--dark">Bastone bianco</h4>
+                            <p class="paragraph-documentary-kenya-small">
+                                James Biggs di Bristol ha dichiarato di aver inventato il bastone
+                                bianco nel 1921. Dopo un incidente che ha compromesso la sua vista,
+                                l'artista ha dovuto adattarsi al suo ambiente. Sentendosi minacciato
+                                dall'aumento del traffico veicolare intorno a casa sua, Biggs ha
+                                deciso di dipingere il suo bastone bianco per rendersi più visibile
+                                ai conducenti.
+                            </p>
+                        </div>
+
+                        <div class="documentary-kenya-feature-facts">
+                            <h4 class="heading4-documentary-kenya--dark">Sport</h4>
+                            <p class="paragraph-documentary-kenya-small">
+                                Essere diagnosticati come ciechi o ipovedenti non significa che una
+                                persona debba rinunciare allo sport. Infatti, ci sono molti sport
+                                adattati per chi è cieco o ipovedente, così come sport completamente
+                                nuovi aperti solo a persone con problemi di vista.
+                            </p>
+                        </div>
+
+                        <div class="documentary-kenya-feature-facts">
+                            <h4 class="heading4-documentary-kenya--dark">Persone cieche famose</h4>
+                            <p class="paragraph-documentary-kenya-small">
+                                Andrea Bocelli è diventato completamente cieco all'età di 12 anni,
+                                uno dei musicisti più di successo di tutti i tempi. Il 25 maggio
+                                2001, Erik Weihenmayer è diventato il primo cieco a raggiungere la
+                                vetta dell'Everest. Marla Runyan è la prima atleta legalmente cieca
+                                a gareggiare alle Olimpiadi. Trischa Zorn, cieca dalla nascita, ha
+                                vinto 55 medaglie, diventando l'atleta più vincente nella storia dei
+                                Giochi Paralimpici.
+                            </p>
+                        </div>
+                    </div>
+                    `r`n
+                </div>
+                `r`n
+            </section>
+            `r`n`r`n
+            <section class="section-features">
+                <div class="u-center-text u-margin-bottom-medium">
+                    <h2 class="heading-secondary">I nostri valori</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-lightbulb"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">INNOVAZIONE</h3>
+                            <p class="feature-box__text">
+                                Tutto è iniziato con l'idea di creare la prima mini-palla al mondo
+                                per bambini non vedenti.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-world"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">GLOBALE</h3>
+                            <p class="feature-box__text">
+                                Abbbiamo l'obiettivo di inviare le nostre mini-palle in ogni paese
+                                del mondo. Abbiamo raggiunto 219 paesi.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-target"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">INCLUSIONE</h3>
+                            <p class="feature-box__text">
+                                Contribuiamo a sostenere i sogni dei bambini ciechi attraverso lo
+                                sport e l'educazione
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-1-of-4">
+                        <div class="feature-box">
+                            <i class="feature-box__icon icon-basic-heart"></i>
+                            <h3 class="heading-tertiary u-margin-bottom-small">CURA</h3>
+                            <p class="feature-box__text">
+                                Sappiamo che la nostra non è solo una mini-palla, ma sta cambiando
+                                la percezione del mondo per i bambini ciechi e le loro famiglie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section
+                class="section-donation"
+                id="section-donation"
+            >
+                <div class="u-center-text u-margin-bottom-medium">
+                    <h2 class="heading-secondary">Aiutiamo insieme</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front card__side--front-1">
+                                <div class="card__picture card__picture--1">&nbsp;</div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--1">
+                                        Donazione <br />una tantum
+                                    </span>
+                                </h4>
                             </div>
-                          </div>
-                        </section>
-                      </main>
-            
-            
-                     <footer class="footer">
-		<div class="footer__logo-box">
-			<img  src="img/aballforAllLogo10YearsOfInclusion.jpg" alt="Logo A Ball For All 10 years of inclusion" class="footer__logo">
-		</div>
-		<div class="row">
-			<div class="col-1-of-2">
-				<div class="footer__navigation">
-					<ul class="footer__list">
-						<li class="footer__item"><a href="support-us.html" class="footer__link">
-							Ways of Support</a></li>
-						<li class="footer__item"><a href="mastoras.html" class="footer__link">
-							Our Founder</a></li>
-						<li class="footer__item"><a href="https://www.linkedin.com/company/aballforall/" class="footer__link" target="_blank">LinkedIn</a></li>
-						<li class="footer__item"><a href="https://www.facebook.com/aballforallyouthorama" class="footer__link" target="_blank">Facebook</a></li>
-						<li class="footer__item"><a href="https://www.instagram.com/aballforall.eu/" class="footer__link" target="_blank">Instagram</a></li>
-						<li class="footer__item"><a href="https://www.youtube.com/@aballforall" class="footer__link" target="_blank">YouTube</a></li>
-						
-					</ul>
-				</div>
-			</div>
-			<div class="col-1-of-2">
-				<p class="footer__copyright">
-					© COPYRIGHT GRiiiS - Global Research Institute Innovation Inclusion Sport
-					 <span class="copyright-year"></span>. 
-					<br> 
-					<br>
-					Website built  with 	&#10084; by Renata Diurczak for A BALL FOR ALL
-				</p>
-			</div>
-		</div>
-	</footer>
-    <script src="app.js"></script>
-            
 
-          <div class="popup" id="popup1">
-            <div class="popup__content">
-              <div class="popup__left">
-                <img src="img/kids with a ball.jpg" alt="miniball" class="popup__img">
-                <img src="img/Zimbabwe.jpg" alt="blind football" class="popup__img">
-              </div>
-              <div class="popup__right">
-                <!-- x to close the popup, it removes the target from the popup -->
-                <a href="#section-donation" class="popup__close">&times;</a>
-                <h2 class="heading-secondary u-margin-bottom-medium2">Aiutiamo insieme</h2>
-                <h3 class="heading-tertiary u-margin-bottom-small">Come funziona?</h3>
-                <p class="popup__text">Abbiamo lanciato il nostro sito web di fundraising per raccogliere fondi online, poiché abbiamo bisogno del vostro sostegno. Crediamo profondamente che la nostra mini-palla abbia un enorme potere: è in grado di cambiare la vita di qualcuno. Ci sono 3 modi per donare alla nostra campagna internazionale. Il primo è l'utilizzo di Paypal; il secondo ti permette di donare attraverso la tua carta di credito o di debiti. Il terzo è rappresentato da un trasferimento bancario diretto.
-                  Insieme possiamo diffondere la felicità, il divertimento e la consapevolezza. Impegniamoci con passione per un unico obiettivo: donare le nostre mini-palle ai bambini ciechi di tutto il mondo. Inoltre, vorremmo chiedervi di seguire e condividere il nostro progetto attraverso i social media. A Ball for All è un progetto straordinario, che dovrebbe essere apprezzato in tutto il mondo.
-                  
-                </p>
-                <ul class="feature-box--btn">
-                  <li>
-                    <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                      <input type="hidden" name="hosted_button_id" value="4N993Z9F5SXZ8" />
-                      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                      <img alt="a ball for all paypal" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
-                      </form>
-                  </li>
-                  
-                  <li>
-                    <a href="#section-contact" class="btn btn--blue btn--animated">coordinate bancarie &rarr;</a>
-                  </li>
-                </ul>
-              </div>
-              
+                            <div class="card__side card__side--back card__side--back-1">
+                                <div class="card_cta">
+                                    <div class="card__details-box">
+                                        <p class="card__details-donation">
+                                            Apprezziamo l'aiuto che puoi darci con A Ball For All.
+                                            La nostra mini-palla è portatrice di gioia. La nostra
+                                            campagna unisce le persone e questo è ciò di cui hanno
+                                            bisogno i bambini affetti da cecità.
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="#popup1"
+                                        class="btn btn--white"
+                                        >Dona ora</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front card__side--front-2">
+                                <div class="card__picture card__picture--2">&nbsp;</div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--2">
+                                        Adotta <br />
+                                        una mini-palla
+                                    </span>
+                                </h4>
+                            </div>
+
+                            <div class="card__side card__side--back card__side--back-2">
+                                <div class="card_cta">
+                                    <div class="card__details-box">
+                                        <p class="card__details-donation">
+                                            Conosci qualcuno che ha bisogno di una mini-palla? Siete
+                                            interessati a sostenere un bambino non vedente, una
+                                            scuola o un paese specifico? Facciamolo insieme!
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="#popup2"
+                                        class="btn btn--white"
+                                        >Donate una mini-palla</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-3">
+                        <div class="card">
+                            <div class="card__side card__side--front card__side--front-3">
+                                <div class="card__picture card__picture--3">&nbsp;</div>
+                                <h4 class="card__heading">
+                                    <span class="card__heading-span card__heading-span--3">
+                                        Diventa il nostro <br />Supereroe
+                                    </span>
+                                </h4>
+                            </div>
+
+                            <div class="card__side card__side--back card__side--back-3">
+                                <div class="card_cta">
+                                    <div class="card__details-box">
+                                        <p class="card__details-donation">
+                                            Un potenziale sostenitore ha una varietà di scelte su
+                                            come sostenere la nostra Campagna Internazionale,
+                                            personalizzando il logo stampato sulla mini-palla
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="#popup3"
+                                        class="btn btn--white"
+                                        >Dona le mini-palle</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="u-center-text u-margin-bottom-medium u-margin-top-medium">
+                    <ul class="feature-box--btns">
+                        <li class="feature-box--btns-li">
+                            <a
+                                href="#section-contact"
+                                class="btn btn--blue btn--animated"
+                                >Contatto &DownArrow;</a
+                            >
+                        </li>
+
+                        <li class="feature-box--btns-li">
+                            <form
+                                action="https://www.paypal.com/donate"
+                                method="post"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="hosted_button_id"
+                                    value="4N993Z9F5SXZ8"
+                                />
+                                <input
+                                    type="image"
+                                    src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                                    border="0"
+                                    name="submit"
+                                    title="PayPal - The safer, easier way to pay online!"
+                                    alt="Donate with PayPal button"
+                                />
+                                <img
+                                    alt="a ball for all paypal"
+                                    border="0"
+                                    src="https://www.paypal.com/en_GR/i/scr/pixel.gif"
+                                    width="1"
+                                    height="1"
+                                />
+                            </form>
+                        </li>
+                        <li class="feature-box--btns-li">
+                            <a
+                                href="#section-contact"
+                                class="btn btn--blue btn--animated"
+                                >coordinate bancarie &DownArrow;</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section
+                class="section-about__ngo"
+                id="section-about__ngo"
+            >
+                <div class="u-center-text u-margin-bottom-medium">
+                    <h2 class="heading-secondary">Qualche parola su di noi!</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-2-of-3">
+                        <h3 class="heading-quaternary u-margin-bottom-xsmall">
+                            Il nostro fondatore Elias Mastoras
+                        </h3>
+                        <p class="paragraph__ngo">
+                            <a
+                                href="/mastoras.html"
+                                class="nav-bar-donation__elias"
+                            >
+                                Elias Mastoras</a
+                            >
+                            è stato Presidente dell'IBSA Blind Football dal 2021 al 2025. Elias è
+                            stato il Direttore Tecnico del Calcio Paralimpico di Parigi 2024,
+                            gestendo l'edizione di maggior successo di sempre presso lo Stadio di
+                            Blind Football della Torre Eiffel. È un educatore per adulti e un
+                            formatore giovanile presso le Agenzie Nazionali Erasmus+ Gioventù e
+                            Corpo Europeo di Solidarietà di Grecia e Cipro. È un Allenatore di
+                            Scacchi FIDE e un Maestro FIDE come giocatore di scacchi. È stato
+                            Coordinatore degli Arbitri a Rio 2016 e Coordinatore Mondiale degli
+                            Arbitri dal 2013 al 2017, nonché Arbitro delle partite per la Medaglia
+                            d'Oro ad Atene 2004 e Pechino 2008. Ha ricevuto il 1° posto vincendo
+                            l'annuale EU Sport Award “Eroe Locale”; è stato premiato come “Leader
+                            Globale Emergente” annuale della Tallberg Foundation – Stavros Niarchos
+                            Foundation; 1° posto e attuale vincitore degli EU Be Inclusive awards
+                            nella categoria “Cambio Ispiratore”.
+                        </p>
+                        <p class="paragraph__ngo">
+                            Ha brevettato una mini-palla speciale che produce un rumore singolare,
+                            in modo che tutti i bambini possano giocarci ed interagire, disponibile
+                            solo tramite donazione. Nei primi sette anni della campagna
+                            #ABallforAll, oltre 50 000 di queste mini palloni da blind football sono
+                            stati distribuiti in 219 paesi e territori su 5 continenti. Elias è il
+                            rappresentante legale di GRiiiS – Global Research institute innovation
+                            inclusion Sport, fondato nel 2003. Puoi contattarlo direttamente
+                            all'indirizzo mastorasgreece@gmail.com
+                        </p>
+
+                        <h3 class="heading-quaternary u-margin-bottom-xsmall">GRiiiS NGO</h3>
+                        <p class="paragraph__ngo">
+                            Global Research institute innovation inclusion Sport è stato fondato nel
+                            2003. Le attività di GRiiiS sono state ospitate e supportate da allora
+                            dal Comune di Pilea-Hortiatis, Grecia. Nel campo dello sport, abbiamo
+                            organizzato e partecipato a decine di programmi europei supportati sia
+                            dalla Commissione Europea Erasmus+ che dagli stakeholder del calcio come
+                            UEFA, FIFA, UEFA Foundation for Children ecc. Negli ultimi anni, in
+                            particolare attraverso la nostra campagna #ABallforAll, ci siamo
+                            concentrati sull'integrazione di bambini e giovani con minori
+                            opportunità attraverso lo sport. Lottiamo per un futuro e un mondo
+                            migliori. Siamo l'unica ONG sportiva che è stata invitata ad educare
+                            interattivamente il pubblico durante l'intero ciclo calcistico
+                            quadriennale 2021-2024: UEFA EURO 2020 & 2024, FIFA World Cup 2022, UEFA
+                            Super Cup 2023, finale UEFA Conference League 2024, finale UEFA Europa
+                            League 2022 & 2023 & 2024, finale UEFA Champions League 2023 & 2024,
+                            Giochi Paralimpici di Parigi 2024 davanti alla Torre Eiffel. Abbiamo
+                            creato il marchio della “silent wave” – un gesto unico negli stadi di
+                            calcio per non vedenti, dove i tifosi eseguono l'onda in silenzio,
+                            rispettando le regole del gioco.
+                        </p>
+
+                        <h3 class="heading-quaternary u-margin-bottom-xsmall">
+                            A Ball for All - Una Palla per Tutti (#ABallforAll)
+                        </h3>
+                        <p class="paragraph__ngo">
+                            GRiiiS, lanciando la campagna #ABallforAll, si è posta l'obiettivo di
+                            viaggiare in tutti gli angoli della terra per distribuire le nostre
+                            palle sonore speciali brevettate, che producono un rumore
+                            caratteristico, permettendo a tutti i bambini di giocarci e interagire,
+                            disponibili solo tramite donazione. Siamo sulla buona strada affinché le
+                            palle raggiungano anche le aree più remote; abbiamo una rete attiva in
+                            219 paesi e territori. Con il vostro supporto otterremo ancora di più e
+                            la palla tintinnerà in ogni casa e scuola di bambino cieco in tutto il
+                            mondo. Abbiamo ricevuto 3 premi internazionali: attuale vincitore del
+                            premio annuale EU Be Inclusive nella categoria “Cambio Ispiratore”, EU
+                            Be Active Sport Award nella categoria “Eroe Locale” per il fondatore di
+                            "Una palla per tutti", vincitore del premio “Leader Globale Emergente”
+                            del premio annuale della Tallberg Foundation – Stavros Niarchos
+                            Foundation per il fondatore di "Una palla per tutti". Il nostro
+                            fondatore Elias Mastoras è stato Presidente dell'IBSA Blind Football
+                            2021-2025 e Direttore Tecnico del calcio paralimpico di Parigi 2024,
+                            organizzando l'edizione di maggior successo nello stadio di calcio più
+                            bello di sempre; lo Stadio di Blind Football della Torre Eiffel.
+                        </p>
+                    </div>
+
+                    <div class="col-1-of-3">
+                        <div class="composition">
+                            <img
+                                src="img/elias.jpg"
+                                alt="aballforall"
+                                class="composition__photongo composition__photongo--p1"
+                            />
+                            <img
+                                src="img/ablindball.png"
+                                alt="aballforall"
+                                class="composition__photongo composition__photongo--p2"
+                            />
+                            <img
+                                src="img/inclusion.jpg"
+                                alt="aballforall"
+                                class="composition__photongo composition__photongo--p3"
+                            />
+                            <img
+                                src="img/boy.jpg"
+                                alt="aballforall"
+                                class="composition__photongo composition__photongo--p4"
+                            />
+                            <!-- .composition>(img.composition__photo.composition__photo--p1)*3 and tab -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section
+                class="section-contact"
+                id="section-contact"
+            >
+                <div class="u-center-text u-margin-bottom-medium">
+                    <h2 class="heading-secondary">Una mini-palla che unisce il mondo</h2>
+                </div>
+
+                <div class="row">
+                    <div class="contactus">
+                        <div class="contactus__form">
+                            <div class="col-4-of-5">
+                                <div>
+                                    <h3 class="heading-tertiary u-margin-bottom-small">
+                                        Contattateci!<i
+                                            class="contact__icon icon-basic-mail-open-text"
+                                        ></i>
+                                    </h3>
+
+                                    <ul class="contact__form--box contact__form--text">
+                                        <li>
+                                            A Ball for All e-mail:
+                                            <span class="contact__form--textbold"
+                                                >aballforall.ngo@gmail.com</span
+                                            >
+                                        </li>
+
+                                        <li>
+                                            Elias Mastoras e-mail:
+                                            <span class="contact__form--textbold"
+                                                >mastorasgreece@gmail.com</span
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 class="heading-tertiary u-margin-bottom-small">
+                                        coordinate bancarie<i
+                                            class="contact__icon icon-basic-info"
+                                        ></i>
+                                    </h3>
+
+                                    <ul class="contact__form--box contact__form--text">
+                                        <li>
+                                            ACCOUNT HOLDER:
+                                            <span class="contact__form--textbold">GRiiiS</span>
+                                        </li>
+                                        <li>
+                                            BANCA:
+                                            <span class="contact__form--textbold">ALPHA BANK</span>
+                                        </li>
+                                        <li>
+                                            IBAN:
+                                            <span class="contact__form--textbold"
+                                                >GR5801407100710002101194342</span
+                                            >
+                                        </li>
+                                        <li>
+                                            SWIFT BIC:
+                                            <span class="contact__form--textbold">CRBAGRAA</span>
+                                        </li>
+                                        <li>
+                                            BRANCH ADDRESS:
+                                            <span class="contact__form--textbold"
+                                                >VAS. OLGAS 103</span
+                                            >
+                                        </li>
+                                        <li>(BRANCH ANALIPSEOS THESSALONIKI GREECE)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__logo-box">
+                <img
+                    src="img/aballfor all logo_official.jpg"
+                    alt="Logo A Ball For All"
+                    class="footer__logo"
+                />
             </div>
-          </div>
-
-          <div class="popup" id="popup2">
-            <div class="popup__content">
-              <div class="popup__left">
-                <img src="img/agirl.jpg" alt="nigeria" class="popup__img">
-                <img src="img/Ireland.jpg" alt="Ireland" class="popup__img">
-              </div>
-              <div class="popup__right">
-                <!-- x to close the popup, it removes the target from the popup -->
-                <a href="#section-donation" class="popup__close">&times;</a>
-                <h2 class="heading-secondary u-margin-bottom-medium2">Diventa nostra famiglia</h2>
-                <h3 class="heading-tertiary u-margin-bottom-small">Come funziona</h3>
-                <p class="popup__text">Stimiamo che il costo per sostenere completamente un bambino, incluso un pacchetto educativo di 2 mini-palle, materiale di supporto e un libro speciale - manuale in formato digitale - sia di 100€. Se conosci una persona/scuola/paese che vorreste sostenere, vi preghiamo di inviarci un'e-mail a aballforall.ngo@gmail.com<br> 
-                  Se non conosci nessuno, non preoccuparti! Ci sono bambini non vedenti o ipovedenti da tutto il mondo che aspettano il tuo aiuto, contattaci ugualmente 
-                   &#9786;
-                </p>
-                
-
-                <ul class="feature-box--btn">
-                  <li>
-                    <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                      <input type="hidden" name="hosted_button_id" value="4N993Z9F5SXZ8" />
-                      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                      <img alt="a ball for all paypal" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
-                      </form>
-                  </li>
-                  <li>
-                    <a href="#section-contact" class="btn btn--blue btn--animated">Contattateci! &rarr;</a>
-                  </li>
-                </ul>
-
-              </div>
-              
+            <div class="row">
+                <div class="col-1-of-2">
+                    <div class="footer__navigation">
+                        <ul class="footer__list">
+                            <li class="footer__item">
+                                <a
+                                    href="support-us.html"
+                                    class="footer__link"
+                                >
+                                    Ways of Support</a
+                                >
+                            </li>
+                            <li class="footer__item">
+                                <a
+                                    href="mastoras.html"
+                                    class="footer__link"
+                                >
+                                    Our Founder</a
+                                >
+                            </li>
+                            <li class="footer__item">
+                                <a
+                                    href="https://www.linkedin.com/company/aballforall/"
+                                    class="footer__link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >LinkedIn</a
+                                >
+                            </li>
+                            <li class="footer__item">
+                                <a
+                                    href="https://www.facebook.com/aballforallyouthorama"
+                                    class="footer__link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Facebook</a
+                                >
+                            </li>
+                            <li class="footer__item">
+                                <a
+                                    href="https://www.instagram.com/aballforall.eu/"
+                                    class="footer__link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >Instagram</a
+                                >
+                            </li>
+                            <li class="footer__item">
+                                <a
+                                    href="https://www.youtube.com/@aballforall"
+                                    class="footer__link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    >YouTube</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-1-of-2">
+                    <p class="footer__copyright">
+                        © COPYRIGHT GRiiiS - Global Research Institute Innovation Inclusion Sport
+                        <span class="copyright-year"></span>.
+                        <br />
+                        <br />
+                        Website built with &#10084; by Renata Diurczak for A BALL FOR ALL
+                    </p>
+                </div>
             </div>
-          </div>
+        </footer>
+        <script src="app.js"></script>
 
-          <div class="popup" id="popup3">
+        <div
+            class="popup"
+            id="popup1"
+        >
             <div class="popup__content">
-              <div class="popup__left">
-                <img src="img/ballswithlogo.jpg" alt="balls for blind children" class="popup__img">
-                <img src="img/guidedog.jpg" alt="guide dog" class="popup__img">
-                
-              </div>
-              <div class="popup__right">
-                <!-- x to close the popup, it removes the target from the popup -->
-                <a href="#section-donation" class="popup__close">&times;</a>
-                <h2 class="heading-secondary u-margin-bottom-medium2">Diventa nostro partner</h2>
-                <h3 class="heading-tertiary u-margin-bottom-small">Come funziona?</h3>
-                <p class="popup__text">Vuoi sostenere la nostra campagna e avere un impatto maggiore? Il tuo logo sarà stampato su ogni mini-palla donata a piccoli studenti o a scuole. Inoltre, il tuo logo sarà presente su tutte le mascotte, le creazioni e le produzioni multimediali. Siamo grati alle future fondazioni che sosterranno la nostra campagna internazionale nei prossimi anni. Per promuovere il nostro progetto “A Ball for All” organizzeremo un evento pubblico aperto a tutti. Il nostro obiettivo è quello di giocare insieme a calcio e di far conoscere il nostro progetto agli alunni. Tutti i canali televisivi greci a livello nazionale promuoveranno l'evento e il programma educativo in speciali trasmissioni televisive, notiziari quotidiani e social media. Contattate direttamente il nostro Fondatore Elias Mastoras all'indirizzo mastorasgreece@gmail.com.
-                </p>
-                <ul class="feature-box--btn">
-                  <li>
-                    <form action="https://www.paypal.com/donate" method="post" target="_blank">
-                      <input type="hidden" name="hosted_button_id" value="4N993Z9F5SXZ8" />
-                      <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                      <img alt="a ball for all paypal" border="0" src="https://www.paypal.com/en_GR/i/scr/pixel.gif" width="1" height="1" />
-                      </form>
-                  </li>
-                  <li>
-                    <a href="#section-contact" class="btn btn--blue btn--animated">Contattateci! &rarr;</a>
-                  </li>
-                </ul>
+                <div class="popup__left">
+                    <img
+                        src="img/kids with a ball.jpg"
+                        alt="miniball"
+                        class="popup__img"
+                    />
+                    <img
+                        src="img/Zimbabwe.jpg"
+                        alt="blind football"
+                        class="popup__img"
+                    />
+                </div>
+                <div class="popup__right">
+                    <!-- x to close the popup, it removes the target from the popup -->
+                    <a
+                        href="#section-donation"
+                        class="popup__close"
+                        >&times;</a
+                    >
+                    <h2 class="heading-secondary u-margin-bottom-medium2">Aiutiamo insieme</h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Come funziona?</h3>
+                    <p class="popup__text">
+                        Abbiamo lanciato il nostro sito web di fundraising per raccogliere fondi
+                        online, poiché abbiamo bisogno del vostro sostegno. Crediamo profondamente
+                        che la nostra mini-palla abbia un enorme potere: è in grado di cambiare la
+                        vita di qualcuno. Ci sono 3 modi per donare alla nostra campagna
+                        internazionale. Il primo è l'utilizzo di Paypal; il secondo ti permette di
+                        donare attraverso la tua carta di credito o di debiti. Il terzo è
+                        rappresentato da un trasferimento bancario diretto. Insieme possiamo
+                        diffondere la felicità, il divertimento e la consapevolezza. Impegniamoci
+                        con passione per un unico obiettivo: donare le nostre mini-palle ai bambini
+                        ciechi di tutto il mondo. Inoltre, vorremmo chiedervi di seguire e
+                        condividere il nostro progetto attraverso i social media. A Ball for All è
+                        un progetto straordinario, che dovrebbe essere apprezzato in tutto il mondo.
+                    </p>
+                    <ul class="feature-box--btn">
+                        <li>
+                            <form
+                                action="https://www.paypal.com/donate"
+                                method="post"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="hosted_button_id"
+                                    value="4N993Z9F5SXZ8"
+                                />
+                                <input
+                                    type="image"
+                                    src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                                    border="0"
+                                    name="submit"
+                                    title="PayPal - The safer, easier way to pay online!"
+                                    alt="Donate with PayPal button"
+                                />
+                                <img
+                                    alt="a ball for all paypal"
+                                    border="0"
+                                    src="https://www.paypal.com/en_GR/i/scr/pixel.gif"
+                                    width="1"
+                                    height="1"
+                                />
+                            </form>
+                        </li>
 
-              </div>
-              
+                        <li>
+                            <a
+                                href="#section-contact"
+                                class="btn btn--blue btn--animated"
+                                >coordinate bancarie &rarr;</a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
-          </div>
+        </div>
 
-         
+        <div
+            class="popup"
+            id="popup2"
+        >
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img
+                        src="img/agirl.jpg"
+                        alt="nigeria"
+                        class="popup__img"
+                    />
+                    <img
+                        src="img/Ireland.jpg"
+                        alt="Ireland"
+                        class="popup__img"
+                    />
+                </div>
+                <div class="popup__right">
+                    <!-- x to close the popup, it removes the target from the popup -->
+                    <a
+                        href="#section-donation"
+                        class="popup__close"
+                        >&times;</a
+                    >
+                    <h2 class="heading-secondary u-margin-bottom-medium2">
+                        Diventa nostra famiglia
+                    </h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Come funziona</h3>
+                    <p class="popup__text">
+                        Stimiamo che il costo per sostenere completamente un bambino, incluso un
+                        pacchetto educativo di 2 mini-palle, materiale di supporto e un libro
+                        speciale - manuale in formato digitale - sia di 100€. Se conosci una
+                        persona/scuola/paese che vorreste sostenere, vi preghiamo di inviarci
+                        un'e-mail a aballforall.ngo@gmail.com<br />
+                        Se non conosci nessuno, non preoccuparti! Ci sono bambini non vedenti o
+                        ipovedenti da tutto il mondo che aspettano il tuo aiuto, contattaci
+                        ugualmente &#9786;
+                    </p>
 
+                    <ul class="feature-box--btn">
+                        <li>
+                            <form
+                                action="https://www.paypal.com/donate"
+                                method="post"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="hosted_button_id"
+                                    value="4N993Z9F5SXZ8"
+                                />
+                                <input
+                                    type="image"
+                                    src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                                    border="0"
+                                    name="submit"
+                                    title="PayPal - The safer, easier way to pay online!"
+                                    alt="Donate with PayPal button"
+                                />
+                                <img
+                                    alt="a ball for all paypal"
+                                    border="0"
+                                    src="https://www.paypal.com/en_GR/i/scr/pixel.gif"
+                                    width="1"
+                                    height="1"
+                                />
+                            </form>
+                        </li>
+                        <li>
+                            <a
+                                href="#section-contact"
+                                class="btn btn--blue btn--animated"
+                                >Contattateci! &rarr;</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-</body>
+        <div
+            class="popup"
+            id="popup3"
+        >
+            <div class="popup__content">
+                <div class="popup__left">
+                    <img
+                        src="img/ballswithlogo.jpg"
+                        alt="balls for blind children"
+                        class="popup__img"
+                    />
+                    <img
+                        src="img/guidedog.jpg"
+                        alt="guide dog"
+                        class="popup__img"
+                    />
+                </div>
+                <div class="popup__right">
+                    <!-- x to close the popup, it removes the target from the popup -->
+                    <a
+                        href="#section-donation"
+                        class="popup__close"
+                        >&times;</a
+                    >
+                    <h2 class="heading-secondary u-margin-bottom-medium2">
+                        Diventa nostro partner
+                    </h2>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Come funziona?</h3>
+                    <p class="popup__text">
+                        Vuoi sostenere la nostra campagna e avere un impatto maggiore? Il tuo logo
+                        sarà stampato su ogni mini-palla donata a piccoli studenti o a scuole.
+                        Inoltre, il tuo logo sarà presente su tutte le mascotte, le creazioni e le
+                        produzioni multimediali. Siamo grati alle future fondazioni che sosterranno
+                        la nostra campagna internazionale nei prossimi anni. Per promuovere il
+                        nostro progetto “A Ball for All” organizzeremo un evento pubblico aperto a
+                        tutti. Il nostro obiettivo è quello di giocare insieme a calcio e di far
+                        conoscere il nostro progetto agli alunni. Tutti i canali televisivi greci a
+                        livello nazionale promuoveranno l'evento e il programma educativo in
+                        speciali trasmissioni televisive, notiziari quotidiani e social media.
+                        Contattate direttamente il nostro Fondatore Elias Mastoras all'indirizzo
+                        mastorasgreece@gmail.com.
+                    </p>
+                    <ul class="feature-box--btn">
+                        <li>
+                            <form
+                                action="https://www.paypal.com/donate"
+                                method="post"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <input
+                                    type="hidden"
+                                    name="hosted_button_id"
+                                    value="4N993Z9F5SXZ8"
+                                />
+                                <input
+                                    type="image"
+                                    src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                                    border="0"
+                                    name="submit"
+                                    title="PayPal - The safer, easier way to pay online!"
+                                    alt="Donate with PayPal button"
+                                />
+                                <img
+                                    alt="a ball for all paypal"
+                                    border="0"
+                                    src="https://www.paypal.com/en_GR/i/scr/pixel.gif"
+                                    width="1"
+                                    height="1"
+                                />
+                            </form>
+                        </li>
+                        <li>
+                            <a
+                                href="#section-contact"
+                                class="btn btn--blue btn--animated"
+                                >Contattateci! &rarr;</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
