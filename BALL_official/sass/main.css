@@ -4017,7 +4017,7 @@ and THEN shift it by TRANSFORM - TRANSLATE -50% for both, now this is saying tha
 }
 
 .nav__item {
-  margin-inline: 0.15rem;
+  margin: 0.3rem;
   flex-wrap: nowrap;
   font-family: 400;
 }
@@ -4046,6 +4046,9 @@ and THEN shift it by TRANSFORM - TRANSLATE -50% for both, now this is saying tha
   flex-direction: column;
   align-items: stretch;
   gap: 0;
+}
+.nav__link--parents li + li {
+  margin-top: 0.4rem;
 }
 .nav__link:link, .nav__link:visited {
   color: #f7f7f7;

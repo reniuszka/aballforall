@@ -96,7 +96,7 @@
     }
 }
 .nav__item {
-    margin-inline: 0.15rem;
+    margin: 0.3rem;
     flex-wrap: nowrap;
     font-family: 400;
     &:first-child {
@@ -124,6 +124,9 @@
         flex-direction: column;
         align-items: stretch;
         gap: 0;
+    }
+    &--parents li + li {
+        margin-top: 0.4rem;
     }
     // transition: all 0.3s;
     &:link,
