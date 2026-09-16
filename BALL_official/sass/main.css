@@ -2493,6 +2493,12 @@ a.disabled {
   background-size: contain;
   background-repeat: no-repeat;
 }
+.header-uefa-right--photo__82 {
+  background-image: url(../img/EU-Disclaimer.png);
+}
+.header-uefa-right--photo__81 {
+  background-image: url(../img/Hellenic-Saltworks.jfif);
+}
 .header-uefa-right--photo__80 {
   background-image: url(../img/Aballforall-EventPoster2026.jpg);
 }
