@@ -152,12 +152,12 @@ body {
 }
 
 .paragraph {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 300;
     padding-right: 2rem;
     padding-left: 1rem;
     @include respond(tab-land-small) {
-        font-size: 1.7rem;
+        font-size: 1.9rem;
     }
 
     &:not(:last-child) {

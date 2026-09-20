@@ -1,8 +1,8 @@
 .feature-box {
     background-color: rgba($color-primary-white, 0.8);
     height: 30rem;
-    font-size: 1.5rem;
-    padding: 1.5rem;
+    font-size: 1.7rem;
+    padding: 1rem;
     text-align: center;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-primary-black, 0.5);
@@ -11,7 +11,7 @@
         height: 25rem;
     }
     @include respond(tab-land-small) {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
     &__icon {
@@ -35,11 +35,11 @@
     &__text {
         font-weight: 300;
         @include respond(tab-land-small) {
-            font-size: 1.7rem;
+            font-size: 2rem;
         }
 
         @include respond(phone) {
-            font-size: 1.8rem;
+            font-size: 1.9rem;
         }
     }
 

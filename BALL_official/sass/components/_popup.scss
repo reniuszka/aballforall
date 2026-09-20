@@ -39,7 +39,7 @@
     // to give left and righ the same hight we use display as table-cell, and dispay table to the __content
     // to adjust it we use vertical-align
     &__left {
-        width: 30%;
+        width: 25%;
         display: table-cell;
 
         @include respond(tab-land-small) {
@@ -48,7 +48,7 @@
     }
 
     &__right {
-        width: 70%;
+        width: 75%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem 3rem 3rem;
@@ -68,7 +68,7 @@
     }
 
     &__text {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
         font-weight: 400;
         color: $color-primary-black;
         margin-bottom: 3rem;

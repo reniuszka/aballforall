@@ -118,7 +118,7 @@
     color: black;
 }
 .paragraph-documentary-kenya-small {
-    font-size: 1.65rem;
+    font-size: 1.85rem;
     font-weight: 300;
     color: black;
 }
@@ -470,14 +470,14 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap: 6rem;
+    gap: 3.8rem;
     align-items: start;
     // font-size: 2rem;
     @include respond(tab-port) {
         // padding: 0rem 8rem 10rem 8rem;
         // margin-bottom: 10rem;
         margin: 0rem;
-        gap: 3rem;
+        gap: 2rem;
     }
 
     @include respond(phone) {
